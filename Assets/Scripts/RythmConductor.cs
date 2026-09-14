@@ -11,6 +11,9 @@ public class RythmConductor : MonoBehaviour
     [Header("References")]
     [SerializeField] private SSO_TrackData trackData;
     [SerializeField] private KeyboardPlatterController PlayerPlatter;
+    [SerializeField] private Transform ValidationZone;
+
+    public float CurrentTrackTime => (float)_currentTrackTime;
 
     private AudioSource _audioSource;
     private double _trackStartDspTime;
@@ -20,7 +23,7 @@ public class RythmConductor : MonoBehaviour
     private float _secondsPerBeat;
     private int _nextNoteIndex = 0;
 
-    private Queue<float> _activeNotesQueue = new Queue<float>();
+    private Queue<NoteBehavior> _activeNotesQueue = new Queue<NoteBehavior>();
 
     private void Start()
     {
@@ -31,8 +34,9 @@ public class RythmConductor : MonoBehaviour
 
         _secondsPerBeat = 60f / trackData.BPM;
 
-        _trackStartDspTime = AudioSettings.dspTime;
-        _audioSource.Play();
+        _trackStartDspTime = AudioSettings.dspTime + lookAheadTime;
+        _audioSource.PlayScheduled(_trackStartDspTime);
+
         _isPlaying = true;
     }
 
@@ -45,10 +49,13 @@ public class RythmConductor : MonoBehaviour
         float nextNoteTargetTime = trackData.FirstBeatOffset + (_nextNoteIndex * _secondsPerBeat);
         float nextNoteSpawnTime = nextNoteTargetTime - lookAheadTime;
 
-        if ((float)_currentTrackTime >= nextNoteSpawnTime)
+        while ((float)_currentTrackTime >= nextNoteSpawnTime)
         {
             SpawnNote(nextNoteTargetTime);
             _nextNoteIndex++;
+
+            nextNoteTargetTime = trackData.FirstBeatOffset + (_nextNoteIndex * _secondsPerBeat);
+            nextNoteSpawnTime = nextNoteTargetTime - lookAheadTime;
         }
 
         CheckPlayerInput();
@@ -58,31 +65,44 @@ public class RythmConductor : MonoBehaviour
     {
         GameObject newNote = Instantiate(notePrefab, transform.position, Quaternion.identity);
 
-        _activeNotesQueue.Enqueue(targetTime);
+        NoteBehavior noteScript = newNote.GetComponent<NoteBehavior>();
+        if (noteScript != null)
+        {
+            float spawnTime = targetTime - lookAheadTime;
+            float scratchDirection = (_nextNoteIndex % 2 == 0) ? 1f : -1f;
+            noteScript.Initialize(transform.position, ValidationZone.position, spawnTime, targetTime, scratchDirection, this);
+        }
+
+        _activeNotesQueue.Enqueue(noteScript);
     }
 
     private void CheckPlayerInput()
     {
         if (_activeNotesQueue.Count == 0) return;
 
-        float nextExpectedHitTime = _activeNotesQueue.Peek();
-        float timeDifference = (float)_currentTrackTime - nextExpectedHitTime;
+        NoteBehavior currentNote = _activeNotesQueue.Peek();
+        float timeDifference = (float)_currentTrackTime - currentNote.TargetTime;
 
         if (timeDifference > trackData.DifficultyTolerance)
         {
-            _activeNotesQueue.Dequeue();
-            Debug.LogError("MISS ! Trop tard, la note est passée.");
+            NoteBehavior missedNote = _activeNotesQueue.Dequeue();
+            Destroy(missedNote.gameObject);
+            Debug.LogError("MISS !");
             return;
         }
 
         if (Mathf.Abs(timeDifference) <= trackData.DifficultyTolerance)
         {
-            float speedDifference = Mathf.Abs(1f - PlayerPlatter.CurrentSpeed);
-
-            if (speedDifference <= trackData.DifficultyTolerance)
+            if (Mathf.Abs(PlayerPlatter.CurrentSpeed) > 0.1f && Mathf.Sign(PlayerPlatter.CurrentSpeed) == Mathf.Sign(currentNote.Direction))
             {
-                _activeNotesQueue.Dequeue();
-                Debug.LogWarning("HIT ! Scratch parfait dans le bon tempo !");
+                float speedDifference = Mathf.Abs(1f - Mathf.Abs(PlayerPlatter.CurrentSpeed));
+
+                if (speedDifference <= trackData.DifficultyTolerance)
+                {
+                    NoteBehavior hitNote = _activeNotesQueue.Dequeue();
+                    Destroy(hitNote.gameObject);
+                    Debug.LogWarning($"HIT ! Scratch {(currentNote.Direction > 0 ? "HAUT" : "BAS")} parfait !");
+                }
             }
         }
     }

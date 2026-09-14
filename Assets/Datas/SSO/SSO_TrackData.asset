@@ -15,4 +15,4 @@ MonoBehaviour:
   TrackAudio: {fileID: 8300000, guid: 9f2e827d911f96f4f8b29bb9b99ad866, type: 3}
   BPM: 130
   FirstBeatOffset: 0
-  DifficultyTolerance: 0.2
+  DifficultyTolerance: 0.5

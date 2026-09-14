@@ -17,7 +17,7 @@ public class KeyboardPlatterController : MonoBehaviour
 
     private void Update()
     {
-        float input = Input.GetAxisRaw("Horizontal");
+        float input = Input.GetAxisRaw("Vertical");
         
         if (input != 0f)
         {
