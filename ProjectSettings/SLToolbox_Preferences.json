@@ -1,0 +1,13 @@
+{
+    "defaultPath": "Assets/Scripts/Generated/",
+    "classPath": "Assets/Scripts/Generated/",
+    "ssoPath": "Assets/Scripts/Generated/",
+    "rsoPath": "Assets/Scripts/Generated/",
+    "rsePath": "Assets/Events/",
+    "assetSSOPath": "Assets/Data/SSO/",
+    "assetRSOPath": "Assets/Data/RSO/",
+    "assetRSEPath": "Assets/Data/Events/",
+    "COLOR_PREF_KEY": "RomainUTR_SLToolbox_StarColor",
+    "DEFAULT_HEX_COLOR": "#FFCA28",
+    "favoriteScenes": []
+}
