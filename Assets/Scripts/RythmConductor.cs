@@ -14,6 +14,7 @@ public class RythmConductor : MonoBehaviour
     [SerializeField] private KeyboardPlatterController PlayerPlatter;
     [SerializeField] private Transform ValidationZone;
     [SerializeField] private Transform NotesParent;
+    // public SoundData SFXTest;
 
     public float CurrentTrackTime => (float)_currentTrackTime;
 
@@ -108,6 +109,7 @@ public class RythmConductor : MonoBehaviour
         if (timeDifference > trackData.DifficultyTolerance)
         {
             NoteBehavior missedNote = _activeNotesQueue.Dequeue();
+            // AudioManager.Instance.PlayClipAt(SFXTest, transform.position);
             Destroy(missedNote.gameObject);
             Debug.LogError("MISS !");
             return;

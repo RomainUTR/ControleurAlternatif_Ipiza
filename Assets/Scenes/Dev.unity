@@ -167,6 +167,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &758893483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 758893485}
+  - component: {fileID: 758893484}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &758893484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758893483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9389848d539125b48a2fb0e88caf7acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  startingAudioObjectsCount: 20
+  transitionFadeOutDelay: 0.2
+  transitionFadeInDelay: 0.2
+  musicMixerGroup: {fileID: 2342504073929040114, guid: 8d786c1a4a3561e4b83c3bef742b8bb2, type: 2}
+  sfxMusicGroup: {fileID: 830788461332232019, guid: 8d786c1a4a3561e4b83c3bef742b8bb2, type: 2}
+  uiMusicGroup: {fileID: -6564511078619750276, guid: 8d786c1a4a3561e4b83c3bef742b8bb2, type: 2}
+  masterMusicGroup: {fileID: 24300002, guid: 8d786c1a4a3561e4b83c3bef742b8bb2, type: 2}
+--- !u!4 &758893485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758893483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.80201, y: -0.64447, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &847110768
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +482,7 @@ MonoBehaviour:
   trackData: {fileID: 11400000, guid: a0563aa7c610655488cab0e0067fa8f7, type: 2}
   PlayerPlatter: {fileID: 72345147}
   ValidationZone: {fileID: 847110769}
+  NotesParent: {fileID: 0}
   _bpm: 0
 --- !u!82 &1691768081
 AudioSource:
@@ -441,7 +493,7 @@ AudioSource:
   m_GameObject: {fileID: 1691768079}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2342504073929040114, guid: 8d786c1a4a3561e4b83c3bef742b8bb2, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -552,3 +604,4 @@ SceneRoots:
   - {fileID: 72345148}
   - {fileID: 1691768082}
   - {fileID: 847110769}
+  - {fileID: 758893485}
