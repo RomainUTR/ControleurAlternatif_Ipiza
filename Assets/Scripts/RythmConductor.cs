@@ -41,7 +41,7 @@ public class RythmConductor : MonoBehaviour
 
         _bpm = trackData.DivideBPM ? trackData.BPM / 2 : trackData.BPM;
 
-        _secondsPerBeat = 60f / _bpm;
+        _secondsPerBeat = (60f / _bpm) / 2f;
 
         _trackStartDspTime = AudioSettings.dspTime + lookAheadTime;
         _audioSource.PlayScheduled(_trackStartDspTime);
@@ -60,7 +60,19 @@ public class RythmConductor : MonoBehaviour
 
         while ((float)_currentTrackTime >= nextNoteSpawnTime && nextNoteSpawnTime <= _audioSource.clip.length)
         {
-            SpawnNote(nextNoteTargetTime);
+            if (_nextNoteIndex % 2 == 0)
+            {
+                float scratchDirection = ((_nextNoteIndex / 2) % 2 == 0) ? 1f : -1f;
+                SpawnNote(ScratchPrefab, nextNoteTargetTime, scratchDirection);
+            }
+            else
+            {
+                if (Random.value < BonusSpawnRate)
+                {
+                    SpawnNote(BonusPrefab, nextNoteTargetTime, 0f);
+                }
+            }
+
             _nextNoteIndex++;
 
             nextNoteTargetTime = trackData.FirstBeatOffset + (_nextNoteIndex * _secondsPerBeat);
@@ -87,17 +99,15 @@ public class RythmConductor : MonoBehaviour
         }
     }
 
-    private void SpawnNote(float targetTime)
+    private void SpawnNote(GameObject prefabToSpawn, float targetTime, float direction)
     {
-        GameObject prefabToSpawn = Random.value > BonusSpawnRate ? BonusPrefab : ScratchPrefab;
         GameObject newNote = Instantiate(prefabToSpawn, transform.position, Quaternion.identity, NotesParent);
 
         NoteBehavior noteScript = newNote.GetComponent<NoteBehavior>();
         if (noteScript != null)
         {
             float spawnTime = targetTime - lookAheadTime;
-            float scratchDirection = (_nextNoteIndex % 2 == 0) ? 1f : -1f;
-            noteScript.Initialize(transform.position, ValidationZone.position, spawnTime, targetTime, scratchDirection, this);
+            noteScript.Initialize(transform.position, ValidationZone.position, spawnTime, targetTime, direction, this);
         }
 
         _activeNotesQueue.Enqueue(noteScript);
