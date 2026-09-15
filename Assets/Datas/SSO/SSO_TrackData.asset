@@ -17,3 +17,8 @@ MonoBehaviour:
   FirstBeatOffset: 0
   DifficultyTolerance: 0.5
   DivideBPM: 1
+  SpecialEvents:
+  - Type: 1
+    Timecode: 10
+    Duration: 3
+    Direction: -1

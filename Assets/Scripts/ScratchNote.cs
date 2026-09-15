@@ -8,20 +8,35 @@ public class ScratchNote : NoteBehavior
     [SerializeField] private Sprite SpriteDown;
 
 
-    public override void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor)
+    public override void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration)
     {
         base.Initialize(startPos, targetPos, spawnTime, targetTime, direction, conductor);
 
         SR.sprite = (Direction > 0f) ? SpriteUp : SpriteDown;
     }
 
-    public override bool EvaluateInput(KeyboardPlatterController platter, float tolerance)
+    public override void EvaluateInput(KeyboardPlatterController platter, float tolerance, float currentTime)
     {
-        if (Mathf.Abs(platter.CurrentSpeed) > 0.1f && Mathf.Sign(platter.CurrentSpeed) == Mathf.Sign(Direction))
+        if (CurrentState == NoteState.Hit || CurrentState == NoteState.Miss) return;
+
+        float timeDifference = currentTime - TargetTime;
+
+        if (timeDifference > tolerance)
         {
-            float speedDifference = Mathf.Abs(1f - Mathf.Abs(platter.CurrentSpeed));
-            return speedDifference <= tolerance;
+            CurrentState = NoteState.Miss;
+            return;
         }
-        return false;
+
+        if (Mathf.Abs(timeDifference) <= tolerance)
+        {
+            if (Mathf.Abs(platter.CurrentSpeed) > 0.1f && Mathf.Sign(platter.CurrentSpeed) == Mathf.Sign(Direction))
+            {
+                float speedDifference = Mathf.Abs(1f - Mathf.Abs(platter.CurrentSpeed));
+                if (speedDifference <= tolerance)
+                {
+                    CurrentState = NoteState.Hit;
+                }
+            }
+        }
     }
 }

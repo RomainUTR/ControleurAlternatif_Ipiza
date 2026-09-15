@@ -17,6 +17,7 @@ public class RythmConductor : MonoBehaviour
     [SerializeField] private Transform NotesParent;
     [SerializeField] private GameObject ScratchPrefab;
     [SerializeField] private GameObject BonusPrefab;
+    [SerializeField] private GameObject HoldPrefab;
     // public SoundData SFXTest;
 
     public float CurrentTrackTime => (float)_currentTrackTime;
@@ -77,14 +78,24 @@ public class RythmConductor : MonoBehaviour
             {
                 _pauseProceduralUntil = nextEvent.Timecode + nextEvent.Duration;
                 Debug.LogWarning($"Apparition d'une note spéciale : {nextEvent.Type} ! Pause du procédural jusqu'à {_pauseProceduralUntil}s.");
+
+                switch (nextEvent.Type)
+                {
+                    case SpecialNoteType.Hold:
+                        SpawnNote(HoldPrefab, nextEvent.Timecode, nextEvent.Direction, nextEvent.Duration);
+                        break;
+
+                    case SpecialNoteType.Spam:
+                        // TODO : Spam note
+                        break;
+                }
+
                 _specialEventsQueue.Dequeue();
             }
         }
 
         while ((float)_currentTrackTime > _pauseProceduralUntil && (float)_currentTrackTime >= nextNoteSpawnTime && nextNoteSpawnTime <= _audioSource.clip.length)
         {
-            Debug.Log(nextNoteSpawnTime);
-
             if (_nextNoteIndex % 2 == 0)
             {
                 float scratchDirection = ((_nextNoteIndex / 2) % 2 == 0) ? 1f : -1f;
@@ -124,7 +135,7 @@ public class RythmConductor : MonoBehaviour
         }
     }
 
-    private void SpawnNote(GameObject prefabToSpawn, float targetTime, float direction)
+    private void SpawnNote(GameObject prefabToSpawn, float targetTime, float direction, float duration = 0f)
     {
         GameObject newNote = Instantiate(prefabToSpawn, transform.position, Quaternion.identity, NotesParent);
 
@@ -132,7 +143,7 @@ public class RythmConductor : MonoBehaviour
         if (noteScript != null)
         {
             float spawnTime = targetTime - lookAheadTime;
-            noteScript.Initialize(transform.position, ValidationZone.position, spawnTime, targetTime, direction, this);
+            noteScript.Initialize(transform.position, ValidationZone.position, spawnTime, targetTime, direction, this, duration);
         }
 
         _activeNotesQueue.Enqueue(noteScript);
@@ -143,25 +154,26 @@ public class RythmConductor : MonoBehaviour
         if (_activeNotesQueue.Count == 0) return;
 
         NoteBehavior currentNote = _activeNotesQueue.Peek();
-        float timeDifference = (float)_currentTrackTime - currentNote.TargetTime;
 
-        if (timeDifference > trackData.DifficultyTolerance)
-        {
-            NoteBehavior missedNote = _activeNotesQueue.Dequeue();
-            // AudioManager.Instance.PlayClipAt(SFXTest, transform.position);
-            Destroy(missedNote.gameObject);
-            Debug.LogError("MISS !");
-            return;
-        }
+        currentNote.EvaluateInput(PlayerPlatter, trackData.DifficultyTolerance, (float)_currentTrackTime);
 
-        if (Mathf.Abs(timeDifference) <= trackData.DifficultyTolerance)
+        switch (currentNote.CurrentState)
         {
-            if (currentNote.EvaluateInput(PlayerPlatter, trackData.DifficultyTolerance))
-            {
+            case NoteState.Hit:
                 NoteBehavior hitNote = _activeNotesQueue.Dequeue();
                 Destroy(hitNote.gameObject);
-                Debug.LogWarning("HIT ! Action validée !");
-            }
+                Debug.LogWarning("HIT !");
+                break;
+
+            case NoteState.Miss:
+                NoteBehavior missedNote = _activeNotesQueue.Dequeue();
+                Destroy(missedNote.gameObject);
+                Debug.LogError("MISS !");
+                break;
+
+            case NoteState.Pending:
+            case NoteState.Ongoing:
+                break;
         }
     }
 }

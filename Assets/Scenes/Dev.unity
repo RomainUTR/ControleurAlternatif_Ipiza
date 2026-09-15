@@ -434,6 +434,7 @@ MonoBehaviour:
   NotesParent: {fileID: 0}
   ScratchPrefab: {fileID: 692890493372091674, guid: 672eece468ec60748ab91df6cf8b3872, type: 3}
   BonusPrefab: {fileID: 692890493372091674, guid: e1d9cfda32b4af64caaf571abc0ff028, type: 3}
+  HoldPrefab: {fileID: 692890493372091674, guid: 4a6c1f45e68092f4eb3a5ff003084348, type: 3}
   _bpm: 0
 --- !u!82 &1691768081
 AudioSource:

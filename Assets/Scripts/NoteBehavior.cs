@@ -1,4 +1,13 @@
+using System;
 using UnityEngine;
+
+public enum NoteState
+{
+    Pending,
+    Ongoing,
+    Hit,
+    Miss
+}
 
 public abstract class NoteBehavior : MonoBehaviour
 {
@@ -8,13 +17,15 @@ public abstract class NoteBehavior : MonoBehaviour
 
     public float TargetTime {  get; private set; }
     public float Direction {  get; private set; }
+    public NoteState CurrentState { get; protected set; } = NoteState.Pending;
+    public float Duration { get; protected set; }
 
     private Vector3 _startPosition;
     private Vector3 _targetPosition;
     private float _spawnTime;
     private RythmConductor _conductor;
 
-    public virtual void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor)
+    public virtual void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration = 0f)
     {
         _startPosition = startPos;
         _targetPosition = targetPos;
@@ -33,12 +44,7 @@ public abstract class NoteBehavior : MonoBehaviour
         float progression = (currentTime - _spawnTime) / (TargetTime - _spawnTime);
 
         transform.position = Vector3.LerpUnclamped(_startPosition, _targetPosition, progression);
-
-        if (progression > 1.5f)
-        {
-            Destroy(gameObject);
-        }
     }
 
-    public abstract bool EvaluateInput(KeyboardPlatterController platter, float tolerance);
+    public abstract void EvaluateInput(KeyboardPlatterController platter, float tolerance, float currentTime);
 }

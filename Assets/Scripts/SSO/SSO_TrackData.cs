@@ -15,6 +15,9 @@ public struct SpecialEvent
     public SpecialNoteType Type;
     public float Timecode;
     public float Duration;
+
+    [InfoBox("1 = Haut, -1 = Bas")]
+    public float Direction;
 }
 
 [CreateAssetMenu(fileName = "SSO_TrackData", menuName = "Data/SSO/SSO_TrackData")]

@@ -7,15 +7,31 @@ public class BonusNote : NoteBehavior
     [SerializeField] private SpriteRenderer SR;
     [SerializeField] private Sprite[] SpriteList;
 
-    public override void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor)
+    public override void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration)
     {
         base.Initialize(startPos, targetPos, spawnTime, targetTime, direction, conductor);
 
         SR.sprite = SpriteList.GetRandom();
     }
 
-    public override bool EvaluateInput(KeyboardPlatterController platter, float tolerance)
+    public override void EvaluateInput(KeyboardPlatterController platter, float tolerance, float currentTime)
     {
-        return Input.GetKeyDown(KeyCode.Space);
+        if (CurrentState == NoteState.Hit || CurrentState == NoteState.Miss) return;
+
+        float timeDifference = currentTime - TargetTime;
+
+        if (timeDifference > tolerance)
+        {
+            CurrentState = NoteState.Miss;
+            return;
+        }
+
+        if (Mathf.Abs(timeDifference) <= tolerance)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                CurrentState = NoteState.Hit;
+            }
+        }
     }
 }
