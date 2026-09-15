@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 
 [RequireComponent(typeof(AudioSource))]
 public class RythmConductor : MonoBehaviour
@@ -9,7 +10,7 @@ public class RythmConductor : MonoBehaviour
     public GameObject notePrefab;
 
     [Header("References")]
-    [SerializeField] private SSO_TrackData trackData;
+    [SerializeField, InlineEditor] private SSO_TrackData trackData;
     [SerializeField] private KeyboardPlatterController PlayerPlatter;
     [SerializeField] private Transform ValidationZone;
 
@@ -20,6 +21,7 @@ public class RythmConductor : MonoBehaviour
     private double _currentTrackTime;
     private bool _isPlaying = false;
 
+    [ReadOnly] public float _bpm;
     private float _secondsPerBeat;
     private int _nextNoteIndex = 0;
 
@@ -32,7 +34,9 @@ public class RythmConductor : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _audioSource.clip = trackData.TrackAudio;
 
-        _secondsPerBeat = 60f / trackData.BPM;
+        _bpm = trackData.DivideBPM ? trackData.BPM / 2 : trackData.BPM;
+
+        _secondsPerBeat = 60f / _bpm;
 
         _trackStartDspTime = AudioSettings.dspTime + lookAheadTime;
         _audioSource.PlayScheduled(_trackStartDspTime);

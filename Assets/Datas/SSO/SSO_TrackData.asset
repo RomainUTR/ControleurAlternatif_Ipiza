@@ -16,3 +16,4 @@ MonoBehaviour:
   BPM: 130
   FirstBeatOffset: 0
   DifficultyTolerance: 0.5
+  DivideBPM: 1

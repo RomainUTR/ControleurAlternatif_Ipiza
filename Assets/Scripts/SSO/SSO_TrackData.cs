@@ -9,4 +9,6 @@ public class SSO_TrackData : ScriptableObject
     public float FirstBeatOffset = 0f;
 
     public float DifficultyTolerance = 0.2f;
+
+    public bool DivideBPM = false;
 }
