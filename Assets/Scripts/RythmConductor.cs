@@ -13,6 +13,7 @@ public class RythmConductor : MonoBehaviour
     [SerializeField, InlineEditor] private SSO_TrackData trackData;
     [SerializeField] private KeyboardPlatterController PlayerPlatter;
     [SerializeField] private Transform ValidationZone;
+    [SerializeField] private Transform NotesParent;
 
     public float CurrentTrackTime => (float)_currentTrackTime;
 
@@ -53,7 +54,7 @@ public class RythmConductor : MonoBehaviour
         float nextNoteTargetTime = trackData.FirstBeatOffset + (_nextNoteIndex * _secondsPerBeat);
         float nextNoteSpawnTime = nextNoteTargetTime - lookAheadTime;
 
-        while ((float)_currentTrackTime >= nextNoteSpawnTime)
+        while ((float)_currentTrackTime >= nextNoteSpawnTime && nextNoteSpawnTime <= _audioSource.clip.length)
         {
             SpawnNote(nextNoteTargetTime);
             _nextNoteIndex++;
@@ -63,11 +64,28 @@ public class RythmConductor : MonoBehaviour
         }
 
         CheckPlayerInput();
+
+        if (!_audioSource.isPlaying && _currentTrackTime > 0)
+        {
+            _isPlaying = false;
+
+            while(_activeNotesQueue.Count > 0)
+            {
+                NoteBehavior remainNote = _activeNotesQueue.Dequeue();
+
+                if (remainNote != null)
+                {
+                    Destroy(remainNote.gameObject);
+                }
+            }
+
+            Debug.Log("Fin de piste");
+        }
     }
 
     private void SpawnNote(float targetTime)
     {
-        GameObject newNote = Instantiate(notePrefab, transform.position, Quaternion.identity);
+        GameObject newNote = Instantiate(notePrefab, transform.position, Quaternion.identity, NotesParent);
 
         NoteBehavior noteScript = newNote.GetComponent<NoteBehavior>();
         if (noteScript != null)
