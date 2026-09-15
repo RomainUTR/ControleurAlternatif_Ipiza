@@ -31,10 +31,20 @@ public class RythmConductor : MonoBehaviour
     private int _nextNoteIndex = 0;
 
     private Queue<NoteBehavior> _activeNotesQueue = new Queue<NoteBehavior>();
+    private Queue<SpecialEvent> _specialEventsQueue = new Queue<SpecialEvent>();
+    private float _pauseProceduralUntil = 0f;
 
     private void Start()
     {
         if (trackData == null || trackData.TrackAudio == null) return;
+
+        if (trackData.SpecialEvents != null)
+        {
+            foreach (var specialEvent in trackData.SpecialEvents)
+            {
+                _specialEventsQueue.Enqueue(specialEvent);
+            }
+        }
 
         _audioSource = GetComponent<AudioSource>();
         _audioSource.clip = trackData.TrackAudio;
@@ -58,8 +68,23 @@ public class RythmConductor : MonoBehaviour
         float nextNoteTargetTime = trackData.FirstBeatOffset + (_nextNoteIndex * _secondsPerBeat);
         float nextNoteSpawnTime = nextNoteTargetTime - lookAheadTime;
 
-        while ((float)_currentTrackTime >= nextNoteSpawnTime && nextNoteSpawnTime <= _audioSource.clip.length)
+        if (_specialEventsQueue.Count > 0)
         {
+            SpecialEvent nextEvent = _specialEventsQueue.Peek();
+            float eventSpawnTime = nextEvent.Timecode - lookAheadTime;
+
+            if ((float)_currentTrackTime >= eventSpawnTime)
+            {
+                _pauseProceduralUntil = nextEvent.Timecode + nextEvent.Duration;
+                Debug.LogWarning($"Apparition d'une note spéciale : {nextEvent.Type} ! Pause du procédural jusqu'à {_pauseProceduralUntil}s.");
+                _specialEventsQueue.Dequeue();
+            }
+        }
+
+        while ((float)_currentTrackTime > _pauseProceduralUntil && (float)_currentTrackTime >= nextNoteSpawnTime && nextNoteSpawnTime <= _audioSource.clip.length)
+        {
+            Debug.Log(nextNoteSpawnTime);
+
             if (_nextNoteIndex % 2 == 0)
             {
                 float scratchDirection = ((_nextNoteIndex / 2) % 2 == 0) ? 1f : -1f;
