@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3152123678002626543}
-  - component: {fileID: 8568437962402745333}
+  - component: {fileID: 556072930762110650}
   - component: {fileID: 3974820048165283492}
   m_Layer: 0
-  m_Name: Notes
+  m_Name: NotesBonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +33,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8568437962402745333
+--- !u!114 &556072930762110650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,12 +42,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 692890493372091674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 137d783184823ec4e8502103dc5af86d, type: 3}
+  m_Script: {fileID: 11500000, guid: ac7eedf7d8f6b654f823df41049ae1df, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScratchNote
+  m_EditorClassIdentifier: Assembly-CSharp::BonusNote
   SR: {fileID: 3974820048165283492}
-  SpriteUp: {fileID: 21300000, guid: dc500cdd49a355f47a06571ea7ac75f1, type: 3}
-  SpriteDown: {fileID: 21300000, guid: 57b4948be96bd6845abebd967bbf440c, type: 3}
+  SpriteList:
+  - {fileID: 21300000, guid: 30105f8d396932c4db02546c618af5cf, type: 3}
+  - {fileID: 21300000, guid: 9a880a85797e94145bddb4f398b1fbc2, type: 3}
 --- !u!212 &3974820048165283492
 SpriteRenderer:
   serializedVersion: 3

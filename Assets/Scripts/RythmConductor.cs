@@ -1,19 +1,22 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using RomainUTR.SLToolbox;
 
 [RequireComponent(typeof(AudioSource))]
 public class RythmConductor : MonoBehaviour
 {
     [Header("Settings")]
     public float lookAheadTime = 2f;
-    public GameObject notePrefab;
+    [SerializeField, Range(0f, 1f)] private float BonusSpawnRate;
 
     [Header("References")]
     [SerializeField, InlineEditor] private SSO_TrackData trackData;
     [SerializeField] private KeyboardPlatterController PlayerPlatter;
     [SerializeField] private Transform ValidationZone;
     [SerializeField] private Transform NotesParent;
+    [SerializeField] private GameObject ScratchPrefab;
+    [SerializeField] private GameObject BonusPrefab;
     // public SoundData SFXTest;
 
     public float CurrentTrackTime => (float)_currentTrackTime;
@@ -86,7 +89,8 @@ public class RythmConductor : MonoBehaviour
 
     private void SpawnNote(float targetTime)
     {
-        GameObject newNote = Instantiate(notePrefab, transform.position, Quaternion.identity, NotesParent);
+        GameObject prefabToSpawn = Random.value > BonusSpawnRate ? BonusPrefab : ScratchPrefab;
+        GameObject newNote = Instantiate(prefabToSpawn, transform.position, Quaternion.identity, NotesParent);
 
         NoteBehavior noteScript = newNote.GetComponent<NoteBehavior>();
         if (noteScript != null)
@@ -117,16 +121,11 @@ public class RythmConductor : MonoBehaviour
 
         if (Mathf.Abs(timeDifference) <= trackData.DifficultyTolerance)
         {
-            if (Mathf.Abs(PlayerPlatter.CurrentSpeed) > 0.1f && Mathf.Sign(PlayerPlatter.CurrentSpeed) == Mathf.Sign(currentNote.Direction))
+            if (currentNote.EvaluateInput(PlayerPlatter, trackData.DifficultyTolerance))
             {
-                float speedDifference = Mathf.Abs(1f - Mathf.Abs(PlayerPlatter.CurrentSpeed));
-
-                if (speedDifference <= trackData.DifficultyTolerance)
-                {
-                    NoteBehavior hitNote = _activeNotesQueue.Dequeue();
-                    Destroy(hitNote.gameObject);
-                    Debug.LogWarning($"HIT ! Scratch {(currentNote.Direction > 0 ? "HAUT" : "BAS")} parfait !");
-                }
+                NoteBehavior hitNote = _activeNotesQueue.Dequeue();
+                Destroy(hitNote.gameObject);
+                Debug.LogWarning("HIT ! Action validée !");
             }
         }
     }

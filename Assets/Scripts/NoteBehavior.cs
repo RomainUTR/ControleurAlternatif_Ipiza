@@ -1,14 +1,8 @@
 using UnityEngine;
 
-public class NoteBehavior : MonoBehaviour
+public abstract class NoteBehavior : MonoBehaviour
 {
     //[Header("Settings")]
-
-    [Header("References")]
-    [SerializeField] private SpriteRenderer SR;
-    [SerializeField] private Sprite SpriteUp;
-    [SerializeField] private Sprite SpriteDown;
-
     //[Header("Input")]
     //[Header("Output")]
 
@@ -20,7 +14,7 @@ public class NoteBehavior : MonoBehaviour
     private float _spawnTime;
     private RythmConductor _conductor;
 
-    public void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor)
+    public virtual void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor)
     {
         _startPosition = startPos;
         _targetPosition = targetPos;
@@ -29,7 +23,6 @@ public class NoteBehavior : MonoBehaviour
         _conductor = conductor;
 
         Direction = direction;
-        SR.sprite = (Direction > 0f) ? SpriteUp : SpriteDown;
     }
 
     private void Update()
@@ -46,4 +39,6 @@ public class NoteBehavior : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public abstract bool EvaluateInput(KeyboardPlatterController platter, float tolerance);
 }
