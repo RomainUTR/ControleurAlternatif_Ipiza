@@ -14,6 +14,8 @@ public class HoldNote : NoteBehavior
     //[Header("Input")]
     //[Header("Output")]
 
+    private float _fallSpeed;
+
     public override void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration = 0f, int requiredHits = 0)
     {
         base.Initialize(startPos, targetPos, spawnTime, targetTime, direction, conductor, duration);
@@ -25,8 +27,10 @@ public class HoldNote : NoteBehavior
         {
             float distance = Vector3.Distance(startPos, targetPos);
             float timeToFall = targetTime - spawnTime;
-            float fallSpeed = distance / timeToFall;
-            float trailLength = fallSpeed * Duration;
+            
+            _fallSpeed = distance / timeToFall;
+
+            float trailLength = _fallSpeed * Duration;
 
             TrailTransform.localScale = new Vector3(trailLength, 0.2f, 1f);
         }
@@ -58,6 +62,14 @@ public class HoldNote : NoteBehavior
 
             case NoteState.Ongoing:
                 SR.color = Color.yellow;
+
+                if (TrailTransform != null)
+                {
+                    float remainingTime = (TargetTime + Duration) - currentTime;
+                    float currentTrailLength = _fallSpeed * Mathf.Max(0, remainingTime);
+
+                    TrailTransform.localScale = new Vector3(currentTrailLength, 0.2f, 1f);
+                }
 
                 if (currentTime >= TargetTime + Duration)
                 {

@@ -43,6 +43,11 @@ public abstract class NoteBehavior : MonoBehaviour
         float currentTime = _conductor.CurrentTrackTime;
         float progression = (currentTime - _spawnTime) / (TargetTime - _spawnTime);
 
+        if (CurrentState == NoteState.Ongoing)
+        {
+            progression = 1f;
+        }
+
         transform.position = Vector3.LerpUnclamped(_startPosition, _targetPosition, progression);
     }
 

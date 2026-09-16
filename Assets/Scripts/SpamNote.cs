@@ -7,12 +7,14 @@ public class SpamNote : NoteBehavior
     [Header("References")]
     [SerializeField] private SpriteRenderer SR;
     [SerializeField] private Transform TrailTransform;
+    [SerializeField] private TMP_Text CounterText;
 
     //[Header("Input")]
     //[Header("Output")]
 
     private int _requiredHits;
     private int _currentHits;
+    private float _fallSpeed;
 
     public override void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration = 0, int requiredHits = 0)
     {
@@ -24,11 +26,15 @@ public class SpamNote : NoteBehavior
         {
             float distance = Vector3.Distance(startPos, targetPos);
             float timeToFall = targetTime - spawnTime;
-            float fallSpeed = distance / timeToFall;
-            float trailLength = fallSpeed * Duration;
 
-            TrailTransform.localScale = new Vector3(trailLength, 1f, 1f);
+            _fallSpeed = distance / timeToFall;
+
+            float trailLength = _fallSpeed * Duration;
+
+            TrailTransform.localScale = new Vector3(trailLength, 0.2f, 1f);
         }
+
+        CounterText.text = _requiredHits.ToString();
     }
 
     public override void EvaluateInput(KeyboardPlatterController platter, float tolerance, float currentTime)
@@ -45,27 +51,40 @@ public class SpamNote : NoteBehavior
                 break;
 
             case NoteState.Ongoing:
-                if (currentTime > TargetTime + Duration)
+                if (TrailTransform != null)
                 {
-                    CurrentState = NoteState.Miss;
-                    Debug.Log("You lose the spam note");
-                    return;
+                    float remainingTime = (TargetTime + Duration) - currentTime;
+                    float currentTrailLength = _fallSpeed * Mathf.Max(0, remainingTime);
+
+                    TrailTransform.localScale = new Vector3(currentTrailLength, 0.2f, 1f);
                 }
 
                 if (Input.GetKeyDown(KeyCode.Backspace))
                 {
                     _currentHits++;
-                    Debug.Log(_currentHits);
+                    CounterText.text = Mathf.Max(0, _requiredHits - _currentHits).ToString();
 
-                    SR.color = Color.Lerp(Color.white, Color.red, (float)_currentHits / _requiredHits);
-
-                    if (_currentHits >= _requiredHits)
+                    if (_currentHits < _requiredHits)
                     {
-                        CurrentState = NoteState.Hit;
-                        Debug.Log("You hit the spam note");
+                        SR.color = Color.Lerp(Color.white, Color.red, (float)_currentHits / _requiredHits);
+                    }
+                    else
+                    {
+                        SR.color = Color.yellow; // Bonus
                     }
                 }
 
+                if (currentTime > TargetTime + Duration)
+                {
+                    if (_currentHits >= _requiredHits)
+                    {
+                        CurrentState = NoteState.Hit;
+                    }
+                    else
+                    {
+                        CurrentState = NoteState.Miss;
+                    }
+                }
                 break;
         }
     }
