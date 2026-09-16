@@ -19,41 +19,34 @@ public class RythmConductor : MonoBehaviour
     [SerializeField] private GameObject BonusPrefab;
     [SerializeField] private GameObject HoldPrefab;
     [SerializeField] private GameObject SpamPrefab;
-    // public SoundData SFXTest;
 
     public float CurrentTrackTime => (float)_currentTrackTime;
 
     private AudioSource _audioSource;
+
+    // On préfère double pour la précision des décimales
     private double _trackStartDspTime;
     private double _currentTrackTime;
-    private bool _isPlaying = false;
 
-    [ReadOnly] public float _bpm;
+    private bool _isPlaying = false;
+    private float _bpm;
     private float _secondsPerBeat;
-    private int _nextNoteIndex = 0;
+
+    private int _currentDataNoteIndex = 0;
+    private float _nextBonusTargetTime = 0f;
 
     private Queue<NoteBehavior> _activeNotesQueue = new Queue<NoteBehavior>();
-    private Queue<SpecialEvent> _specialEventsQueue = new Queue<SpecialEvent>();
-    private float _pauseProceduralUntil = 0f;
 
     private void Start()
     {
         if (trackData == null || trackData.TrackAudio == null) return;
 
-        if (trackData.SpecialEvents != null)
-        {
-            foreach (var specialEvent in trackData.SpecialEvents)
-            {
-                _specialEventsQueue.Enqueue(specialEvent);
-            }
-        }
-
         _audioSource = GetComponent<AudioSource>();
         _audioSource.clip = trackData.TrackAudio;
+        _bpm = trackData.DivideBPM ? trackData.BPM / 2f : trackData.BPM;
+        _secondsPerBeat = 60f / _bpm;
 
-        _bpm = trackData.DivideBPM ? trackData.BPM / 2 : trackData.BPM;
-
-        _secondsPerBeat = (60f / _bpm) / 2f;
+        _nextBonusTargetTime = trackData.FirstBeatOffset + (_secondsPerBeat / 2f);
 
         _trackStartDspTime = AudioSettings.dspTime + lookAheadTime;
         _audioSource.PlayScheduled(_trackStartDspTime);
@@ -67,78 +60,66 @@ public class RythmConductor : MonoBehaviour
 
         _currentTrackTime = AudioSettings.dspTime - _trackStartDspTime;
 
-        float nextNoteTargetTime = trackData.FirstBeatOffset + (_nextNoteIndex * _secondsPerBeat);
-        float nextNoteSpawnTime = nextNoteTargetTime - lookAheadTime;
-
-        if (_specialEventsQueue.Count > 0)
-        {
-            SpecialEvent nextEvent = _specialEventsQueue.Peek();
-            float eventSpawnTime = nextEvent.Timecode - lookAheadTime;
-
-            if ((float)_currentTrackTime >= eventSpawnTime)
-            {
-                _pauseProceduralUntil = nextEvent.Timecode + nextEvent.Duration;
-                Debug.LogWarning($"Apparition d'une note spéciale : {nextEvent.Type} ! Pause du procédural jusqu'à {_pauseProceduralUntil}s.");
-
-                switch (nextEvent.Type)
-                {
-                    case SpecialNoteType.Hold:
-                        SpawnNote(HoldPrefab, nextEvent.Timecode, nextEvent.Direction, nextEvent.Duration);
-                        break;
-
-                    case SpecialNoteType.Spam:
-                        SpawnNote(SpamPrefab, nextEvent.Timecode, nextEvent.Direction, nextEvent.Duration, nextEvent.RequiredHits);
-                        break;
-                }
-
-                _specialEventsQueue.Dequeue();
-            }
-        }
-
-        while ((float)_currentTrackTime >= nextNoteSpawnTime && nextNoteSpawnTime <= _audioSource.clip.length)
-        {
-            if (nextNoteTargetTime < _pauseProceduralUntil)
-            {
-                _nextNoteIndex++;
-                nextNoteTargetTime = trackData.FirstBeatOffset + (_nextNoteIndex * _secondsPerBeat);
-                nextNoteSpawnTime = nextNoteTargetTime - lookAheadTime;
-                continue;
-            }
-
-            if (_nextNoteIndex % 2 == 0)
-            {
-                float scratchDirection = ((_nextNoteIndex / 2) % 2 == 0) ? 1f : -1f;
-                SpawnNote(ScratchPrefab, nextNoteTargetTime, scratchDirection);
-            }
-            else
-            {
-                if (Random.value < BonusSpawnRate)
-                {
-                    SpawnNote(BonusPrefab, nextNoteTargetTime, 0f);
-                }
-            }
-
-            _nextNoteIndex++;
-            nextNoteTargetTime = trackData.FirstBeatOffset + (_nextNoteIndex * _secondsPerBeat);
-            nextNoteSpawnTime = nextNoteTargetTime - lookAheadTime;
-        }
-
+        ProcessDataNotes();
+        ProcessProceduralBonuses();
         CheckPlayerInput();
+        CheckTrackEnd();
+    }
 
-        if (!_audioSource.isPlaying && _currentTrackTime > 0)
+    private void ProcessDataNotes()
+    {
+        while (_currentDataNoteIndex < trackData.TrackNotes.Count)
+        {
+            NoteEvent nextNote = trackData.TrackNotes[_currentDataNoteIndex];
+            float targetTimeInSeconds = trackData.FirstBeatOffset + (nextNote.TargetBeat * _secondsPerBeat);
+            float spawnTime = targetTimeInSeconds - lookAheadTime;
+
+            if ((float)_currentTrackTime < spawnTime) break;
+
+            switch (nextNote.Type)
+            {
+                case NoteType.Scratch:
+                    SpawnNote(ScratchPrefab, targetTimeInSeconds, nextNote.Direction);
+                    break;
+                case NoteType.Bonus:
+                    SpawnNote(BonusPrefab, targetTimeInSeconds, 0f);
+                    break;
+                case NoteType.Hold:
+                    SpawnNote(HoldPrefab, targetTimeInSeconds, nextNote.Direction, nextNote.Duration);
+                    break;
+                case NoteType.Spam:
+                    SpawnNote(SpamPrefab, targetTimeInSeconds, nextNote.Direction, nextNote.Duration, nextNote.RequiredHits);
+                    break;
+            }
+
+            _currentDataNoteIndex++;
+        }
+    }
+
+    private void ProcessProceduralBonuses()
+    {
+        if ((float)_currentTrackTime >= _nextBonusTargetTime - lookAheadTime)
+        {
+            if (Random.value < BonusSpawnRate)
+            {
+                SpawnNote(BonusPrefab, _nextBonusTargetTime, 0f);
+            }
+
+            _nextBonusTargetTime += _secondsPerBeat;
+        }
+    }
+
+    private void CheckTrackEnd()
+    {
+        if (_currentTrackTime >= _audioSource.clip.length && _isPlaying)
         {
             _isPlaying = false;
 
-            while(_activeNotesQueue.Count > 0)
+            while (_activeNotesQueue.Count > 0)
             {
                 NoteBehavior remainNote = _activeNotesQueue.Dequeue();
-
-                if (remainNote != null)
-                {
-                    Destroy(remainNote.gameObject);
-                }
+                if (remainNote != null) Destroy(remainNote.gameObject);
             }
-
             Debug.Log("Fin de piste");
         }
     }
@@ -179,7 +160,6 @@ public class RythmConductor : MonoBehaviour
                 Debug.LogError("MISS !");
                 break;
 
-            case NoteState.Pending:
             case NoteState.Ongoing:
                 break;
         }

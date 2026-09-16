@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RythmConductor
   lookAheadTime: 2
-  BonusSpawnRate: 0.2
+  BonusSpawnRate: 0.05
   trackData: {fileID: 11400000, guid: a0563aa7c610655488cab0e0067fa8f7, type: 2}
   PlayerPlatter: {fileID: 72345147}
   ValidationZone: {fileID: 847110769}
@@ -469,7 +469,6 @@ MonoBehaviour:
   BonusPrefab: {fileID: 692890493372091674, guid: e1d9cfda32b4af64caaf571abc0ff028, type: 3}
   HoldPrefab: {fileID: 692890493372091674, guid: 4a6c1f45e68092f4eb3a5ff003084348, type: 3}
   SpamPrefab: {fileID: 692890493372091674, guid: ad366914655cd6b4f9708bf9c84dd55f, type: 3}
-  _bpm: 0
 --- !u!82 &1691768081
 AudioSource:
   m_ObjectHideFlags: 0
