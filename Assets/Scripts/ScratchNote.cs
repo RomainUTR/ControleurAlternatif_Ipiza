@@ -8,7 +8,7 @@ public class ScratchNote : NoteBehavior
     [SerializeField] private Sprite SpriteDown;
 
 
-    public override void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration)
+    public override void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration, int requiredHits = 0)
     {
         base.Initialize(startPos, targetPos, spawnTime, targetTime, direction, conductor);
 

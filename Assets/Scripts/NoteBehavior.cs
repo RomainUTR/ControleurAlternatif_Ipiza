@@ -25,7 +25,7 @@ public abstract class NoteBehavior : MonoBehaviour
     private float _spawnTime;
     private RythmConductor _conductor;
 
-    public virtual void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration = 0f)
+    public virtual void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration = 0f, int requiredHits = 0)
     {
         _startPosition = startPos;
         _targetPosition = targetPos;

@@ -22,3 +22,9 @@ MonoBehaviour:
     Timecode: 10
     Duration: 3
     Direction: -1
+    RequiredHits: 0
+  - Type: 0
+    Timecode: 20
+    Duration: 5
+    Direction: 1
+    RequiredHits: 5

@@ -9,14 +9,17 @@ public class HoldNote : NoteBehavior
     [Header("References")]
     [SerializeField] private SpriteRenderer SR;
     [SerializeField] private Transform TrailTransform;
+    [SerializeField] private Sprite SpriteUp, SpriteDown;
 
     //[Header("Input")]
     //[Header("Output")]
 
-    public override void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration = 0f)
+    public override void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration = 0f, int requiredHits = 0)
     {
         base.Initialize(startPos, targetPos, spawnTime, targetTime, direction, conductor, duration);
         Duration = duration;
+
+        SR.sprite = (Direction > 0f) ? SpriteUp : SpriteDown;
 
         if (TrailTransform != null)
         {

@@ -18,6 +18,7 @@ public class RythmConductor : MonoBehaviour
     [SerializeField] private GameObject ScratchPrefab;
     [SerializeField] private GameObject BonusPrefab;
     [SerializeField] private GameObject HoldPrefab;
+    [SerializeField] private GameObject SpamPrefab;
     // public SoundData SFXTest;
 
     public float CurrentTrackTime => (float)_currentTrackTime;
@@ -86,7 +87,7 @@ public class RythmConductor : MonoBehaviour
                         break;
 
                     case SpecialNoteType.Spam:
-                        // TODO : Spam note
+                        SpawnNote(SpamPrefab, nextEvent.Timecode, nextEvent.Direction, nextEvent.Duration, nextEvent.RequiredHits);
                         break;
                 }
 
@@ -142,7 +143,7 @@ public class RythmConductor : MonoBehaviour
         }
     }
 
-    private void SpawnNote(GameObject prefabToSpawn, float targetTime, float direction, float duration = 0f)
+    private void SpawnNote(GameObject prefabToSpawn, float targetTime, float direction, float duration = 0f, int requiredHits = 0)
     {
         GameObject newNote = Instantiate(prefabToSpawn, transform.position, Quaternion.identity, NotesParent);
 
@@ -150,7 +151,7 @@ public class RythmConductor : MonoBehaviour
         if (noteScript != null)
         {
             float spawnTime = targetTime - lookAheadTime;
-            noteScript.Initialize(transform.position, ValidationZone.position, spawnTime, targetTime, direction, this, duration);
+            noteScript.Initialize(transform.position, ValidationZone.position, spawnTime, targetTime, direction, this, duration, requiredHits);
         }
 
         _activeNotesQueue.Enqueue(noteScript);

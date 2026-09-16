@@ -18,6 +18,7 @@ public struct SpecialEvent
 
     [InfoBox("1 = Haut, -1 = Bas")]
     public float Direction;
+    public int RequiredHits;
 }
 
 [CreateAssetMenu(fileName = "SSO_TrackData", menuName = "Data/SSO/SSO_TrackData")]
