@@ -16,6 +16,8 @@ public class SpamNote : NoteBehavior
     private int _currentHits;
     private float _fallSpeed;
 
+    private SpriteRenderer _trailSR;
+
     public override void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration = 0, int requiredHits = 0)
     {
         base.Initialize(startPos, targetPos, spawnTime, targetTime, direction, conductor, duration, requiredHits);
@@ -32,6 +34,7 @@ public class SpamNote : NoteBehavior
             float trailLength = _fallSpeed * Duration;
 
             TrailTransform.localScale = new Vector3(trailLength, 0.2f, 1f);
+            _trailSR = TrailTransform.gameObject.GetComponent<SpriteRenderer>();
         }
 
         CounterText.text = _requiredHits.ToString();
@@ -67,10 +70,12 @@ public class SpamNote : NoteBehavior
                     if (_currentHits < _requiredHits)
                     {
                         SR.color = Color.Lerp(Color.white, Color.red, (float)_currentHits / _requiredHits);
+                        _trailSR.color = Color.Lerp(Color.white, Color.red, (float)_currentHits / _requiredHits);
                     }
                     else
                     {
                         SR.color = Color.yellow; // Bonus
+                        _trailSR.color = Color.yellow;
                     }
                 }
 
