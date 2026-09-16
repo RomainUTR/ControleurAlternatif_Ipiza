@@ -94,8 +94,16 @@ public class RythmConductor : MonoBehaviour
             }
         }
 
-        while ((float)_currentTrackTime > _pauseProceduralUntil && (float)_currentTrackTime >= nextNoteSpawnTime && nextNoteSpawnTime <= _audioSource.clip.length)
+        while ((float)_currentTrackTime >= nextNoteSpawnTime && nextNoteSpawnTime <= _audioSource.clip.length)
         {
+            if (nextNoteTargetTime < _pauseProceduralUntil)
+            {
+                _nextNoteIndex++;
+                nextNoteTargetTime = trackData.FirstBeatOffset + (_nextNoteIndex * _secondsPerBeat);
+                nextNoteSpawnTime = nextNoteTargetTime - lookAheadTime;
+                continue;
+            }
+
             if (_nextNoteIndex % 2 == 0)
             {
                 float scratchDirection = ((_nextNoteIndex / 2) % 2 == 0) ? 1f : -1f;
@@ -110,7 +118,6 @@ public class RythmConductor : MonoBehaviour
             }
 
             _nextNoteIndex++;
-
             nextNoteTargetTime = trackData.FirstBeatOffset + (_nextNoteIndex * _secondsPerBeat);
             nextNoteSpawnTime = nextNoteTargetTime - lookAheadTime;
         }

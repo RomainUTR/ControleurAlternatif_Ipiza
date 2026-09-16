@@ -8,6 +8,7 @@ public class HoldNote : NoteBehavior
 
     [Header("References")]
     [SerializeField] private SpriteRenderer SR;
+    [SerializeField] private Transform TrailTransform;
 
     //[Header("Input")]
     //[Header("Output")]
@@ -16,6 +17,16 @@ public class HoldNote : NoteBehavior
     {
         base.Initialize(startPos, targetPos, spawnTime, targetTime, direction, conductor, duration);
         Duration = duration;
+
+        if (TrailTransform != null)
+        {
+            float distance = Vector3.Distance(startPos, targetPos);
+            float timeToFall = targetTime - spawnTime;
+            float fallSpeed = distance / timeToFall;
+            float trailLength = fallSpeed * Duration;
+
+            TrailTransform.localScale = new Vector3(trailLength, 0.2f, 1f);
+        }
     }
 
     public override void EvaluateInput(KeyboardPlatterController platter, float tolerance, float currentTime)
