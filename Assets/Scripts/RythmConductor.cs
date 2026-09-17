@@ -34,8 +34,9 @@ public class RythmConductor : MonoBehaviour
 
     private int _currentDataNoteIndex = 0;
     private float _nextBonusTargetTime = 0f;
+    private float _pauseProceduralUntil = 0f;
 
-    private Queue<NoteBehavior> _activeNotesQueue = new Queue<NoteBehavior>();
+    private List<NoteBehavior> _activeNotes = new List<NoteBehavior>();
 
     private void Start()
     {
@@ -76,6 +77,11 @@ public class RythmConductor : MonoBehaviour
 
             if ((float)_currentTrackTime < spawnTime) break;
 
+            if (nextNote.Duration> 0)
+            {
+                _pauseProceduralUntil = targetTimeInSeconds + nextNote.Duration;
+            }
+
             switch (nextNote.Type)
             {
                 case NoteType.Scratch:
@@ -98,6 +104,12 @@ public class RythmConductor : MonoBehaviour
 
     private void ProcessProceduralBonuses()
     {
+        if (_nextBonusTargetTime < _pauseProceduralUntil)
+        {
+            _nextBonusTargetTime += _secondsPerBeat;
+            return;
+        }
+
         if ((float)_currentTrackTime >= _nextBonusTargetTime - lookAheadTime)
         {
             if (Random.value < BonusSpawnRate)
@@ -115,11 +127,11 @@ public class RythmConductor : MonoBehaviour
         {
             _isPlaying = false;
 
-            while (_activeNotesQueue.Count > 0)
+            foreach (NoteBehavior remainNote in _activeNotes)
             {
-                NoteBehavior remainNote = _activeNotesQueue.Dequeue();
                 if (remainNote != null) Destroy(remainNote.gameObject);
             }
+            _activeNotes.Clear();
             Debug.Log("Fin de piste");
         }
     }
@@ -135,33 +147,33 @@ public class RythmConductor : MonoBehaviour
             noteScript.Initialize(transform.position, ValidationZone.position, spawnTime, targetTime, direction, this, duration, requiredHits);
         }
 
-        _activeNotesQueue.Enqueue(noteScript);
+        _activeNotes.Add(noteScript);
     }
 
     private void CheckPlayerInput()
     {
-        if (_activeNotesQueue.Count == 0) return;
-
-        NoteBehavior currentNote = _activeNotesQueue.Peek();
-
-        currentNote.EvaluateInput(PlayerPlatter, trackData.DifficultyTolerance, (float)_currentTrackTime);
-
-        switch (currentNote.CurrentState)
+        for (int i = 0; i < _activeNotes.Count; i++)
         {
-            case NoteState.Hit:
-                NoteBehavior hitNote = _activeNotesQueue.Dequeue();
-                Destroy(hitNote.gameObject);
+            NoteBehavior note = _activeNotes[i];
+            note.EvaluateInput(PlayerPlatter, trackData.DifficultyTolerance, (float)_currentTrackTime);
+
+            if (note.CurrentState == NoteState.Hit)
+            {
                 Debug.LogWarning("HIT !");
-                break;
+                PlayerPlatter.ConsumeInput();
 
-            case NoteState.Miss:
-                NoteBehavior missedNote = _activeNotesQueue.Dequeue();
-                currentNote.TriggerMissFeedback((float)CurrentTrackTime);
+                Destroy(note.gameObject);
+                _activeNotes.RemoveAt(i);
+                break;
+            }
+            else if (note.CurrentState == NoteState.Miss)
+            {
                 Debug.LogError("MISS !");
-                break;
+                note.TriggerMissFeedback((float)CurrentTrackTime);
+                _activeNotes.RemoveAt(i);
 
-            case NoteState.Ongoing:
-                break;
+                i--;
+            }
         }
     }
 }

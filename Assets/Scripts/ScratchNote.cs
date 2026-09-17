@@ -29,13 +29,9 @@ public class ScratchNote : NoteBehavior
 
         if (Mathf.Abs(timeDifference) <= tolerance)
         {
-            if (Mathf.Abs(platter.CurrentSpeed) > 0.1f && Mathf.Sign(platter.CurrentSpeed) == Mathf.Sign(Direction))
+            if (!platter.IsConsumed && Mathf.Abs(platter.CurrentSpeed) > 0.1f && Mathf.Sign(platter.CurrentSpeed) == Mathf.Sign(Direction))
             {
-                float speedDifference = Mathf.Abs(1f - Mathf.Abs(platter.CurrentSpeed));
-                if (speedDifference <= tolerance)
-                {
-                    CurrentState = NoteState.Hit;
-                }
+                CurrentState = NoteState.Hit;
             }
         }
     }

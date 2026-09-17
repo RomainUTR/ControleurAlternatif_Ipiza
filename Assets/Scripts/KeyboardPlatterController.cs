@@ -15,18 +15,34 @@ public class KeyboardPlatterController : MonoBehaviour
     [ReadOnly]
     public float CurrentSpeed = 0f;
 
+    public bool IsConsumed {  get; private set; }
+
+    private float _lastInput = 0f;
+
     private void Update()
     {
         float input = Input.GetAxisRaw("Vertical");
-        
+
+        if (input != _lastInput)
+        {
+            IsConsumed = false;
+        }
+        _lastInput = input;
+
         if (input != 0f)
         {
             CurrentSpeed += input * Acceleration * Time.deltaTime;
-        } else
+        }
+        else
         {
             CurrentSpeed = Mathf.MoveTowards(CurrentSpeed, 0f, Friction * Time.deltaTime);
         }
 
         CurrentSpeed = Mathf.Clamp(CurrentSpeed, -MaxSpeed, MaxSpeed);
+    }
+
+    public void ConsumeInput()
+    {
+        IsConsumed = true;
     }
 }
