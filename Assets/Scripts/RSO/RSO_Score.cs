@@ -4,14 +4,20 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "RSO_Score", menuName = "Data/RSO/RSO_Score")]
 public class RSO_Score : ScriptableObject
 {
-    [Header("Runtime Value")]
+    [Header("Initial Value")]
     public float InitialScoreValue;
-    
-    [ReadOnly]
-    public float RuntimeScore;
+    public int InitialComboValue;
+    public float InitialMultiplierValue;
+
+    [Header("Runtime Value")]
+    [ReadOnly] public float RuntimeScore;
+    [ReadOnly] public int RuntimeCombo;
+    [ReadOnly] public float RuntimeMultiplier;
 
     private void OnEnable()
     {
         RuntimeScore = InitialScoreValue;
+        RuntimeCombo = InitialComboValue;
+        RuntimeMultiplier = InitialMultiplierValue;
     }
 }

@@ -19,6 +19,9 @@ public class RythmConductor : MonoBehaviour
     [SerializeField] private GameObject BonusPrefab;
     [SerializeField] private GameObject HoldPrefab;
     [SerializeField] private GameObject SpamPrefab;
+    [SerializeField] private RSE_RefreshUI RefreshUI;
+    [SerializeField] private RSO_Score Score;
+    [SerializeField] private SSO_ScoreData ScoreData;
 
     public float CurrentTrackTime => (float)_currentTrackTime;
 
@@ -161,6 +164,11 @@ public class RythmConductor : MonoBehaviour
                 PlayerPlatter.ConsumeInput();
                 note.TryToScoring();
 
+                Score.RuntimeMultiplier += ScoreData.MultiplierByComboUnit;
+                Score.RuntimeCombo++;
+
+                RefreshUI.Raise();
+
                 Destroy(note.gameObject);
                 _activeNotes.RemoveAt(i);
                 break;
@@ -168,6 +176,12 @@ public class RythmConductor : MonoBehaviour
             else if (note.CurrentState == NoteState.Miss)
             {
                 Debug.LogError("MISS !");
+
+                Score.RuntimeMultiplier = Score.InitialMultiplierValue;
+                Score.RuntimeCombo = Score.InitialComboValue;
+
+                RefreshUI.Raise();
+
                 note.TriggerMissFeedback((float)CurrentTrackTime);
                 _activeNotes.RemoveAt(i);
 

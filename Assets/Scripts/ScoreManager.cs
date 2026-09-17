@@ -31,7 +31,8 @@ public class ScoreManager : MonoBehaviour
 
     private void AddScore(int amount)
     {
-        Score.RuntimeScore += amount;
-        // Request update of ui
+        Debug.Log(Score.RuntimeMultiplier);
+        Debug.Log(amount * Score.RuntimeMultiplier);
+        Score.RuntimeScore += (amount * Score.RuntimeMultiplier);
     }
 }

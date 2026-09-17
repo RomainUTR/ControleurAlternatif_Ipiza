@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9059f0c75e47af4caa692d99c44367d, type: 3}
   m_Name: RSO_Score
   m_EditorClassIdentifier: Assembly-CSharp::RSO_Score
-  initialValue: 0
-  RuntimeValue: 0
+  InitialScoreValue: 0
+  InitialComboValue: 1
+  InitialMultiplierValue: 1
+  RuntimeScore: 51193.992
+  RuntimeCombo: 1
+  RuntimeMultiplier: 1

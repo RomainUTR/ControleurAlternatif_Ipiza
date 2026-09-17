@@ -97,6 +97,5 @@ public class SpamNote : NoteBehavior
     public override void TryToScoring()
     {
         RequestScoring.Raise(ScoreData.SpamNote);
-        RefreshUI.Raise();
     }
 }

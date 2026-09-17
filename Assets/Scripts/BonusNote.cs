@@ -38,6 +38,5 @@ public class BonusNote : NoteBehavior
     public override void TryToScoring()
     {
         RequestScoring.Raise(ScoreData.BonusNote);
-        RefreshUI.Raise();
     }
 }

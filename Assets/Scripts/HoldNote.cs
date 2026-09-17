@@ -114,6 +114,5 @@ public class HoldNote : NoteBehavior
     public override void TryToScoring()
     {
         RequestScoring.Raise(ScoreData.HoldNote);
-        RefreshUI.Raise();
     }
 }

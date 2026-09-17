@@ -16,7 +16,6 @@ public abstract class NoteBehavior : MonoBehaviour
     //[Header("Output")]
 
     public RSE_RequestScoring RequestScoring;
-    public RSE_RefreshUI RefreshUI;
     public SSO_ScoreData ScoreData;
 
     public float TargetTime {  get; private set; }

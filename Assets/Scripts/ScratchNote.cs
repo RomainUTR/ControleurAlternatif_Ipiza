@@ -38,6 +38,5 @@ public class ScratchNote : NoteBehavior
     public override void TryToScoring()
     {
         RequestScoring.Raise(ScoreData.ScratchNote);
-        RefreshUI.Raise();
     }
 }

@@ -16,3 +16,4 @@ MonoBehaviour:
   HoldNote: 50
   SpamNote: 30
   BonusNote: 100
+  MultiplierByComboUnit: 0.2
