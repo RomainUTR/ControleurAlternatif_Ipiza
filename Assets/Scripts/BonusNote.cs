@@ -30,10 +30,7 @@ public class BonusNote : NoteBehavior
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (!platter.IsConsumed && Mathf.Abs(platter.CurrentSpeed) > 0.1f && Mathf.Sign(platter.CurrentSpeed) == Mathf.Sign(Direction))
-                {
-                    CurrentState = NoteState.Hit;
-                }
+                CurrentState = NoteState.Hit;
             }
         }
     }

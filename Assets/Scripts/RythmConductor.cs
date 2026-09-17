@@ -77,10 +77,8 @@ public class RythmConductor : MonoBehaviour
 
             if ((float)_currentTrackTime < spawnTime) break;
 
-            if (nextNote.Duration> 0)
-            {
-                _pauseProceduralUntil = targetTimeInSeconds + nextNote.Duration;
-            }
+            float blockDuration = nextNote.Duration > 0f ? nextNote.Duration : 0.05f;
+            _pauseProceduralUntil = targetTimeInSeconds + blockDuration;
 
             switch (nextNote.Type)
             {
@@ -104,7 +102,7 @@ public class RythmConductor : MonoBehaviour
 
     private void ProcessProceduralBonuses()
     {
-        if (_nextBonusTargetTime < _pauseProceduralUntil)
+        if (_nextBonusTargetTime <= _pauseProceduralUntil + 0.01f)
         {
             _nextBonusTargetTime += _secondsPerBeat;
             return;

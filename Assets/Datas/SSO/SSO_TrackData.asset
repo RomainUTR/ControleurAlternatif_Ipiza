@@ -24,17 +24,17 @@ MonoBehaviour:
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 1
+    TargetBeat: 0.5
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 2
+    TargetBeat: 1
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 3
+    TargetBeat: 1.5
     Duration: 0
     Direction: -1
     RequiredHits: 0
