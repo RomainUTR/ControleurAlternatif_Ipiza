@@ -52,4 +52,9 @@ public abstract class NoteBehavior : MonoBehaviour
     }
 
     public abstract void EvaluateInput(KeyboardPlatterController platter, float tolerance, float currentTime);
+
+    public virtual void TriggerMissFeedback(float currentTime)
+    {
+        Destroy(gameObject);
+    }
 }

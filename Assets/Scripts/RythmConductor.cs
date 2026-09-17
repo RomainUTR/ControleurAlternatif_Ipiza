@@ -156,7 +156,7 @@ public class RythmConductor : MonoBehaviour
 
             case NoteState.Miss:
                 NoteBehavior missedNote = _activeNotesQueue.Dequeue();
-                Destroy(missedNote.gameObject);
+                currentNote.TriggerMissFeedback((float)CurrentTrackTime);
                 Debug.LogError("MISS !");
                 break;
 

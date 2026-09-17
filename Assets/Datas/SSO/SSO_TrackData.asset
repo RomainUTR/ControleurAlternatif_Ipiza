@@ -38,26 +38,11 @@ MonoBehaviour:
     Duration: 0
     Direction: -1
     RequiredHits: 0
-  - Type: 0
+  - Type: 2
     TargetBeat: 4
-    Duration: 0
+    Duration: 3
     Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 5
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 6
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 7
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
+    RequiredHits: 15
   - Type: 0
     TargetBeat: 8
     Duration: 0
@@ -68,25 +53,10 @@ MonoBehaviour:
     Duration: 0
     Direction: -1
     RequiredHits: 0
-  - Type: 0
+  - Type: 3
     TargetBeat: 10
-    Duration: 0
+    Duration: 2.5
     Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 11
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 12
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 13
-    Duration: 0
-    Direction: -1
     RequiredHits: 0
   - Type: 0
     TargetBeat: 14

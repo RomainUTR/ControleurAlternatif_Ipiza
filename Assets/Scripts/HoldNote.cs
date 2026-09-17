@@ -15,6 +15,7 @@ public class HoldNote : NoteBehavior
     //[Header("Output")]
 
     private float _fallSpeed;
+    private SpriteRenderer _trailSR;
 
     public override void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration = 0f, int requiredHits = 0)
     {
@@ -33,6 +34,8 @@ public class HoldNote : NoteBehavior
             float trailLength = _fallSpeed * Duration;
 
             TrailTransform.localScale = new Vector3(trailLength, 0.2f, 1f);
+
+            _trailSR = TrailTransform.gameObject.GetComponent<SpriteRenderer>();
         }
     }
 
@@ -93,5 +96,15 @@ public class HoldNote : NoteBehavior
                 }
                 break;
         }
+    }
+
+    public override void TriggerMissFeedback(float currentTime)
+    {
+        SR.color = new Color(1f, 0f, 0f, 0.5f);
+        _trailSR.color = new Color(1f, 0f, 0f, 0.5f);
+
+        float remainingTime = (TargetTime + Duration) - currentTime;
+
+        Destroy(gameObject, Mathf.Max(0f, remainingTime));
     }
 }
