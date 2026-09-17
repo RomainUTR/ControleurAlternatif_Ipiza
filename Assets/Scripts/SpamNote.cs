@@ -93,4 +93,10 @@ public class SpamNote : NoteBehavior
                 break;
         }
     }
+
+    public override void TryToScoring()
+    {
+        RequestScoring.Raise(ScoreData.SpamNote);
+        RefreshUI.Raise();
+    }
 }

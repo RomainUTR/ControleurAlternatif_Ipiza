@@ -159,6 +159,7 @@ public class RythmConductor : MonoBehaviour
             {
                 Debug.LogWarning("HIT !");
                 PlayerPlatter.ConsumeInput();
+                note.TryToScoring();
 
                 Destroy(note.gameObject);
                 _activeNotes.RemoveAt(i);

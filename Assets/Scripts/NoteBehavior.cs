@@ -15,6 +15,10 @@ public abstract class NoteBehavior : MonoBehaviour
     //[Header("Input")]
     //[Header("Output")]
 
+    public RSE_RequestScoring RequestScoring;
+    public RSE_RefreshUI RefreshUI;
+    public SSO_ScoreData ScoreData;
+
     public float TargetTime {  get; private set; }
     public float Direction {  get; private set; }
     public NoteState CurrentState { get; protected set; } = NoteState.Pending;
@@ -57,4 +61,6 @@ public abstract class NoteBehavior : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public abstract void TryToScoring();
 }

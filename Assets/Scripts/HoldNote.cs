@@ -110,4 +110,10 @@ public class HoldNote : NoteBehavior
 
         Destroy(gameObject, Mathf.Max(0f, remainingTime));
     }
+
+    public override void TryToScoring()
+    {
+        RequestScoring.Raise(ScoreData.HoldNote);
+        RefreshUI.Raise();
+    }
 }

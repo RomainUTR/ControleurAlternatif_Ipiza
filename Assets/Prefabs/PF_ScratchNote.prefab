@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137d783184823ec4e8502103dc5af86d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScratchNote
+  RequestScoring: {fileID: 11400000, guid: 09a6bce03286b584b835c5ce59d7a0e7, type: 2}
+  RefreshUI: {fileID: 11400000, guid: 201c0e01d76e8214b9fc6c2dda46096f, type: 2}
+  ScoreData: {fileID: 11400000, guid: 55aaa038bf52d714984610c9e5a7f412, type: 2}
   SR: {fileID: 3974820048165283492}
   SpriteUp: {fileID: 21300000, guid: dc500cdd49a355f47a06571ea7ac75f1, type: 3}
   SpriteDown: {fileID: 21300000, guid: 57b4948be96bd6845abebd967bbf440c, type: 3}
