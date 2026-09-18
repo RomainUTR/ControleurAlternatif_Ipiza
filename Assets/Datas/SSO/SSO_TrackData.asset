@@ -19,72 +19,47 @@ MonoBehaviour:
   DivideBPM: 1
   TrackNotes:
   - Type: 0
-    TargetBeat: 0
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 0.75
+    TargetBeat: 0.85
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 2.25
+    TargetBeat: 2.35
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 4
+    TargetBeat: 4.1
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 6.5
+    TargetBeat: 6.6
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 7
+    TargetBeat: 7.1
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 7.5
+    TargetBeat: 7.6
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 8.5
+    TargetBeat: 8.75
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 9.25
+    TargetBeat: 10.25
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 10
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 10.75
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 11.5
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 12.25
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 13.25
+    TargetBeat: 12
     Duration: 0
     Direction: -1
     RequiredHits: 0
@@ -94,12 +69,12 @@ MonoBehaviour:
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 15
+    TargetBeat: 15.25
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 15.5
+    TargetBeat: 15.75
     Duration: 0
     Direction: 1
     RequiredHits: 0
@@ -210,16 +185,16 @@ MonoBehaviour:
     RequiredHits: 0
   - Type: 3
     TargetBeat: 38.5
-    Duration: 0.5
+    Duration: 1.5
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 39.25
+    TargetBeat: 0
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 3
-    TargetBeat: 39.75
+    TargetBeat: 0
     Duration: 0.5
     Direction: 1
     RequiredHits: 0
@@ -335,7 +310,7 @@ MonoBehaviour:
     RequiredHits: 0
   - Type: 3
     TargetBeat: 56.5
-    Duration: 0.5
+    Duration: 0.65
     Direction: -1
     RequiredHits: 0
   - Type: 2
@@ -344,12 +319,32 @@ MonoBehaviour:
     Direction: 1
     RequiredHits: 30
   - Type: 0
-    TargetBeat: 65
+    TargetBeat: 64.5
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 66
+    TargetBeat: 65
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 65.5
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 65.8
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 66.1
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 66.5
     Duration: 0
     Direction: 1
     RequiredHits: 0
@@ -359,17 +354,37 @@ MonoBehaviour:
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 68
+    TargetBeat: 67.5
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 67.8
+    Duration: 0.65
+    Direction: -1
+    RequiredHits: 3
+  - Type: 0
+    TargetBeat: 69
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 69
+    TargetBeat: 69.5
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 70
+    TargetBeat: 69.8
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 70.1
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 70.5
     Duration: 0
     Direction: 1
     RequiredHits: 0
@@ -379,17 +394,37 @@ MonoBehaviour:
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 72
+    TargetBeat: 71.5
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 71.8
+    Duration: 0.6
+    Direction: -1
+    RequiredHits: 3
+  - Type: 0
+    TargetBeat: 73
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 73
+    TargetBeat: 73.5
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 74
+    TargetBeat: 73.8
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 74.1
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 74.5
     Duration: 0
     Direction: 1
     RequiredHits: 0
@@ -399,75 +434,15 @@ MonoBehaviour:
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 76
+    TargetBeat: 75.5
     Duration: 0
     Direction: 1
     RequiredHits: 0
-  - Type: 0
-    TargetBeat: 77
-    Duration: 0
+  - Type: 2
+    TargetBeat: 75.8
+    Duration: 4.5
     Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 78
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 79
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 80
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 81
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 82
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 83
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 84
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 85
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 86
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 87
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 88
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 89
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
+    RequiredHits: 25
   - Type: 0
     TargetBeat: 90
     Duration: 0
