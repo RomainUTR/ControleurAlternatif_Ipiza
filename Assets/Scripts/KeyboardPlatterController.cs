@@ -26,7 +26,13 @@ public class KeyboardPlatterController : MonoBehaviour
         if (input != _lastInput)
         {
             IsConsumed = false;
+
+            if (input != 0f && Mathf.Sign(input) != Mathf.Sign(CurrentSpeed))
+            {
+                CurrentSpeed = 0f;
+            }
         }
+
         _lastInput = input;
 
         if (input != 0f)
