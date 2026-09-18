@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour
     private void RefreshUI()
     {
         ScoreText.text = FormatNumber(Score.RuntimeScore);
-        ComboText.text = Score.RuntimeCombo.ToString();
+        ComboText.text = $"x {Score.RuntimeCombo}";
     }
 
     private string FormatNumber(double num)
