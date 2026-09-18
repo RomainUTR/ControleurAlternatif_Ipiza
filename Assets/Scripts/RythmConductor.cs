@@ -177,8 +177,11 @@ public class RythmConductor : MonoBehaviour
             {
                 Debug.LogError("MISS !");
 
-                Score.RuntimeMultiplier = Score.InitialMultiplierValue;
-                Score.RuntimeCombo = Score.InitialComboValue;
+                if (note.CurrentType != NoteType.Bonus)
+                {
+                    Score.RuntimeMultiplier = Score.InitialMultiplierValue;
+                    Score.RuntimeCombo = Score.InitialComboValue;
+                }
 
                 RefreshUI.Raise();
 

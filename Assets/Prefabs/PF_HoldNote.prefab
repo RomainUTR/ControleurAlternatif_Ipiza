@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoldNote
   RequestScoring: {fileID: 11400000, guid: 09a6bce03286b584b835c5ce59d7a0e7, type: 2}
-  RefreshUI: {fileID: 11400000, guid: 201c0e01d76e8214b9fc6c2dda46096f, type: 2}
   ScoreData: {fileID: 11400000, guid: 55aaa038bf52d714984610c9e5a7f412, type: 2}
+  CurrentType: 3
   MaxGraceTime: 0.2
   SR: {fileID: 3974820048165283492}
   TrailTransform: {fileID: 8348140370511957250}

@@ -21,6 +21,8 @@ public abstract class NoteBehavior : MonoBehaviour
     public float TargetTime {  get; private set; }
     public float Direction {  get; private set; }
     public NoteState CurrentState { get; protected set; } = NoteState.Pending;
+
+    public NoteType CurrentType;
     public float Duration { get; protected set; }
 
     private Vector3 _startPosition;
