@@ -12,4 +12,7 @@ public class SSO_ScoreData : ScriptableObject
 
     [InfoBox("Pour chaque unité du combo, ça ajoute la valeur suivante au multiplicateur")]
     public float MultiplierByComboUnit;
+
+    [InfoBox("Pour chaque note pendant le spam en plus de l'objectif fixé")]
+    public int SpamNoteBonus;
 }

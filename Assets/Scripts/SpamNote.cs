@@ -15,6 +15,7 @@ public class SpamNote : NoteBehavior
     private int _requiredHits;
     private int _currentHits;
     private float _fallSpeed;
+    private int _extraNoteCount;
 
     private SpriteRenderer _trailSR;
 
@@ -74,7 +75,8 @@ public class SpamNote : NoteBehavior
                     }
                     else
                     {
-                        SR.color = Color.yellow; // Bonus
+                        _extraNoteCount++;
+                        SR.color = Color.yellow;
                         _trailSR.color = Color.yellow;
                     }
                 }
@@ -84,10 +86,14 @@ public class SpamNote : NoteBehavior
                     if (_currentHits >= _requiredHits)
                     {
                         CurrentState = NoteState.Hit;
+                        Debug.Log("Extra : " + _extraNoteCount);
+                        RequestScoring.Raise(_extraNoteCount * ScoreData.SpamNoteBonus);
+                        _extraNoteCount = 0;
                     }
                     else
                     {
                         CurrentState = NoteState.Miss;
+                        _extraNoteCount = 0;
                     }
                 }
                 break;
