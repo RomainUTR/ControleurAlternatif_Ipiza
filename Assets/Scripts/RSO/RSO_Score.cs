@@ -14,7 +14,7 @@ public class RSO_Score : ScriptableObject
     [ReadOnly] public int RuntimeCombo;
     [ReadOnly] public float RuntimeMultiplier;
 
-    private void OnEnable()
+    public void ResetData()
     {
         RuntimeScore = InitialScoreValue;
         RuntimeCombo = InitialComboValue;

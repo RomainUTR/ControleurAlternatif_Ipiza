@@ -13,6 +13,14 @@ public class ScoreManager : MonoBehaviour
     [Header("Output")]
     [SerializeField, InlineEditor] private RSO_Score Score;
 
+    private void Awake()
+    {
+        if (Score != null)
+        {
+            Score.ResetData();
+        }
+    }
+
     private void OnEnable()
     {
         if (RequestScoring != null)
