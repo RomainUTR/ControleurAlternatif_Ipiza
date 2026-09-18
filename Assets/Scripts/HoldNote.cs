@@ -105,6 +105,8 @@ public class HoldNote : NoteBehavior
 
         float remainingTime = (TargetTime + Duration) - currentTime;
 
+        this.enabled = false;
+
         Destroy(gameObject, Mathf.Max(0f, remainingTime));
     }
 

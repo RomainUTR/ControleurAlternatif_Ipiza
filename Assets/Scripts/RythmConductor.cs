@@ -81,7 +81,7 @@ public class RythmConductor : MonoBehaviour
             if ((float)_currentTrackTime < spawnTime) break;
 
             float blockDuration = nextNote.Duration > 0f ? nextNote.Duration : 0.05f;
-            _pauseProceduralUntil = targetTimeInSeconds + blockDuration;
+            _pauseProceduralUntil = Mathf.Max(_pauseProceduralUntil, targetTimeInSeconds + blockDuration);
 
             switch (nextNote.Type)
             {
@@ -109,6 +109,18 @@ public class RythmConductor : MonoBehaviour
         {
             _nextBonusTargetTime += _secondsPerBeat;
             return;
+        }
+
+        if (_currentDataNoteIndex < trackData.TrackNotes.Count)
+        {
+            NoteEvent nextNote = trackData.TrackNotes[_currentDataNoteIndex];
+            float nextNoteTime = trackData.FirstBeatOffset + (nextNote.TargetBeat * _secondsPerBeat);
+
+            if (Mathf.Abs(nextNoteTime - _nextBonusTargetTime) <= 0.1f)
+            {
+                _nextBonusTargetTime += _secondsPerBeat;
+                return;
+            }
         }
 
         if ((float)_currentTrackTime >= _nextBonusTargetTime - lookAheadTime)
@@ -160,7 +172,7 @@ public class RythmConductor : MonoBehaviour
 
             if (note.CurrentState == NoteState.Hit)
             {
-                Debug.LogWarning("HIT !");
+                //Debug.LogWarning("HIT !");
                 PlayerPlatter.ConsumeInput();
                 note.TryToScoring();
 
@@ -171,11 +183,12 @@ public class RythmConductor : MonoBehaviour
 
                 Destroy(note.gameObject);
                 _activeNotes.RemoveAt(i);
-                break;
+
+                i--;
             }
             else if (note.CurrentState == NoteState.Miss)
             {
-                Debug.LogError("MISS !");
+                //Debug.LogError("MISS !");
 
                 if (note.CurrentType != NoteType.Bonus)
                 {

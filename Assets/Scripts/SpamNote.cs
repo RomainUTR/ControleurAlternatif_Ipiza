@@ -86,7 +86,6 @@ public class SpamNote : NoteBehavior
                     if (_currentHits >= _requiredHits)
                     {
                         CurrentState = NoteState.Hit;
-                        Debug.Log("Extra : " + _extraNoteCount);
                         RequestScoring.Raise(_extraNoteCount * ScoreData.SpamNoteBonus);
                         _extraNoteCount = 0;
                     }
