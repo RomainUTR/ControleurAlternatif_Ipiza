@@ -28,7 +28,7 @@ public class ScratchNote : NoteBehavior
 
         if (Mathf.Abs(timeDifference) <= tolerance)
         {
-            if (!platter.IsConsumed && Mathf.Abs(platter.CurrentSpeed) > 0.1f && Mathf.Sign(platter.CurrentSpeed) == Mathf.Sign(Direction))
+            if (!platter.IsConsumed && Mathf.Abs(platter.CurrentSpeed) > 0.1f && platter.CurrentInput != 0f && Mathf.Sign(platter.CurrentInput) == Mathf.Sign(Direction))
             {
                 CurrentState = NoteState.Hit;
             }
