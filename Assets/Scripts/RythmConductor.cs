@@ -105,6 +105,8 @@ public class RythmConductor : MonoBehaviour
 
     private void ProcessProceduralBonuses()
     {
+        if (_currentDataNoteIndex >= trackData.TrackNotes.Count) return;
+
         if (_nextBonusTargetTime <= _pauseProceduralUntil + 0.01f)
         {
             _nextBonusTargetTime += _secondsPerBeat;
@@ -136,9 +138,14 @@ public class RythmConductor : MonoBehaviour
 
     private void CheckTrackEnd()
     {
-        if (_currentTrackTime >= _audioSource.clip.length && _isPlaying)
+        bool allNotesPlayed = _currentDataNoteIndex >= trackData.TrackNotes.Count;
+        bool audioFinished = _currentTrackTime >= _audioSource.clip.length;
+
+        if ((allNotesPlayed || audioFinished) && _isPlaying)
         {
             _isPlaying = false;
+
+            if (_audioSource.isPlaying) _audioSource.Stop();
 
             foreach (NoteBehavior remainNote in _activeNotes)
             {
