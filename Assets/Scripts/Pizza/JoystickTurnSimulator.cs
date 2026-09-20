@@ -44,7 +44,7 @@ public class JoystickTurnSimulator : MonoBehaviour
         }
 
         float delta = Mathf.DeltaAngle(_previousAngle, currentAngle);
-        _accumulatedDegrees += delta;
+        _accumulatedDegrees -= delta;
         _previousAngle = currentAngle;
 
         if (Mathf.Abs(_accumulatedDegrees) >= 360f)
