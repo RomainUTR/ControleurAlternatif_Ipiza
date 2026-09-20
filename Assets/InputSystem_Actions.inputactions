@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "InputSystem_Actions",
     "maps": [
         {
@@ -12,7 +13,8 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": true,
+                    "priority": 0
                 },
                 {
                     "name": "Look",
@@ -21,7 +23,8 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": true,
+                    "priority": 0
                 },
                 {
                     "name": "Attack",
@@ -30,7 +33,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "Interact",
@@ -39,7 +43,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Hold",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "Crouch",
@@ -48,7 +53,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "Jump",
@@ -57,7 +63,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "Previous",
@@ -66,7 +73,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "Next",
@@ -75,7 +83,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "Sprint",
@@ -84,7 +93,38 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Champignon",
+                    "type": "Button",
+                    "id": "56db0406-1787-4000-8458-dff36fa1f349",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Poisson",
+                    "type": "Button",
+                    "id": "8dde51f0-60c9-40f9-ae78-810eebda6cd6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Poivron",
+                    "type": "Button",
+                    "id": "749f868a-7761-4c67-868c-a7a00b92aab9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -472,6 +512,39 @@
                     "action": "Crouch",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a62ff80c-b2a0-4cd3-a5c0-92421d72cb68",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Champignon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ccd08b8a-aa18-4ac8-8e62-e1b4914aa594",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Poisson",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b57a7b3c-ecde-4ade-9581-020a0511ff57",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Poivron",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -486,7 +559,8 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "Submit",
@@ -495,7 +569,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "Cancel",
@@ -504,7 +579,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "Point",
@@ -513,7 +589,8 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": true,
+                    "priority": 0
                 },
                 {
                     "name": "Click",
@@ -522,7 +599,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": true,
+                    "priority": 0
                 },
                 {
                     "name": "RightClick",
@@ -531,7 +609,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "MiddleClick",
@@ -540,7 +619,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "ScrollWheel",
@@ -549,7 +629,8 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "TrackedDevicePosition",
@@ -558,7 +639,8 @@
                     "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "TrackedDeviceOrientation",
@@ -567,7 +649,8 @@
                     "expectedControlType": "Quaternion",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
