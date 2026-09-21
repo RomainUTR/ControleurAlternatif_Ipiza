@@ -33,10 +33,14 @@ public class PizzaManager : MonoBehaviour
     [SerializeField] private List<SSO_Ingredient> CurrentRecipe;
     [SerializeField] private int TurnsToPlaceIngredient = 2;
 
+    [Header("Oven Settings")]
+    [SerializeField] private int TurnsToOven = 5;
+
     [Header("Input Mapping")]
     [Tooltip("Associe chaque action d'input (bouton) à son ingrédient correspondant.")]
     [SerializeField] private List<IngredientMapping> InputMapping = new List<IngredientMapping>();
     [SerializeField] private RSE_OnTurnCompleted OnTurnCompleted;
+    [SerializeField] private InputActionReference OvenInputAction;
 
     [Header("Scene References")]
     [SerializeField] private Transform PizzaTransform;
@@ -53,6 +57,8 @@ public class PizzaManager : MonoBehaviour
     private int _currentRecipeIndex = 0;
     private int _currentIngredientTurns = 0;
     private SSO_Ingredient _selectedIngredient = null;
+    private int _currentCookingTurns = 0;
+    private bool _isOvenOn = false;
 
     private void Awake()
     {
@@ -89,6 +95,9 @@ public class PizzaManager : MonoBehaviour
                 break;
             case PizzaState.IngredientAssembly:
                 ProcessIngredientTurning(amount);
+                break;
+            case PizzaState.Cooking:
+                ProcessCookingTurning(amount);
                 break;
         }
     }
@@ -196,7 +205,7 @@ public class PizzaManager : MonoBehaviour
             {
                 Debug.Log("Recette complète ! On passe à la cuisson.");
                 StopIngredientAssembly();
-                CurrentState = PizzaState.Cooking;
+                StartCooking();
                 TurnText.text = "Au four !";
             }
             else
@@ -225,6 +234,63 @@ public class PizzaManager : MonoBehaviour
                 iconImage.sprite = ingredient.Icon;
                 _spawnedOrderIcons.Add(iconImage);
             }
+        }
+    }
+
+    private void StartCooking()
+    {
+        CurrentState = PizzaState.Cooking;
+        _currentCookingTurns = 0;
+        _isOvenOn = false;
+        TurnText.text = "Appuyez sur le bouton du four !";
+
+        if (OvenInputAction != null)
+        {
+            OvenInputAction.action.Enable();
+            OvenInputAction.action.performed += OnOvenPressed;
+        }
+    }
+
+    private void StopCooking()
+    {
+        if (OvenInputAction != null)
+        {
+            OvenInputAction.action.performed -= OnOvenPressed;
+            OvenInputAction.action.Disable();
+        }
+    }
+
+    private void OnOvenPressed(InputAction.CallbackContext ctx)
+    {
+        if (CurrentState != PizzaState.Cooking) return;
+
+        if (!_isOvenOn)
+        {
+            _isOvenOn = true;
+            Debug.Log("Le four est allumé ! Tournez la pizza !");
+            TurnText.text = $"Cuisson : {_currentCookingTurns}/{TurnsToOven}";
+        } else if (_currentCookingTurns >= TurnsToOven)
+        {
+            _isOvenOn = false;
+            StopCooking();
+            CurrentState = PizzaState.Ready;
+
+            Debug.Log("Four éteint. Pizza prête à servir !");
+            TurnText.text = "Pizza prête";
+        }
+    }
+
+    private void ProcessCookingTurning(int amount)
+    {
+        if (!_isOvenOn || _currentCookingTurns >= TurnsToOven) return;
+
+        _currentCookingTurns += Mathf.Abs(amount);
+        TurnText.text = $"Cuisson : {_currentCookingTurns}/{TurnsToOven}";
+
+        if (_currentCookingTurns >= TurnsToOven)
+        {
+            Debug.Log("Cuisson parfaite ! Eteignez le four !");
+            TurnText.text = "Eteignez le four ! (Appuyez sur le bouton)";
         }
     }
 }

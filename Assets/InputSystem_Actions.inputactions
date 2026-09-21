@@ -165,6 +165,26 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "Four",
+                    "type": "Button",
+                    "id": "17104cae-a4b1-4125-83cd-007e36e2b402",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "ServePizza",
+                    "type": "Button",
+                    "id": "41890ec7-90bc-49ad-b163-be3ef916cd76",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -627,6 +647,28 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "Viande",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1b670f1a-d642-407c-b79a-d107ba567554",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Four",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ff31bcca-42cb-4e44-b7ae-eb647eb78824",
+                    "path": "<DualShockGamepad>/touchpadButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ServePizza",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

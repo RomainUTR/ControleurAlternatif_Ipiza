@@ -251,6 +251,26 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""initialStateCheck"": false,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""Four"",
+                    ""type"": ""Button"",
+                    ""id"": ""17104cae-a4b1-4125-83cd-007e36e2b402"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""ServePizza"",
+                    ""type"": ""Button"",
+                    ""id"": ""41890ec7-90bc-49ad-b163-be3ef916cd76"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -713,6 +733,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
                     ""action"": ""Viande"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1b670f1a-d642-407c-b79a-d107ba567554"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Four"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ff31bcca-42cb-4e44-b7ae-eb647eb78824"",
+                    ""path"": ""<DualShockGamepad>/touchpadButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ServePizza"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1326,6 +1368,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Saucisse = m_Player.FindAction("Saucisse", throwIfNotFound: true);
         m_Player_Ananas = m_Player.FindAction("Ananas", throwIfNotFound: true);
         m_Player_Viande = m_Player.FindAction("Viande", throwIfNotFound: true);
+        m_Player_Four = m_Player.FindAction("Four", throwIfNotFound: true);
+        m_Player_ServePizza = m_Player.FindAction("ServePizza", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1435,6 +1479,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Saucisse;
     private readonly InputAction m_Player_Ananas;
     private readonly InputAction m_Player_Viande;
+    private readonly InputAction m_Player_Four;
+    private readonly InputAction m_Player_ServePizza;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1511,6 +1557,14 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Viande => m_Wrapper.m_Player_Viande;
         /// <summary>
+        /// Provides access to the underlying input action "Player/Four".
+        /// </summary>
+        public InputAction @Four => m_Wrapper.m_Player_Four;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/ServePizza".
+        /// </summary>
+        public InputAction @ServePizza => m_Wrapper.m_Player_ServePizza;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -1584,6 +1638,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Viande.started += instance.OnViande;
             @Viande.performed += instance.OnViande;
             @Viande.canceled += instance.OnViande;
+            @Four.started += instance.OnFour;
+            @Four.performed += instance.OnFour;
+            @Four.canceled += instance.OnFour;
+            @ServePizza.started += instance.OnServePizza;
+            @ServePizza.performed += instance.OnServePizza;
+            @ServePizza.canceled += instance.OnServePizza;
         }
 
         /// <summary>
@@ -1643,6 +1703,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Viande.started -= instance.OnViande;
             @Viande.performed -= instance.OnViande;
             @Viande.canceled -= instance.OnViande;
+            @Four.started -= instance.OnFour;
+            @Four.performed -= instance.OnFour;
+            @Four.canceled -= instance.OnFour;
+            @ServePizza.started -= instance.OnServePizza;
+            @ServePizza.performed -= instance.OnServePizza;
+            @ServePizza.canceled -= instance.OnServePizza;
         }
 
         /// <summary>
@@ -2055,6 +2121,20 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnViande(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Four" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnFour(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ServePizza" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnServePizza(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

@@ -793,7 +793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.41, y: 2.37}
+  m_AnchoredPosition: {x: 5.41, y: -0.36}
   m_SizeDelta: {x: 6.79, y: 1.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1709919944
@@ -985,8 +985,8 @@ Transform:
   m_GameObject: {fileID: 2069105016}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 0, y: -2.5, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 679543632}
@@ -1027,12 +1027,8 @@ MonoBehaviour:
   CurrentRecipe:
   - {fileID: 11400000, guid: 47f86d4c21cff154e859262b6de37c7f, type: 2}
   - {fileID: 11400000, guid: d718e1361153b3549a5266c258b98bab, type: 2}
-  - {fileID: 11400000, guid: 5c3f46ee8307389498f3c7caa5ad32fa, type: 2}
-  - {fileID: 11400000, guid: 0b4f7204725f64d41bffe718ffcb7e5a, type: 2}
-  - {fileID: 11400000, guid: a9129cac064dfd54499b51e53ed2aa96, type: 2}
-  - {fileID: 11400000, guid: 1b2d33c71d79d6a4683e286f977c8098, type: 2}
-  - {fileID: 11400000, guid: 8f9967792ce46b945945dc269c1309c7, type: 2}
   TurnsToPlaceIngredient: 2
+  TurnsToOven: 5
   InputMapping:
   - InputAction: {fileID: -7904981635282769790, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
     Ingredient: {fileID: 11400000, guid: 47f86d4c21cff154e859262b6de37c7f, type: 2}
@@ -1049,6 +1045,7 @@ MonoBehaviour:
   - InputAction: {fileID: 5822195270078999543, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
     Ingredient: {fileID: 11400000, guid: 8f9967792ce46b945945dc269c1309c7, type: 2}
   OnTurnCompleted: {fileID: 11400000, guid: 8e46e9a5ac20dca43a5acfe40ab702f2, type: 2}
+  OvenInputAction: {fileID: 4987594950054935975, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   PizzaTransform: {fileID: 2069105018}
   TurnText: {fileID: 1329958293}
   OrderContainer: {fileID: 74042467}
