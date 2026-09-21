@@ -30,7 +30,6 @@ public class PizzaManager : MonoBehaviour
     [SerializeField] private int RequiredTurnDirection = 1;
 
     [Header("Ingredients Settings")]
-    [SerializeField] private List<SSO_Ingredient> CurrentRecipe;
     [SerializeField] private int TurnsToPlaceIngredient = 2;
 
     [Header("Oven Settings")]
@@ -51,6 +50,9 @@ public class PizzaManager : MonoBehaviour
     [SerializeField] private Transform OrderContainer;
     [SerializeField] private GameObject OrderIconPrefab;
 
+    [Header("Events")]
+    [SerializeField] private RecipeGenerator RecipeGen;
+
     private Dictionary<InputAction, SSO_Ingredient> _runtimeActionMap = new Dictionary<InputAction, SSO_Ingredient>();
     private List<Image> _spawnedOrderIcons = new List<Image>();
 
@@ -60,6 +62,7 @@ public class PizzaManager : MonoBehaviour
     private SSO_Ingredient _selectedIngredient = null;
     private int _currentCookingTurns = 0;
     private bool _isOvenOn = false;
+    private List<SSO_Ingredient> CurrentRecipe;
 
     private void Awake()
     {
@@ -75,16 +78,18 @@ public class PizzaManager : MonoBehaviour
     private void OnEnable()
     {
         OnTurnCompleted.OnEventRaised += HandleTurnCompletion;
+        if (RecipeGen != null) RecipeGen.OnRecipeGenerated += HandleNewRecipe;
     }
 
     private void OnDisable()
     {
         OnTurnCompleted.OnEventRaised -= HandleTurnCompletion;
+        if (RecipeGen != null) RecipeGen.OnRecipeGenerated -= HandleNewRecipe;
     }
 
     private void Start()
     {
-        GenerateOrderUI();
+        if (RecipeGen != null) RecipeGen.GenerateRecipe();
     }
 
     private void HandleTurnCompletion(int amount)
@@ -318,6 +323,9 @@ public class PizzaManager : MonoBehaviour
         if (CurrentState != PizzaState.Ready) return;
 
         Debug.Log("Pizza servie ! En attente de la prochaine commande...");
+
+        // AddScore
+
         StopServing();
         ResetForNextOrder();
     }
@@ -326,7 +334,10 @@ public class PizzaManager : MonoBehaviour
     {
         foreach (Transform child in PizzaTransform)
         {
-            Destroy(child.gameObject);
+            if (!child.CompareTag("Indicator"))
+            {
+                Destroy(child.gameObject);
+            }
         }
 
         _turnCount = 0;
@@ -338,5 +349,13 @@ public class PizzaManager : MonoBehaviour
 
         CurrentState = PizzaState.DoughFlattening;
         TurnText.text = $"0/{RequiredDoughTurns}";
+
+        if (RecipeGen != null) RecipeGen.GenerateRecipe();
+    }
+
+    private void HandleNewRecipe(List<SSO_Ingredient> generatedRecipe)
+    {
+        CurrentRecipe = generatedRecipe;
+        GenerateOrderUI();
     }
 }
