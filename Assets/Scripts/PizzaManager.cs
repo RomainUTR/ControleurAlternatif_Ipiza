@@ -41,6 +41,7 @@ public class PizzaManager : MonoBehaviour
     [SerializeField] private List<IngredientMapping> InputMapping = new List<IngredientMapping>();
     [SerializeField] private RSE_OnTurnCompleted OnTurnCompleted;
     [SerializeField] private InputActionReference OvenInputAction;
+    [SerializeField] private InputActionReference ServeInputAction;
 
     [Header("Scene References")]
     [SerializeField] private Transform PizzaTransform;
@@ -273,10 +274,7 @@ public class PizzaManager : MonoBehaviour
         {
             _isOvenOn = false;
             StopCooking();
-            CurrentState = PizzaState.Ready;
-
-            Debug.Log("Four éteint. Pizza prête à servir !");
-            TurnText.text = "Pizza prête";
+            StartServing();
         }
     }
 
@@ -292,5 +290,53 @@ public class PizzaManager : MonoBehaviour
             Debug.Log("Cuisson parfaite ! Eteignez le four !");
             TurnText.text = "Eteignez le four ! (Appuyez sur le bouton)";
         }
+    }
+
+    private void StartServing()
+    {
+        CurrentState = PizzaState.Ready;
+        TurnText.text = "Pizza prête ! Appuyez pour servir.";
+
+        if (ServeInputAction != null)
+        {
+            ServeInputAction.action.Enable();
+            ServeInputAction.action.performed += OnServe;
+        }
+    }
+
+    private void StopServing()
+    {
+        if (ServeInputAction != null)
+        {
+            ServeInputAction.action.performed -= OnServe;
+            ServeInputAction.action.Disable();
+        }
+    }
+
+    private void OnServe(InputAction.CallbackContext ctx)
+    {
+        if (CurrentState != PizzaState.Ready) return;
+
+        Debug.Log("Pizza servie ! En attente de la prochaine commande...");
+        StopServing();
+        ResetForNextOrder();
+    }
+
+    private void ResetForNextOrder()
+    {
+        foreach (Transform child in PizzaTransform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        _turnCount = 0;
+        _currentRecipeIndex = 0;
+        _currentIngredientTurns = 0;
+        _currentCookingTurns = 0;
+        _selectedIngredient = null;
+        _isOvenOn = false;
+
+        CurrentState = PizzaState.DoughFlattening;
+        TurnText.text = $"0/{RequiredDoughTurns}";
     }
 }

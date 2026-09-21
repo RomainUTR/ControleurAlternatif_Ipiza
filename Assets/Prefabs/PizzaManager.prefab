@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8757361412121883273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4569173590504955482}
+  - component: {fileID: 3582733237022914785}
+  m_Layer: 0
+  m_Name: PizzaManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4569173590504955482
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757361412121883273}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.40804, y: 0.0979, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3582733237022914785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757361412121883273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f976f63a668834da1e47e8a3dd9603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PizzaManager
+  CurrentState: 0
+  RequiredDoughTurns: 3
+  RequiredTurnDirection: 1
+  CurrentRecipe:
+  - {fileID: 11400000, guid: 47f86d4c21cff154e859262b6de37c7f, type: 2}
+  - {fileID: 11400000, guid: d718e1361153b3549a5266c258b98bab, type: 2}
+  TurnsToPlaceIngredient: 2
+  TurnsToOven: 5
+  InputMapping:
+  - InputAction: {fileID: -7904981635282769790, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    Ingredient: {fileID: 11400000, guid: 47f86d4c21cff154e859262b6de37c7f, type: 2}
+  - InputAction: {fileID: 1725091726008682307, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    Ingredient: {fileID: 11400000, guid: d718e1361153b3549a5266c258b98bab, type: 2}
+  - InputAction: {fileID: 6043437010441218388, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    Ingredient: {fileID: 11400000, guid: 5c3f46ee8307389498f3c7caa5ad32fa, type: 2}
+  - InputAction: {fileID: 8736197657662944249, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    Ingredient: {fileID: 11400000, guid: 0b4f7204725f64d41bffe718ffcb7e5a, type: 2}
+  - InputAction: {fileID: -2978574025876970985, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    Ingredient: {fileID: 11400000, guid: a9129cac064dfd54499b51e53ed2aa96, type: 2}
+  - InputAction: {fileID: 1707923936737119392, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    Ingredient: {fileID: 11400000, guid: 1b2d33c71d79d6a4683e286f977c8098, type: 2}
+  - InputAction: {fileID: 5822195270078999543, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    Ingredient: {fileID: 11400000, guid: 8f9967792ce46b945945dc269c1309c7, type: 2}
+  OnTurnCompleted: {fileID: 11400000, guid: 8e46e9a5ac20dca43a5acfe40ab702f2, type: 2}
+  OvenInputAction: {fileID: 4987594950054935975, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  ServeInputAction: {fileID: -7968538508486166492, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  PizzaTransform: {fileID: 0}
+  TurnText: {fileID: 0}
+  OrderContainer: {fileID: 0}
+  OrderIconPrefab: {fileID: 6159901478824295784, guid: a248785616763394c96c2d8e171a7d21, type: 3}
