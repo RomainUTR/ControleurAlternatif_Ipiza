@@ -211,6 +211,46 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""initialStateCheck"": false,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""Fromage"",
+                    ""type"": ""Button"",
+                    ""id"": ""24046a7c-bea0-42b1-802f-7cdbcda8440f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Saucisse"",
+                    ""type"": ""Button"",
+                    ""id"": ""e95363cb-3e0b-43bd-855d-fa08727fd252"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Ananas"",
+                    ""type"": ""Button"",
+                    ""id"": ""b846f0ef-3724-435a-b205-ea194ca3b376"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Viande"",
+                    ""type"": ""Button"",
+                    ""id"": ""03ab1662-4cd7-400b-b762-df747ebc6561"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -629,6 +669,50 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
                     ""action"": ""Poivron"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""147a622b-43d6-434d-a468-2b411fffbed4"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Fromage"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""056b041f-041c-4ba4-881c-f04e16a36c1c"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Saucisse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e49d11d8-2f77-485a-a3ea-085e2e19bd53"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Ananas"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7927762a-0846-4abe-8a9a-dd1cd4487afb"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Viande"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1238,6 +1322,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Champignon = m_Player.FindAction("Champignon", throwIfNotFound: true);
         m_Player_Poisson = m_Player.FindAction("Poisson", throwIfNotFound: true);
         m_Player_Poivron = m_Player.FindAction("Poivron", throwIfNotFound: true);
+        m_Player_Fromage = m_Player.FindAction("Fromage", throwIfNotFound: true);
+        m_Player_Saucisse = m_Player.FindAction("Saucisse", throwIfNotFound: true);
+        m_Player_Ananas = m_Player.FindAction("Ananas", throwIfNotFound: true);
+        m_Player_Viande = m_Player.FindAction("Viande", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1343,6 +1431,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Champignon;
     private readonly InputAction m_Player_Poisson;
     private readonly InputAction m_Player_Poivron;
+    private readonly InputAction m_Player_Fromage;
+    private readonly InputAction m_Player_Saucisse;
+    private readonly InputAction m_Player_Ananas;
+    private readonly InputAction m_Player_Viande;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1402,6 +1494,22 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Poivron".
         /// </summary>
         public InputAction @Poivron => m_Wrapper.m_Player_Poivron;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Fromage".
+        /// </summary>
+        public InputAction @Fromage => m_Wrapper.m_Player_Fromage;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Saucisse".
+        /// </summary>
+        public InputAction @Saucisse => m_Wrapper.m_Player_Saucisse;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Ananas".
+        /// </summary>
+        public InputAction @Ananas => m_Wrapper.m_Player_Ananas;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Viande".
+        /// </summary>
+        public InputAction @Viande => m_Wrapper.m_Player_Viande;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1464,6 +1572,18 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Poivron.started += instance.OnPoivron;
             @Poivron.performed += instance.OnPoivron;
             @Poivron.canceled += instance.OnPoivron;
+            @Fromage.started += instance.OnFromage;
+            @Fromage.performed += instance.OnFromage;
+            @Fromage.canceled += instance.OnFromage;
+            @Saucisse.started += instance.OnSaucisse;
+            @Saucisse.performed += instance.OnSaucisse;
+            @Saucisse.canceled += instance.OnSaucisse;
+            @Ananas.started += instance.OnAnanas;
+            @Ananas.performed += instance.OnAnanas;
+            @Ananas.canceled += instance.OnAnanas;
+            @Viande.started += instance.OnViande;
+            @Viande.performed += instance.OnViande;
+            @Viande.canceled += instance.OnViande;
         }
 
         /// <summary>
@@ -1511,6 +1631,18 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Poivron.started -= instance.OnPoivron;
             @Poivron.performed -= instance.OnPoivron;
             @Poivron.canceled -= instance.OnPoivron;
+            @Fromage.started -= instance.OnFromage;
+            @Fromage.performed -= instance.OnFromage;
+            @Fromage.canceled -= instance.OnFromage;
+            @Saucisse.started -= instance.OnSaucisse;
+            @Saucisse.performed -= instance.OnSaucisse;
+            @Saucisse.canceled -= instance.OnSaucisse;
+            @Ananas.started -= instance.OnAnanas;
+            @Ananas.performed -= instance.OnAnanas;
+            @Ananas.canceled -= instance.OnAnanas;
+            @Viande.started -= instance.OnViande;
+            @Viande.performed -= instance.OnViande;
+            @Viande.canceled -= instance.OnViande;
         }
 
         /// <summary>
@@ -1895,6 +2027,34 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPoivron(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Fromage" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnFromage(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Saucisse" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSaucisse(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Ananas" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAnanas(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Viande" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnViande(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

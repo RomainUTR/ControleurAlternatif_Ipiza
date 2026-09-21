@@ -1028,6 +1028,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 47f86d4c21cff154e859262b6de37c7f, type: 2}
   - {fileID: 11400000, guid: d718e1361153b3549a5266c258b98bab, type: 2}
   - {fileID: 11400000, guid: 5c3f46ee8307389498f3c7caa5ad32fa, type: 2}
+  - {fileID: 11400000, guid: 0b4f7204725f64d41bffe718ffcb7e5a, type: 2}
+  - {fileID: 11400000, guid: a9129cac064dfd54499b51e53ed2aa96, type: 2}
+  - {fileID: 11400000, guid: 1b2d33c71d79d6a4683e286f977c8098, type: 2}
+  - {fileID: 11400000, guid: 8f9967792ce46b945945dc269c1309c7, type: 2}
   TurnsToPlaceIngredient: 2
   InputMapping:
   - InputAction: {fileID: -7904981635282769790, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
@@ -1036,6 +1040,14 @@ MonoBehaviour:
     Ingredient: {fileID: 11400000, guid: d718e1361153b3549a5266c258b98bab, type: 2}
   - InputAction: {fileID: 6043437010441218388, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
     Ingredient: {fileID: 11400000, guid: 5c3f46ee8307389498f3c7caa5ad32fa, type: 2}
+  - InputAction: {fileID: 8736197657662944249, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    Ingredient: {fileID: 11400000, guid: 0b4f7204725f64d41bffe718ffcb7e5a, type: 2}
+  - InputAction: {fileID: -2978574025876970985, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    Ingredient: {fileID: 11400000, guid: a9129cac064dfd54499b51e53ed2aa96, type: 2}
+  - InputAction: {fileID: 1707923936737119392, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    Ingredient: {fileID: 11400000, guid: 1b2d33c71d79d6a4683e286f977c8098, type: 2}
+  - InputAction: {fileID: 5822195270078999543, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    Ingredient: {fileID: 11400000, guid: 8f9967792ce46b945945dc269c1309c7, type: 2}
   OnTurnCompleted: {fileID: 11400000, guid: 8e46e9a5ac20dca43a5acfe40ab702f2, type: 2}
   PizzaTransform: {fileID: 2069105018}
   TurnText: {fileID: 1329958293}
