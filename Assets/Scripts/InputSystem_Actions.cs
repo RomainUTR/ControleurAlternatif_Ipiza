@@ -271,6 +271,16 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""initialStateCheck"": false,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""SpamNote"",
+                    ""type"": ""Button"",
+                    ""id"": ""6705a955-eafa-41ed-9f95-50d7e5e6e20c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -832,6 +842,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ServePizza"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""55047dbd-4bbb-49a1-84e5-0a2632b3217c"",
+                    ""path"": ""<Keyboard>/backspace"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpamNote"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e180c59a-684b-4e49-89f5-b263d28524eb"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button12"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpamNote"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1447,6 +1479,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Viande = m_Player.FindAction("Viande", throwIfNotFound: true);
         m_Player_Four = m_Player.FindAction("Four", throwIfNotFound: true);
         m_Player_ServePizza = m_Player.FindAction("ServePizza", throwIfNotFound: true);
+        m_Player_SpamNote = m_Player.FindAction("SpamNote", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1558,6 +1591,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Viande;
     private readonly InputAction m_Player_Four;
     private readonly InputAction m_Player_ServePizza;
+    private readonly InputAction m_Player_SpamNote;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1642,6 +1676,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @ServePizza => m_Wrapper.m_Player_ServePizza;
         /// <summary>
+        /// Provides access to the underlying input action "Player/SpamNote".
+        /// </summary>
+        public InputAction @SpamNote => m_Wrapper.m_Player_SpamNote;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -1721,6 +1759,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ServePizza.started += instance.OnServePizza;
             @ServePizza.performed += instance.OnServePizza;
             @ServePizza.canceled += instance.OnServePizza;
+            @SpamNote.started += instance.OnSpamNote;
+            @SpamNote.performed += instance.OnSpamNote;
+            @SpamNote.canceled += instance.OnSpamNote;
         }
 
         /// <summary>
@@ -1786,6 +1827,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ServePizza.started -= instance.OnServePizza;
             @ServePizza.performed -= instance.OnServePizza;
             @ServePizza.canceled -= instance.OnServePizza;
+            @SpamNote.started -= instance.OnSpamNote;
+            @SpamNote.performed -= instance.OnSpamNote;
+            @SpamNote.canceled -= instance.OnSpamNote;
         }
 
         /// <summary>
@@ -2212,6 +2256,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnServePizza(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SpamNote" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSpamNote(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

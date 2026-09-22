@@ -14,7 +14,7 @@ public class ScratchNote : NoteBehavior
         SR.sprite = (Direction > 0f) ? SpriteUp : SpriteDown;
     }
 
-    public override void EvaluateInput(KeyboardPlatterController platter, float tolerance, float currentTime)
+    public override void EvaluateInput(IPlatterInput platter, float tolerance, float currentTime)
     {
         if (CurrentState == NoteState.Hit || CurrentState == NoteState.Miss) return;
 

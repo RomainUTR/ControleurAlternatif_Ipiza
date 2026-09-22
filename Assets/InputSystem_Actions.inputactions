@@ -185,6 +185,16 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "SpamNote",
+                    "type": "Button",
+                    "id": "6705a955-eafa-41ed-9f95-50d7e5e6e20c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -746,6 +756,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ServePizza",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "55047dbd-4bbb-49a1-84e5-0a2632b3217c",
+                    "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpamNote",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e180c59a-684b-4e49-89f5-b263d28524eb",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button12",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpamNote",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
