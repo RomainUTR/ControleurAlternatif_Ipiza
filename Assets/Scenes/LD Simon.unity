@@ -405,6 +405,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 72345148}
+  - {fileID: 1691768085}
   - {fileID: 1765507104}
   - {fileID: 1342975946}
   m_Father: {fileID: 0}
@@ -901,6 +902,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 1754147686507538075, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
   m_PrefabInstance: {fileID: 544789204787605146}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1691768085 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6047120970472744290, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
+  m_PrefabInstance: {fileID: 544789204787605146}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1765507104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8367426999135538163, guid: 6c3d7d26675397e47aa8ebefb932c261, type: 3}
@@ -969,7 +975,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 738804135}
     m_Modifications:
     - target: {fileID: 1698881188821708581, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: m_Name
@@ -993,11 +999,11 @@ PrefabInstance:
       objectReference: {fileID: 847110769}
     - target: {fileID: 6047120970472744290, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.404461
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6047120970472744290, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.45506
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6047120970472744290, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1282,5 +1288,4 @@ SceneRoots:
   - {fileID: 738804135}
   - {fileID: 444050257}
   - {fileID: 1559320427}
-  - {fileID: 544789204787605146}
   - {fileID: 1308927991}
