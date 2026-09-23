@@ -271,6 +271,16 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""initialStateCheck"": false,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""SpamNote"",
+                    ""type"": ""Button"",
+                    ""id"": ""6705a955-eafa-41ed-9f95-50d7e5e6e20c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -672,11 +682,33 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""20b403f1-0f86-42a4-87d1-67d602f243df"",
+                    ""path"": ""<Joystick>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Champignon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""ccd08b8a-aa18-4ac8-8e62-e1b4914aa594"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
+                    ""action"": ""Poisson"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2436452a-6829-4a4a-bc6a-15aa3bdc58c6"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
                     ""action"": ""Poisson"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -694,11 +726,33 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""9d0b46b1-6a1a-4180-8f6c-3709aa9839b6"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Poivron"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""147a622b-43d6-434d-a468-2b411fffbed4"",
                     ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
+                    ""action"": ""Fromage"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""77c6614b-fcba-4a59-86d1-211633c650cd"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
                     ""action"": ""Fromage"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -716,6 +770,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""c7efecd0-d6a6-488a-9425-a48c1814c30c"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Saucisse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""e49d11d8-2f77-485a-a3ea-085e2e19bd53"",
                     ""path"": ""<Gamepad>/dpad/right"",
                     ""interactions"": """",
@@ -727,11 +792,33 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""1be0be0c-9eed-4662-a3ab-2b00a0b7a225"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ananas"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""7927762a-0846-4abe-8a9a-dd1cd4487afb"",
                     ""path"": ""<Gamepad>/dpad/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
+                    ""action"": ""Viande"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b4be0e5e-1e0a-417a-a1e2-d073661a3b00"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
                     ""action"": ""Viande"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -755,6 +842,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ServePizza"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""55047dbd-4bbb-49a1-84e5-0a2632b3217c"",
+                    ""path"": ""<Keyboard>/backspace"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpamNote"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e180c59a-684b-4e49-89f5-b263d28524eb"",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button12"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpamNote"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1370,6 +1479,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Viande = m_Player.FindAction("Viande", throwIfNotFound: true);
         m_Player_Four = m_Player.FindAction("Four", throwIfNotFound: true);
         m_Player_ServePizza = m_Player.FindAction("ServePizza", throwIfNotFound: true);
+        m_Player_SpamNote = m_Player.FindAction("SpamNote", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1481,6 +1591,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Viande;
     private readonly InputAction m_Player_Four;
     private readonly InputAction m_Player_ServePizza;
+    private readonly InputAction m_Player_SpamNote;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1565,6 +1676,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @ServePizza => m_Wrapper.m_Player_ServePizza;
         /// <summary>
+        /// Provides access to the underlying input action "Player/SpamNote".
+        /// </summary>
+        public InputAction @SpamNote => m_Wrapper.m_Player_SpamNote;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -1644,6 +1759,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ServePizza.started += instance.OnServePizza;
             @ServePizza.performed += instance.OnServePizza;
             @ServePizza.canceled += instance.OnServePizza;
+            @SpamNote.started += instance.OnSpamNote;
+            @SpamNote.performed += instance.OnSpamNote;
+            @SpamNote.canceled += instance.OnSpamNote;
         }
 
         /// <summary>
@@ -1709,6 +1827,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ServePizza.started -= instance.OnServePizza;
             @ServePizza.performed -= instance.OnServePizza;
             @ServePizza.canceled -= instance.OnServePizza;
+            @SpamNote.started -= instance.OnSpamNote;
+            @SpamNote.performed -= instance.OnSpamNote;
+            @SpamNote.canceled -= instance.OnSpamNote;
         }
 
         /// <summary>
@@ -2135,6 +2256,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnServePizza(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SpamNote" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSpamNote(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

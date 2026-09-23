@@ -1,7 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class KeyboardPlatterController : MonoBehaviour
+public class KeyboardPlatterController : MonoBehaviour, IPlatterInput
 {
     [Header("Settings")]
     [SerializeField] private float Acceleration = 3f;
@@ -12,8 +12,8 @@ public class KeyboardPlatterController : MonoBehaviour
     //[Header("Input")]
     //[Header("Output")]
 
-    [ReadOnly]
-    public float CurrentSpeed = 0f;
+    [ReadOnly, ShowInInspector]
+    public float CurrentSpeed { get; private set; } = 0f;
 
     public bool IsConsumed {  get; private set; }
     public float CurrentInput {  get; private set; }

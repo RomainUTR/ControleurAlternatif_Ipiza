@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using RomainUTR.SLToolbox;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(AudioSource))]
 public class RythmConductor : MonoBehaviour
@@ -12,7 +13,8 @@ public class RythmConductor : MonoBehaviour
 
     [Header("References")]
     [SerializeField, InlineEditor] private SSO_TrackData trackData;
-    [SerializeField] private KeyboardPlatterController PlayerPlatter;
+    [Tooltip("Glisse ici le KeyboardPlatter ou l'EncoderPlatter")]
+    [SerializeField] private MonoBehaviour PlatterComponent;
     [SerializeField] private Transform ValidationZone;
     [SerializeField] private Transform NotesParent;
     [SerializeField] private GameObject ScratchPrefab;
@@ -22,6 +24,7 @@ public class RythmConductor : MonoBehaviour
     [SerializeField] private RSE_RefreshUI RefreshUI;
     [SerializeField] private RSO_Score Score;
     [SerializeField] private SSO_ScoreData ScoreData;
+    [SerializeField] private InputActionReference SpamInput;
 
     public float CurrentTrackTime => (float)_currentTrackTime;
 
@@ -41,8 +44,34 @@ public class RythmConductor : MonoBehaviour
 
     private List<NoteBehavior> _activeNotes = new List<NoteBehavior>();
 
+    private IPlatterInput PlayerPlatter;
+
+    private void OnEnable()
+    {
+        if (SpamInput != null)
+        {
+            SpamInput.action.Enable();
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (SpamInput != null)
+        {
+            SpamInput.action.Disable();
+        }
+    }
+
     private void Start()
     {
+        PlayerPlatter = PlatterComponent as IPlatterInput;
+
+        if (PlayerPlatter == null)
+        {
+            Debug.LogError("Le composant assigné à PlatterComponent n'implémente pas IPlatterInput !");
+            return;
+        }
+
         if (trackData == null || trackData.TrackAudio == null) return;
 
         _audioSource = GetComponent<AudioSource>();

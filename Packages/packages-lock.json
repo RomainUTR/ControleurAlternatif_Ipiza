@@ -182,6 +182,14 @@
       "source": "builtin",
       "dependencies": {}
     },
+    "com.unity.media.osc": {
+      "version": "file:../UnityOSCProtocolSupport/com.unity.media.osc",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0"
+      }
+    },
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.6",
       "depth": 2,

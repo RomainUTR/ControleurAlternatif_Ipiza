@@ -53,6 +53,7 @@ MonoBehaviour:
   SR: {fileID: 3974820048165283492}
   TrailTransform: {fileID: 8348140370511957250}
   CounterText: {fileID: 5317123641703091186}
+  SpamInput: {fileID: -2219071090774977460, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!212 &3974820048165283492
 SpriteRenderer:
   serializedVersion: 3
