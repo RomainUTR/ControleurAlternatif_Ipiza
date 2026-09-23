@@ -56,7 +56,7 @@ public abstract class NoteBehavior : MonoBehaviour
         transform.position = Vector3.LerpUnclamped(_startPosition, _targetPosition, progression);
     }
 
-    public abstract void EvaluateInput(KeyboardPlatterController platter, float tolerance, float currentTime);
+    public abstract void EvaluateInput(IPlatterInput platter, float tolerance, float currentTime);
 
     public virtual void TriggerMissFeedback(float currentTime)
     {
