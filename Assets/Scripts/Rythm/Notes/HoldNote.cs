@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class HoldNote : NoteBehavior
@@ -11,6 +12,14 @@ public class HoldNote : NoteBehavior
     [SerializeField] private Transform TrailTransform;
     [SerializeField] private Sprite SpriteUp, SpriteDown;
 
+    [Header("Debug En Temps Réel")]
+    [ShowInInspector, ReadOnly] private float DebugCurrentSpeed = 0f;
+    [ShowInInspector, ReadOnly] private string DebugHoldStatus = "En attente...";
+    [ShowInInspector, ReadOnly, ProgressBar(0, "MaxGraceTime", ColorGetter = "GetGraceColor")]
+    private float DebugGraceProgressBar => _graceTimer;
+
+    private Color GetGraceColor() => Color.Lerp(Color.green, Color.red, _graceTimer / MaxGraceTime);
+
     //[Header("Input")]
     //[Header("Output")]
 
@@ -22,7 +31,7 @@ public class HoldNote : NoteBehavior
         base.Initialize(startPos, targetPos, spawnTime, targetTime, direction, conductor, duration);
         Duration = duration;
 
-        SR.sprite = (Direction > 0f) ? SpriteUp : SpriteDown;
+        SR.sprite = (Direction > 0f) ? SpriteDown : SpriteUp;
 
         if (TrailTransform != null)
         {
@@ -50,6 +59,8 @@ public class HoldNote : NoteBehavior
             case NoteState.Pending:
                 if (timeDifference > tolerance)
                 {
+                    Debug.LogWarning($"[MISS - DÉBUT] Raté à l'entrée ! Vitesse Platine: {platter.CurrentSpeed:F2} | Dir Joueur: {Mathf.Sign(platter.CurrentSpeed)} | Dir Requise: {Mathf.Sign(Direction)}");
+
                     CurrentState = NoteState.Miss;
                     return;
                 }
@@ -66,30 +77,44 @@ public class HoldNote : NoteBehavior
             case NoteState.Ongoing:
                 SR.color = Color.yellow;
 
+                DebugCurrentSpeed = platter.CurrentSpeed;
+
                 if (TrailTransform != null)
                 {
                     float remainingTime = (TargetTime + Duration) - currentTime;
                     float currentTrailLength = _fallSpeed * Mathf.Max(0, remainingTime);
-
                     TrailTransform.localScale = new Vector3(currentTrailLength, 0.2f, 1f);
                 }
 
                 if (currentTime >= TargetTime + Duration)
                 {
+                    DebugHoldStatus = "Validé !";
                     CurrentState = NoteState.Hit;
                     return;
                 }
 
-                if (Mathf.Abs(platter.CurrentSpeed) > 0.1f && Mathf.Sign(platter.CurrentSpeed) == Mathf.Sign(Direction))
+                bool isFastEnough = Mathf.Abs(platter.CurrentSpeed) > 0.1f;
+                bool isRightDirection = Mathf.Sign(platter.CurrentSpeed) == Mathf.Sign(Direction);
+
+                if (isFastEnough && isRightDirection)
                 {
+                    DebugHoldStatus = "Parfait";
                     _graceTimer = 0f;
                 }
                 else
                 {
+                    if (!isFastEnough) DebugHoldStatus = "TROP LENT ! (Vitesse < 0.1)";
+                    else if (!isRightDirection) DebugHoldStatus = "MAUVAISE DIRECTION !";
+
                     _graceTimer += Time.deltaTime;
 
                     if (_graceTimer > MaxGraceTime)
                     {
+                        Debug.LogWarning($"[HOLD RATÉ] Vitesse actuelle: {platter.CurrentSpeed:F2} | Trop lent: {!isFastEnough} | Mauvaise Direction: {!isRightDirection}");
+
+                        Debug.Break();
+
+                        DebugHoldStatus = "LÂCHÉ";
                         SR.color = Color.red;
                         CurrentState = NoteState.Miss;
                     }

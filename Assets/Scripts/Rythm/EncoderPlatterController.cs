@@ -9,8 +9,17 @@ public class EncoderPlatterController : MonoBehaviour, IPlatterInput
     [SerializeField] private float MaxSpeed = 1f;
 
     [Header("Hardware Settings")]
-    [InfoBox("Vitesse minimale (degrés/sec) pour activer l'input.")]
-    [SerializeField] private float SpeedThreshold = 20f;
+    [InfoBox("Vitesse pour déclencher")]
+    [SerializeField] private float StartSpeedThreshold = 100f;
+    [InfoBox("Vitesse pour maintenir")]
+    [SerializeField] private float MaintainSpeedThreshold = 15f;
+    [InfoBox("Filtre spatial. Ignore les micro-tremblements du doigt sur l'encodeur")]
+    [SerializeField] private float DistanceFilter = 0.5f;
+    [InfoBox("Debounce (sec) : Temps nécessaire pour valider un changement de direction.")]
+    [SerializeField] private float DebounceTime = 0.05f;
+
+    private float _directionDebounceTimer = 0f;
+    private float _pendingDirection = 0f;
 
     [Header("Network Smoothing")]
     [Tooltip("Tolérance (sec) avant de couper l'input si l'Arduino ne renvoie plus de mouvement")]
@@ -19,6 +28,7 @@ public class EncoderPlatterController : MonoBehaviour, IPlatterInput
     [Header("Debug")]
     [ReadOnly, ShowInInspector] public float CurrentSpeed { get; private set; } = 0f;
     [ReadOnly] public float TrueContinuousAngle = 0f;
+    [SerializeField] private Transform PlatineTransform;
 
     public bool IsConsumed { get; private set; }
     public float CurrentInput { get; private set; }
@@ -26,6 +36,8 @@ public class EncoderPlatterController : MonoBehaviour, IPlatterInput
     private float _lastInput = 0f;
     private float _lastPacketTime = 0f;
     private float _timeSinceLastMovement = 0f;
+    private float _currentAngle = 0f;
+    private float _visualContinuousAngle = 0f;
 
     public void HandleEncoderVector(Vector3 hardwareData)
     {
@@ -34,25 +46,54 @@ public class EncoderPlatterController : MonoBehaviour, IPlatterInput
         float hardwareDirection = hardwareData.z;
 
         float newTotalDistance = (rawTurns * 360f) + rawAngle;
+        float distanceMoved = Mathf.Abs(newTotalDistance - TrueContinuousAngle);
+
+        if (distanceMoved < DistanceFilter) return;
 
         float currentTime = Time.realtimeSinceStartup;
         float timeSinceLastPacket = currentTime - _lastPacketTime;
 
         if (timeSinceLastPacket > 0.001f)
         {
-            float distanceMoved = Mathf.Abs(newTotalDistance - TrueContinuousAngle);
+            float physicalVelocity = (distanceMoved * hardwareDirection) / timeSinceLastPacket;
 
-            if (distanceMoved > 1f)
+            float activeThreshold = (CurrentInput != 0f) ? MaintainSpeedThreshold : StartSpeedThreshold;
+
+            if (Mathf.Abs(physicalVelocity) > activeThreshold)
             {
-                float signedDeltaAngle = distanceMoved * hardwareDirection;
-                float physicalVelocity = signedDeltaAngle / timeSinceLastPacket;
+                float newRawDirection = Mathf.Sign(physicalVelocity);
 
-                if (Mathf.Abs(physicalVelocity) > SpeedThreshold)
+                if (newRawDirection != CurrentInput)
                 {
-                    CurrentInput = Mathf.Sign(physicalVelocity);
+                    if (newRawDirection == _pendingDirection)
+                    {
+                        _directionDebounceTimer += timeSinceLastPacket;
+
+                        if (_directionDebounceTimer >= DebounceTime)
+                        {
+                            CurrentInput = newRawDirection;
+                            _timeSinceLastMovement = 0f;
+                        }
+                    }
+                    else
+                    {
+                        _pendingDirection = newRawDirection;
+                        _directionDebounceTimer = timeSinceLastPacket;
+                    }
+                }
+                else
+                {
+                    _directionDebounceTimer = 0f;
                     _timeSinceLastMovement = 0f;
                 }
             }
+        }
+
+        _visualContinuousAngle += distanceMoved * hardwareDirection;
+
+        if (PlatineTransform != null)
+        {
+            PlatineTransform.rotation = Quaternion.Euler(0f, 0f, -_visualContinuousAngle);
         }
 
         TrueContinuousAngle = newTotalDistance;

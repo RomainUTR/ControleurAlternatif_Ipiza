@@ -11,7 +11,7 @@ public class ScratchNote : NoteBehavior
     {
         base.Initialize(startPos, targetPos, spawnTime, targetTime, direction, conductor);
 
-        SR.sprite = (Direction > 0f) ? SpriteUp : SpriteDown;
+        SR.sprite = (Direction > 0f) ? SpriteDown : SpriteUp;
     }
 
     public override void EvaluateInput(IPlatterInput platter, float tolerance, float currentTime)
