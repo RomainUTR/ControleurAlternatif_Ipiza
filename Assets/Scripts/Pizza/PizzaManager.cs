@@ -232,6 +232,9 @@ public class PizzaManager : MonoBehaviour
         foreach (SSO_Ingredient ingredient in CurrentRecipe)
         {
             GameObject iconObj = Instantiate(OrderIconPrefab, OrderContainer);
+
+            iconObj.transform.SetAsFirstSibling();
+
             Image iconImage = iconObj.GetComponent<Image>();
 
             if (iconImage != null && ingredient.Icon != null)
