@@ -9,11 +9,11 @@ public class EncoderPlatterController : MonoBehaviour, IPlatterInput
     [SerializeField] private float MaxSpeed = 1f;
 
     [Header("Hardware Settings")]
-    [InfoBox("Vitesse (degrés/sec). Si la tige est très sensible, monte cette valeur (ex: 30)")]
+    [InfoBox("Vitesse minimale (degrés/sec) pour activer l'input.")]
     [SerializeField] private float SpeedThreshold = 20f;
 
     [Header("Network Smoothing")]
-    [Tooltip("Tolérance en secondes pour lisser les micro-coupures réseau de l'Arduino")]
+    [Tooltip("Tolérance (sec) avant de couper l'input si l'Arduino ne renvoie plus de mouvement")]
     [SerializeField] private float InputBufferTime = 0.1f;
 
     [Header("Debug")]
@@ -24,48 +24,53 @@ public class EncoderPlatterController : MonoBehaviour, IPlatterInput
     public float CurrentInput { get; private set; }
 
     private float _lastInput = 0f;
-    private float _previousFrameAngle = 0f;
+    private float _lastPacketTime = 0f;
     private float _timeSinceLastMovement = 0f;
 
-    private float _rawAngle = 0f;
-    private int _rawTurns = 0;
-
-    public void HandleEncoderAngle(float angle)
+    public void HandleEncoderVector(Vector3 hardwareData)
     {
-        _rawAngle = angle;
-    }
+        float rawAngle = hardwareData.x;
+        int rawTurns = Mathf.RoundToInt(hardwareData.y);
+        float hardwareDirection = hardwareData.z;
 
-    public void HandleEncoderTurns(int turns)
-    {
-        _rawTurns = turns;
+        float newTotalDistance = (rawTurns * 360f) + rawAngle;
+
+        float currentTime = Time.realtimeSinceStartup;
+        float timeSinceLastPacket = currentTime - _lastPacketTime;
+
+        if (timeSinceLastPacket > 0.001f)
+        {
+            float distanceMoved = Mathf.Abs(newTotalDistance - TrueContinuousAngle);
+
+            if (distanceMoved > 1f)
+            {
+                float signedDeltaAngle = distanceMoved * hardwareDirection;
+                float physicalVelocity = signedDeltaAngle / timeSinceLastPacket;
+
+                if (Mathf.Abs(physicalVelocity) > SpeedThreshold)
+                {
+                    CurrentInput = Mathf.Sign(physicalVelocity);
+                    _timeSinceLastMovement = 0f;
+                }
+            }
+        }
+
+        TrueContinuousAngle = newTotalDistance;
+        _lastPacketTime = currentTime;
     }
 
     private void Start()
     {
-        TrueContinuousAngle = (_rawTurns * 360f) + _rawAngle;
-        _previousFrameAngle = TrueContinuousAngle;
+        _lastPacketTime = Time.realtimeSinceStartup;
     }
 
     private void Update()
     {
-        TrueContinuousAngle = (_rawTurns * 360f) + _rawAngle;
+        _timeSinceLastMovement += Time.deltaTime;
 
-        float deltaAngle = TrueContinuousAngle - _previousFrameAngle;
-        _previousFrameAngle = TrueContinuousAngle;
-
-        float physicalVelocity = deltaAngle / Time.deltaTime;
-
-        if (Mathf.Abs(physicalVelocity) > SpeedThreshold)
+        if (_timeSinceLastMovement >= InputBufferTime)
         {
-            CurrentInput = Mathf.Sign(physicalVelocity);
-            _timeSinceLastMovement = 0f;
-        } else
-        {
-            _timeSinceLastMovement += Time.deltaTime;
-            if (_timeSinceLastMovement >= InputBufferTime)
-            {
-                CurrentInput = 0f;
-            }
+            CurrentInput = 0f;
         }
 
         if (CurrentInput != _lastInput)
@@ -75,7 +80,7 @@ public class EncoderPlatterController : MonoBehaviour, IPlatterInput
             if (CurrentInput != 0f && Mathf.Sign(CurrentInput) != Mathf.Sign(CurrentSpeed))
             {
                 CurrentSpeed = 0f;
-            } 
+            }
         }
 
         _lastInput = CurrentInput;
@@ -83,7 +88,8 @@ public class EncoderPlatterController : MonoBehaviour, IPlatterInput
         if (CurrentInput != 0f)
         {
             CurrentSpeed += CurrentInput * Acceleration * Time.deltaTime;
-        } else
+        }
+        else
         {
             CurrentSpeed = Mathf.MoveTowards(CurrentSpeed, 0f, Friction * Time.deltaTime);
         }
@@ -94,5 +100,16 @@ public class EncoderPlatterController : MonoBehaviour, IPlatterInput
     public void ConsumeInput()
     {
         IsConsumed = true;
+    }
+
+    [ShowInInspector, ReadOnly, DisplayAsString]
+    public string IntendedDirection
+    {
+        get
+        {
+            if (CurrentInput > 0f) return "Horaire (Down)";
+            if (CurrentInput < 0f) return "Anti-horaire (Up)";
+            return "Repos";
+        }
     }
 }

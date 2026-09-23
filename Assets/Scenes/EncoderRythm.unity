@@ -293,19 +293,19 @@ MonoBehaviour:
   m_Receiver: {fileID: 896590692}
   m_Address: /encoder2
   m_Arguments:
-  - rid: 7538087298645885169
+  - rid: 7538087321378226259
   references:
     version: 2
     RefIds:
-    - rid: 7538087298645885169
-      type: {class: ArgumentHandlerFloat, ns: Unity.Media.Osc, asm: Unity.Media.Osc.Components}
+    - rid: 7538087321378226259
+      type: {class: ArgumentHandlerVector3, ns: Unity.Media.Osc, asm: Unity.Media.Osc.Components}
       data:
         m_Event:
           m_PersistentCalls:
             m_Calls:
             - m_Target: {fileID: 896590694}
               m_TargetAssemblyTypeName: EncoderPlatterController, Assembly-CSharp
-              m_MethodName: HandleEncoderAngle
+              m_MethodName: HandleEncoderVector
               m_Mode: 0
               m_Arguments:
                 m_ObjectArgument: {fileID: 0}
@@ -363,7 +363,7 @@ MonoBehaviour:
   Acceleration: 3
   Friction: 2
   MaxSpeed: 1
-  SpeedThreshold: 20
+  SpeedThreshold: 200
   InputBufferTime: 0.1
   TrueContinuousAngle: 0
 --- !u!82 &896590695
@@ -496,7 +496,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896590690}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5b9979067d335d47a65133b882b31ff, type: 3}
   m_Name: 
