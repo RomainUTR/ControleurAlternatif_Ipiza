@@ -4,12 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-[System.Serializable]
-public struct IngredientMapping
-{
-    public InputActionReference InputAction;
-    public SSO_Ingredient Ingredient;
-}
+
 
 public class PizzaManager : MonoBehaviour
 {
@@ -34,16 +29,13 @@ public class PizzaManager : MonoBehaviour
     [Header("Oven Settings")]
     [SerializeField] private int TurnsToOven = 5;
 
-    [Header("Input Mapping")]
-    [Tooltip("Associe chaque action d'input (bouton) à son ingrédient correspondant.")]
-    [SerializeField] private List<IngredientMapping> InputMapping = new List<IngredientMapping>();
-    [SerializeField] private RSE_OnTurnCompleted OnTurnCompleted;
-    [SerializeField] private InputActionReference OvenInputAction;
-    [SerializeField] private InputActionReference ServeInputAction;
+    [Header("Inputs")]
+    [SerializeField] private SSO_InputReader InputReader;
 
     [Header("Scene References")]
     [SerializeField] private Transform PizzaTransform;
     [SerializeField] private TMP_Text TurnText;
+    [SerializeField] private RSO_GameMode CurrentGameMode;
 
     [Header("UI References")]
     [SerializeField] private Transform OrderContainer;
@@ -51,8 +43,8 @@ public class PizzaManager : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] private RecipeGenerator RecipeGen;
+    [SerializeField] private RSE_OnTurnCompleted OnTurnCompleted;
 
-    private Dictionary<InputAction, SSO_Ingredient> _runtimeActionMap = new Dictionary<InputAction, SSO_Ingredient>();
     private List<Image> _spawnedOrderIcons = new List<Image>();
 
     private int _turnCount = 0;
@@ -63,26 +55,21 @@ public class PizzaManager : MonoBehaviour
     private bool _isOvenOn = false;
     private List<SSO_Ingredient> CurrentRecipe;
 
-    private void Awake()
-    {
-        foreach (var mapping in InputMapping)
-        {
-            if (mapping.InputAction != null && mapping.Ingredient != null)
-            {
-                _runtimeActionMap.Add(mapping.InputAction.action, mapping.Ingredient);
-            }
-        }
-    }
-
     private void OnEnable()
     {
         OnTurnCompleted.OnEventRaised += HandleTurnCompletion;
+        InputReader.OnIngredientPressedEvent += HandleIngredient;
+        InputReader.OnOvenPressedEvent += HandleOven;
+        InputReader.OnServePressedEvent += HandleServe;
         if (RecipeGen != null) RecipeGen.OnRecipeGenerated += HandleNewRecipe;
     }
 
     private void OnDisable()
     {
         OnTurnCompleted.OnEventRaised -= HandleTurnCompletion;
+        InputReader.OnIngredientPressedEvent -= HandleIngredient;
+        InputReader.OnOvenPressedEvent -= HandleOven;
+        InputReader.OnServePressedEvent -= HandleServe;
         if (RecipeGen != null) RecipeGen.OnRecipeGenerated -= HandleNewRecipe;
     }
 
@@ -93,6 +80,8 @@ public class PizzaManager : MonoBehaviour
 
     private void HandleTurnCompletion(int amount)
     {
+        if (CurrentGameMode.CurrentMode != RSO_GameMode.GameMode.Pizza) return;
+
         switch (CurrentState)
         {
             case PizzaState.DoughFlattening:
@@ -129,38 +118,8 @@ public class PizzaManager : MonoBehaviour
 
     void StartIngredientAssembly()
     {
-        Debug.Log("StartIngredientAssembly");
         CurrentState = PizzaState.IngredientAssembly;
         _currentRecipeIndex = 0;
-
-        foreach (var action in _runtimeActionMap.Keys)
-        {
-            action.Enable();
-            action.performed += OnIngredientPressed;
-        }
-    }
-
-    void StopIngredientAssembly()
-    {
-        foreach (var action in _runtimeActionMap.Keys)
-        {
-            action.performed -= OnIngredientPressed;
-            action.Disable();
-        }
-    }
-
-    void OnIngredientPressed(InputAction.CallbackContext ctx)
-    {
-        Debug.Log("OnIngredientPressed");
-
-        if (CurrentState != PizzaState.IngredientAssembly) return;
-
-        if (_selectedIngredient != null) return;
-
-        if (_runtimeActionMap.TryGetValue(ctx.action, out SSO_Ingredient pressedIngredient))
-        {
-            ValidateIngredientSelection(pressedIngredient);
-        }
     }
 
     void ValidateIngredientSelection(SSO_Ingredient pressedIngredient)
@@ -209,7 +168,6 @@ public class PizzaManager : MonoBehaviour
             if (_currentRecipeIndex >= CurrentRecipe.Count)
             {
                 Debug.Log("Recette complète ! On passe à la cuisson.");
-                StopIngredientAssembly();
                 StartCooking();
                 TurnText.text = "Au four !";
             }
@@ -251,38 +209,6 @@ public class PizzaManager : MonoBehaviour
         _currentCookingTurns = 0;
         _isOvenOn = false;
         TurnText.text = "Appuyez sur le bouton du four !";
-
-        if (OvenInputAction != null)
-        {
-            OvenInputAction.action.Enable();
-            OvenInputAction.action.performed += OnOvenPressed;
-        }
-    }
-
-    private void StopCooking()
-    {
-        if (OvenInputAction != null)
-        {
-            OvenInputAction.action.performed -= OnOvenPressed;
-            OvenInputAction.action.Disable();
-        }
-    }
-
-    private void OnOvenPressed(InputAction.CallbackContext ctx)
-    {
-        if (CurrentState != PizzaState.Cooking) return;
-
-        if (!_isOvenOn)
-        {
-            _isOvenOn = true;
-            Debug.Log("Le four est allumé ! Tournez la pizza !");
-            TurnText.text = $"Cuisson : {_currentCookingTurns}/{TurnsToOven}";
-        } else if (_currentCookingTurns >= TurnsToOven)
-        {
-            _isOvenOn = false;
-            StopCooking();
-            StartServing();
-        }
     }
 
     private void ProcessCookingTurning(int amount)
@@ -303,33 +229,6 @@ public class PizzaManager : MonoBehaviour
     {
         CurrentState = PizzaState.Ready;
         TurnText.text = "Pizza prête ! Appuyez pour servir.";
-
-        if (ServeInputAction != null)
-        {
-            ServeInputAction.action.Enable();
-            ServeInputAction.action.performed += OnServe;
-        }
-    }
-
-    private void StopServing()
-    {
-        if (ServeInputAction != null)
-        {
-            ServeInputAction.action.performed -= OnServe;
-            ServeInputAction.action.Disable();
-        }
-    }
-
-    private void OnServe(InputAction.CallbackContext ctx)
-    {
-        if (CurrentState != PizzaState.Ready) return;
-
-        Debug.Log("Pizza servie ! En attente de la prochaine commande...");
-
-        // AddScore
-
-        StopServing();
-        ResetForNextOrder();
     }
 
     private void ResetForNextOrder()
@@ -359,5 +258,40 @@ public class PizzaManager : MonoBehaviour
     {
         CurrentRecipe = generatedRecipe;
         GenerateOrderUI();
+    }
+
+    private void HandleIngredient(SSO_Ingredient pressedIngredient)
+    {
+        if (CurrentGameMode.CurrentMode != RSO_GameMode.GameMode.Pizza) return;
+        if (CurrentState != PizzaState.IngredientAssembly) return;
+        if (_selectedIngredient != null) return;
+
+        ValidateIngredientSelection(pressedIngredient);
+    }
+
+    private void HandleOven()
+    {
+        if (CurrentGameMode.CurrentMode != RSO_GameMode.GameMode.Pizza) return;
+        if (CurrentState != PizzaState.Cooking) return;
+
+        if (!_isOvenOn)
+        {
+            _isOvenOn = true;
+            TurnText.text = $"Cuisson : {_currentCookingTurns}/{TurnsToOven}";
+        }
+        else if (_currentCookingTurns >= TurnsToOven)
+        {
+            _isOvenOn = false;
+            StartServing();
+        }
+    }
+
+    private void HandleServe()
+    {
+        if (CurrentGameMode.CurrentMode != RSO_GameMode.GameMode.Pizza) return;
+        if (CurrentState != PizzaState.Ready) return;
+
+        Debug.Log("Pizza servie ! En attente de la prochaine commande...");
+        ResetForNextOrder();
     }
 }
