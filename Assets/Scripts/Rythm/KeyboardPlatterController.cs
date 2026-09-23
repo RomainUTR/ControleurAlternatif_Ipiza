@@ -22,7 +22,7 @@ public class KeyboardPlatterController : MonoBehaviour, IPlatterInput
 
     private void Update()
     {
-        CurrentInput = Input.GetAxisRaw("Vertical");
+        CurrentInput = Input.GetAxisRaw("Vertical") * -1f;
 
         if (CurrentInput != _lastInput)
         {
