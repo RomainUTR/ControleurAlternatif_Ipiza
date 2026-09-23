@@ -1,5 +1,7 @@
+using System.Buffers;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SpamNote : NoteBehavior
 {
@@ -9,7 +11,8 @@ public class SpamNote : NoteBehavior
     [SerializeField] private Transform TrailTransform;
     [SerializeField] private TMP_Text CounterText;
 
-    //[Header("Input")]
+    [Header("Input")]
+    [SerializeField] private InputActionReference SpamInput;
     //[Header("Output")]
 
     private int _requiredHits;
@@ -41,7 +44,7 @@ public class SpamNote : NoteBehavior
         CounterText.text = _requiredHits.ToString();
     }
 
-    public override void EvaluateInput(KeyboardPlatterController platter, float tolerance, float currentTime)
+    public override void EvaluateInput(IPlatterInput platter, float tolerance, float currentTime)
     {
         if (CurrentState == NoteState.Hit || CurrentState == NoteState.Miss) return;
 
@@ -63,7 +66,7 @@ public class SpamNote : NoteBehavior
                     TrailTransform.localScale = new Vector3(currentTrailLength, 0.2f, 1f);
                 }
 
-                if (Input.GetKeyDown(KeyCode.Backspace))
+                if (SpamInput != null && SpamInput.action.WasPressedThisFrame())
                 {
                     _currentHits++;
                     CounterText.text = Mathf.Max(0, _requiredHits - _currentHits).ToString();
