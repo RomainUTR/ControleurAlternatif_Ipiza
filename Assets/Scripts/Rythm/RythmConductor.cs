@@ -27,7 +27,7 @@ public class RythmConductor : MonoBehaviour
 
     private AudioSource _audioSource;
 
-    // On préfère double pour la précision des décimales
+    // On prï¿½fï¿½re double pour la prï¿½cision des dï¿½cimales
     private double _trackStartDspTime;
     private double _currentTrackTime;
 
@@ -62,7 +62,15 @@ public class RythmConductor : MonoBehaviour
     {
         if (!_isPlaying) return;
 
-        _currentTrackTime = AudioSettings.dspTime - _trackStartDspTime;
+        if (Time.timeScale == 1f)
+        {
+            _currentTrackTime = AudioSettings.dspTime - _trackStartDspTime;
+        }
+        else
+        {
+            _currentTrackTime += Time.deltaTime;
+            _trackStartDspTime = AudioSettings.dspTime - _currentTrackTime;
+        }
 
         ProcessDataNotes();
         ProcessProceduralBonuses();
