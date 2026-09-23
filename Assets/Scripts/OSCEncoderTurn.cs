@@ -17,19 +17,16 @@ public class OSCEncoderTurn : MonoBehaviour
     private int _previousTotalTurns;
     private bool _isInitialized = false;
 
-    public void HandleOSCEncoderAngle(float value)
+    public void HandleOSCMessage(Vector3 data)
     {
-        _currentAngle = value;
+        _currentAngle = data.x;
 
         if (PizzaTransform != null)
         {
             PizzaTransform.rotation = Quaternion.Euler(0f, 0f, -_currentAngle + OffsetAngle);
         }
-    }
 
-    public void HandleOSCEncoderTurns(int amount)
-    {
-        TotalTurns = amount;
+        TotalTurns = Mathf.RoundToInt(data.y);
 
         if (!_isInitialized)
         {
