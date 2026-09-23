@@ -25,6 +25,7 @@ public class RythmConductor : MonoBehaviour
     [SerializeField] private RSO_Score Score;
     [SerializeField] private SSO_ScoreData ScoreData;
     [SerializeField] private InputActionReference SpamInput;
+    [SerializeField] private RSO_GameMode CurrentGameMode;
 
     public float CurrentTrackTime => (float)_currentTrackTime;
 
@@ -204,6 +205,21 @@ public class RythmConductor : MonoBehaviour
         for (int i = 0; i < _activeNotes.Count; i++)
         {
             NoteBehavior note = _activeNotes[i];
+
+            if (CurrentGameMode.CurrentMode != RSO_GameMode.GameMode.Rythm)
+            {
+                float timeDifference = (float)_currentTrackTime - note.TargetTime;
+
+                if (timeDifference > trackData.DifficultyTolerance)
+                {
+                    Destroy(note.gameObject);
+                    _activeNotes.RemoveAt(i);
+                    i--;
+                }
+
+                continue;
+            }
+
             note.EvaluateInput(PlayerPlatter, trackData.DifficultyTolerance, (float)_currentTrackTime);
 
             if (note.CurrentState == NoteState.Hit)
@@ -224,19 +240,23 @@ public class RythmConductor : MonoBehaviour
             }
             else if (note.CurrentState == NoteState.Miss)
             {
-                //Debug.LogError("MISS !");
-
-                if (note.CurrentType != NoteType.Bonus)
+                if (CurrentGameMode.CurrentMode == RSO_GameMode.GameMode.Rythm)
                 {
-                    Score.RuntimeMultiplier = Score.InitialMultiplierValue;
-                    Score.RuntimeCombo = Score.InitialComboValue;
+                    if (note.CurrentType != NoteType.Bonus)
+                    {
+                        Score.RuntimeMultiplier = Score.InitialMultiplierValue;
+                        Score.RuntimeCombo = Score.InitialComboValue;
+                    }
+
+                    note.TriggerMissFeedback((float)CurrentTrackTime);
+                }
+                else
+                {
+                    Destroy(note.gameObject);
                 }
 
                 RefreshUI.Raise();
-
-                note.TriggerMissFeedback((float)CurrentTrackTime);
                 _activeNotes.RemoveAt(i);
-
                 i--;
             }
         }
