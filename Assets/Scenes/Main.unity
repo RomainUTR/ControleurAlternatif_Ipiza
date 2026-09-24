@@ -394,6 +394,7 @@ MonoBehaviour:
   SwitchInput: {fileID: 4137916787638889854, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   RTPizza: {fileID: 1779338280}
   RTRythm: {fileID: 570163645}
+  CommandsPanel: {fileID: 378448453}
 --- !u!1 &251791839
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,6 +725,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &378448453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5429338209876157122, guid: b242946baf2d8f243be3f7706c195100, type: 3}
+  m_PrefabInstance: {fileID: 172359567}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &393121767
 GameObject:
   m_ObjectHideFlags: 0

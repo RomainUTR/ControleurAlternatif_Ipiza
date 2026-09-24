@@ -9,6 +9,7 @@ public class GameModeSwitcher : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameObject RTPizza;
     [SerializeField] private GameObject RTRythm;
+    [SerializeField] private GameObject CommandsPanel;
 
     private void OnEnable() => SwitchInput.action.Enable();
     private void OnDisable() => SwitchInput.action.Disable();
@@ -45,12 +46,14 @@ public class GameModeSwitcher : MonoBehaviour
 
         RTRythm.SetActive(false);
         RTPizza.SetActive(true);
+        CommandsPanel.SetActive(true);
     }
 
     void SwitchToRythmMode()
     {
         GameModeData.CurrentMode = RSO_GameMode.GameMode.Rythm;
 
+        CommandsPanel.SetActive(false);
         RTPizza.SetActive(false);
         RTRythm.SetActive(true);
     }
