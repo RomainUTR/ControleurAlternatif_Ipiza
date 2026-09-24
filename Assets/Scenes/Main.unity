@@ -392,7 +392,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameModeSwitcher
   GameModeData: {fileID: 11400000, guid: 8337bb908822b2449b62eee0d90379cf, type: 2}
   SwitchInput: {fileID: 4137916787638889854, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  RTPizza: {fileID: 0}
+  RTPizza: {fileID: 1779338280}
+  RTRythm: {fileID: 570163645}
 --- !u!1 &251791839
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,7 +889,7 @@ PrefabInstance:
     - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: PlatterComponent
       value: 
-      objectReference: {fileID: 646380743}
+      objectReference: {fileID: 1265101912}
     - target: {fileID: 6047120970472744290, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 85.78
@@ -1534,7 +1535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1151537539
 Transform:
   m_ObjectHideFlags: 0
@@ -1872,6 +1873,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8965091299644454179, guid: fc3506e5df8187a459ac7b3291dad60e, type: 3}
   m_PrefabInstance: {fileID: 1265101909}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1265101912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3139324079886172877, guid: fc3506e5df8187a459ac7b3291dad60e, type: 3}
+  m_PrefabInstance: {fileID: 1265101909}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f4d95c83b4fde478e51dcd98ccbfc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyboardPlatterController
 --- !u!1001 &1361473259
 PrefabInstance:
   m_ObjectHideFlags: 0

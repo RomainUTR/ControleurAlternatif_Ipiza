@@ -27,6 +27,9 @@ public class RythmConductor : MonoBehaviour
     [SerializeField] private InputActionReference SpamInput;
     [SerializeField] private RSO_GameMode CurrentGameMode;
 
+    [Header("Grace Period")]
+    [SerializeField] private float GracePeriodDuration = 1.5f;
+
     public float CurrentTrackTime => (float)_currentTrackTime;
 
     private AudioSource _audioSource;
@@ -46,6 +49,8 @@ public class RythmConductor : MonoBehaviour
     private List<NoteBehavior> _activeNotes = new List<NoteBehavior>();
 
     private IPlatterInput PlayerPlatter;
+    private double _gracePeriodEndTime = 0;
+    private RSO_GameMode.GameMode _previousFrameMode;
 
     private void OnEnable()
     {
@@ -66,6 +71,7 @@ public class RythmConductor : MonoBehaviour
     private void Start()
     {
         PlayerPlatter = PlatterComponent as IPlatterInput;
+        _previousFrameMode = CurrentGameMode.CurrentMode;
 
         if (PlayerPlatter == null)
         {
@@ -93,6 +99,13 @@ public class RythmConductor : MonoBehaviour
         if (!_isPlaying) return;
 
         _currentTrackTime = AudioSettings.dspTime - _trackStartDspTime;
+
+        if (_previousFrameMode != RSO_GameMode.GameMode.Rythm && CurrentGameMode.CurrentMode == RSO_GameMode.GameMode.Rythm)
+        {
+            _gracePeriodEndTime = _currentTrackTime + GracePeriodDuration;
+        }
+
+        _previousFrameMode = CurrentGameMode.CurrentMode;
 
         ProcessDataNotes();
         ProcessProceduralBonuses();
@@ -242,13 +255,19 @@ public class RythmConductor : MonoBehaviour
             {
                 if (CurrentGameMode.CurrentMode == RSO_GameMode.GameMode.Rythm)
                 {
-                    if (note.CurrentType != NoteType.Bonus)
+                    if (_currentTrackTime < _gracePeriodEndTime)
                     {
-                        Score.RuntimeMultiplier = Score.InitialMultiplierValue;
-                        Score.RuntimeCombo = Score.InitialComboValue;
-                    }
+                        Destroy(note.gameObject);
+                    } else
+                    {
+                        if (note.CurrentType != NoteType.Bonus)
+                        {
+                            Score.RuntimeMultiplier = Score.InitialMultiplierValue;
+                            Score.RuntimeCombo = Score.InitialComboValue;
+                        }
 
-                    note.TriggerMissFeedback((float)CurrentTrackTime);
+                        note.TriggerMissFeedback((float)CurrentTrackTime);
+                    }
                 }
                 else
                 {
