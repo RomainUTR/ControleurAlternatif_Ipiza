@@ -31,7 +31,7 @@ public class RythmConductor : MonoBehaviour
 
     private AudioSource _audioSource;
 
-    // On préfère double pour la précision des décimales
+    // On prï¿½fï¿½re double pour la prï¿½cision des dï¿½cimales
     private double _trackStartDspTime;
     private double _currentTrackTime;
 
