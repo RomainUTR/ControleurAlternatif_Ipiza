@@ -62,15 +62,7 @@ public class RythmConductor : MonoBehaviour
     {
         if (!_isPlaying) return;
 
-        if (Time.timeScale == 1f)
-        {
-            _currentTrackTime = AudioSettings.dspTime - _trackStartDspTime;
-        }
-        else
-        {
-            _currentTrackTime += Time.deltaTime;
-            _trackStartDspTime = AudioSettings.dspTime - _currentTrackTime;
-        }
+        _currentTrackTime = AudioSettings.dspTime - _trackStartDspTime;
 
         ProcessDataNotes();
         ProcessProceduralBonuses();
