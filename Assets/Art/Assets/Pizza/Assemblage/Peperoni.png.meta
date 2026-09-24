@@ -1,0 +1,613 @@
+fileFormatVersion: 2
+guid: cbf3e0363457e0a45a77cada2fe72e80
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6868123795999908727
+    second: Peperoni_0
+  - first:
+      213: 3770495015488929274
+    second: Peperoni_1
+  - first:
+      213: 1386703221155675056
+    second: Peperoni_2
+  - first:
+      213: -4793346452924625113
+    second: Peperoni_3
+  - first:
+      213: 6684605597689368818
+    second: Peperoni_4
+  - first:
+      213: 119178128668169583
+    second: Peperoni_5
+  - first:
+      213: 7093227507786365520
+    second: Peperoni_6
+  - first:
+      213: 8171400088519244420
+    second: Peperoni_7
+  - first:
+      213: -5215566999347008085
+    second: Peperoni_8
+  - first:
+      213: 3914588796979017113
+    second: Peperoni_9
+  - first:
+      213: 1162885397344554646
+    second: Peperoni_10
+  - first:
+      213: 8865290989102610589
+    second: Peperoni_11
+  - first:
+      213: 6394706331156121490
+    second: Peperoni_12
+  - first:
+      213: 1828011654894931087
+    second: Peperoni_13
+  - first:
+      213: -2020458754533347981
+    second: Peperoni_14
+  - first:
+      213: 7463188592375965060
+    second: Peperoni_15
+  - first:
+      213: -7322083146840841534
+    second: Peperoni_16
+  - first:
+      213: 836631292541884625
+    second: Peperoni_17
+  - first:
+      213: -6047491674236441772
+    second: Peperoni_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Peperoni_0
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1215
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7736bfd143a705f50800000000000000
+      internalID: 6868123795999908727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_1
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 1361
+        width: 199
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afd39995d3d735430800000000000000
+      internalID: 3770495015488929274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_2
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 1358
+        width: 190
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bbbfd98b3f8e3310800000000000000
+      internalID: 1386703221155675056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_3
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 1232
+        width: 215
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f8c0c1ccc9a7db0800000000000000
+      internalID: -4793346452924625113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_4
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 941
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0dcd1ef5d74cc50800000000000000
+      internalID: 6684605597689368818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_5
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 913
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f65134860e767a100800000000000000
+      internalID: 119178128668169583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_6
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1045
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05ab2a836d4307260800000000000000
+      internalID: 7093227507786365520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_7
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 853
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48af8c92615a66170800000000000000
+      internalID: 8171400088519244420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_8
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 908
+        width: 198
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: badeba582759e97b0800000000000000
+      internalID: -5215566999347008085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 584
+        width: 213
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99578ad35c9635630800000000000000
+      internalID: 3914588796979017113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_10
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 582
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e063f8b16632010800000000000000
+      internalID: 1162885397344554646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_11
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 709
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d98beeb2f27d70b70800000000000000
+      internalID: 8865290989102610589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_12
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 504
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297808f078f8eb850800000000000000
+      internalID: 6394706331156121490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 569
+        width: 198
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c49473ae66e5910800000000000000
+      internalID: 1828011654894931087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_14
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 277
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d26b4b773e5f3e0800000000000000
+      internalID: -2020458754533347981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_15
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 374
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 485215cab72929760800000000000000
+      internalID: 7463188592375965060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_16
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 289
+        width: 195
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c26da80c2cb26a90800000000000000
+      internalID: -7322083146840841534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_17
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 110
+        width: 191
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d85fe75abf4c9b00800000000000000
+      internalID: 836631292541884625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Peperoni_18
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 88
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b210ffc5ef21ca0800000000000000
+      internalID: -6047491674236441772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Peperoni_0: 6868123795999908727
+      Peperoni_1: 3770495015488929274
+      Peperoni_10: 1162885397344554646
+      Peperoni_11: 8865290989102610589
+      Peperoni_12: 6394706331156121490
+      Peperoni_13: 1828011654894931087
+      Peperoni_14: -2020458754533347981
+      Peperoni_15: 7463188592375965060
+      Peperoni_16: -7322083146840841534
+      Peperoni_17: 836631292541884625
+      Peperoni_18: -6047491674236441772
+      Peperoni_2: 1386703221155675056
+      Peperoni_3: -4793346452924625113
+      Peperoni_4: 6684605597689368818
+      Peperoni_5: 119178128668169583
+      Peperoni_6: 7093227507786365520
+      Peperoni_7: 8171400088519244420
+      Peperoni_8: -5215566999347008085
+      Peperoni_9: 3914588796979017113
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

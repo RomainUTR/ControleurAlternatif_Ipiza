@@ -1,0 +1,5319 @@
+fileFormatVersion: 2
+guid: d68b78244192d654fadfdbd2d77bee7b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -866432782679661498
+    second: Fromage 1_0
+  - first:
+      213: -2356054976396757514
+    second: Fromage 1_1
+  - first:
+      213: 1879806140206330105
+    second: Fromage 1_2
+  - first:
+      213: -4904575336016429457
+    second: Fromage 1_3
+  - first:
+      213: 8842628389898080014
+    second: Fromage 1_4
+  - first:
+      213: 949549686405486435
+    second: Fromage 1_5
+  - first:
+      213: 4552155033299102822
+    second: Fromage 1_6
+  - first:
+      213: -3583034784961962014
+    second: Fromage 1_7
+  - first:
+      213: -2893437656835789897
+    second: Fromage 1_8
+  - first:
+      213: 8723598956994232471
+    second: Fromage 1_9
+  - first:
+      213: -988631301284584533
+    second: Fromage 1_10
+  - first:
+      213: 3737542676471964296
+    second: Fromage 1_11
+  - first:
+      213: -2047596723787726780
+    second: Fromage 1_12
+  - first:
+      213: 2588683213050243012
+    second: Fromage 1_13
+  - first:
+      213: -8789574727455086700
+    second: Fromage 1_14
+  - first:
+      213: -8536111088186338780
+    second: Fromage 1_15
+  - first:
+      213: 836015488759215066
+    second: Fromage 1_16
+  - first:
+      213: -318664264399746569
+    second: Fromage 1_17
+  - first:
+      213: -2859694072457310269
+    second: Fromage 1_18
+  - first:
+      213: 3210836478286782323
+    second: Fromage 1_19
+  - first:
+      213: 2131069992589566281
+    second: Fromage 1_20
+  - first:
+      213: -6842900342397027734
+    second: Fromage 1_21
+  - first:
+      213: 240484021722279887
+    second: Fromage 1_22
+  - first:
+      213: 3654925118924792222
+    second: Fromage 1_23
+  - first:
+      213: 4335761468493303263
+    second: Fromage 1_24
+  - first:
+      213: 6669309556835923193
+    second: Fromage 1_25
+  - first:
+      213: 302412308693341199
+    second: Fromage 1_26
+  - first:
+      213: -2536147178646900066
+    second: Fromage 1_27
+  - first:
+      213: 6516257782992619221
+    second: Fromage 1_28
+  - first:
+      213: 9010235727159634653
+    second: Fromage 1_29
+  - first:
+      213: -5768855881107343699
+    second: Fromage 1_30
+  - first:
+      213: 8011342208545029445
+    second: Fromage 1_31
+  - first:
+      213: -3278363381538440924
+    second: Fromage 1_32
+  - first:
+      213: -1470196762129197424
+    second: Fromage 1_33
+  - first:
+      213: 4073787259971888414
+    second: Fromage 1_34
+  - first:
+      213: 6071137543577981336
+    second: Fromage 1_35
+  - first:
+      213: -2577326487496314931
+    second: Fromage 1_36
+  - first:
+      213: 4630302917475011519
+    second: Fromage 1_37
+  - first:
+      213: -7276331171777426718
+    second: Fromage 1_38
+  - first:
+      213: 4543651813772900325
+    second: Fromage 1_39
+  - first:
+      213: 1937392225347623172
+    second: Fromage 1_40
+  - first:
+      213: -4815765984543070076
+    second: Fromage 1_41
+  - first:
+      213: -8915769434275609341
+    second: Fromage 1_42
+  - first:
+      213: 4326945284338369300
+    second: Fromage 1_43
+  - first:
+      213: -8726294772913989844
+    second: Fromage 1_44
+  - first:
+      213: 2240123955372435298
+    second: Fromage 1_45
+  - first:
+      213: -5014161515833142674
+    second: Fromage 1_46
+  - first:
+      213: 5223736799727616007
+    second: Fromage 1_47
+  - first:
+      213: 3010902976942817472
+    second: Fromage 1_48
+  - first:
+      213: 6239213684886516314
+    second: Fromage 1_49
+  - first:
+      213: -2668746565952584002
+    second: Fromage 1_50
+  - first:
+      213: 3475810879679981653
+    second: Fromage 1_51
+  - first:
+      213: 7940931700691326044
+    second: Fromage 1_52
+  - first:
+      213: -3019502897237860806
+    second: Fromage 1_53
+  - first:
+      213: -2979072057553114163
+    second: Fromage 1_54
+  - first:
+      213: -1756187514467913898
+    second: Fromage 1_55
+  - first:
+      213: -1284820504798295498
+    second: Fromage 1_56
+  - first:
+      213: 3857348825010316432
+    second: Fromage 1_57
+  - first:
+      213: -6422391853907519863
+    second: Fromage 1_58
+  - first:
+      213: -5656600604572086303
+    second: Fromage 1_59
+  - first:
+      213: 7199216324857270257
+    second: Fromage 1_60
+  - first:
+      213: -8268015508716356018
+    second: Fromage 1_61
+  - first:
+      213: -9194304457725695566
+    second: Fromage 1_62
+  - first:
+      213: -8453112159485560440
+    second: Fromage 1_63
+  - first:
+      213: 5484001682237074603
+    second: Fromage 1_64
+  - first:
+      213: 3137759353245239161
+    second: Fromage 1_65
+  - first:
+      213: 7723163918564949907
+    second: Fromage 1_66
+  - first:
+      213: 6366468434285238426
+    second: Fromage 1_67
+  - first:
+      213: 5371111513099800488
+    second: Fromage 1_68
+  - first:
+      213: -8588901636214010337
+    second: Fromage 1_69
+  - first:
+      213: 3801653355537385417
+    second: Fromage 1_70
+  - first:
+      213: 6301427243597981963
+    second: Fromage 1_71
+  - first:
+      213: -1988380376302586656
+    second: Fromage 1_72
+  - first:
+      213: 1180416093469124006
+    second: Fromage 1_73
+  - first:
+      213: -2265973771214839085
+    second: Fromage 1_74
+  - first:
+      213: -6435226777643621604
+    second: Fromage 1_75
+  - first:
+      213: -482574114045532291
+    second: Fromage 1_76
+  - first:
+      213: -4856014182806974305
+    second: Fromage 1_77
+  - first:
+      213: -2522336051666848402
+    second: Fromage 1_78
+  - first:
+      213: 299975972500766687
+    second: Fromage 1_79
+  - first:
+      213: -131838245615614886
+    second: Fromage 1_80
+  - first:
+      213: 817921874608194128
+    second: Fromage 1_81
+  - first:
+      213: -4406086630808501343
+    second: Fromage 1_82
+  - first:
+      213: -7633240161886361020
+    second: Fromage 1_83
+  - first:
+      213: 3112620551288299052
+    second: Fromage 1_84
+  - first:
+      213: 1806647438721955343
+    second: Fromage 1_85
+  - first:
+      213: 1947915651689802120
+    second: Fromage 1_86
+  - first:
+      213: -8769830878909065861
+    second: Fromage 1_87
+  - first:
+      213: -4460437435598587906
+    second: Fromage 1_88
+  - first:
+      213: -7389075091289665967
+    second: Fromage 1_89
+  - first:
+      213: 3135826666878734980
+    second: Fromage 1_90
+  - first:
+      213: 8879201016222162993
+    second: Fromage 1_91
+  - first:
+      213: -3106921392604959937
+    second: Fromage 1_92
+  - first:
+      213: -4335525272509214056
+    second: Fromage 1_93
+  - first:
+      213: 2404921276321003690
+    second: Fromage 1_94
+  - first:
+      213: -6293744948320138223
+    second: Fromage 1_95
+  - first:
+      213: 4504654455497354576
+    second: Fromage 1_96
+  - first:
+      213: 8505222212601325758
+    second: Fromage 1_97
+  - first:
+      213: 6173658077573784485
+    second: Fromage 1_98
+  - first:
+      213: -6008746109693638994
+    second: Fromage 1_99
+  - first:
+      213: -6202122348792859777
+    second: Fromage 1_100
+  - first:
+      213: 4890241908803574260
+    second: Fromage 1_101
+  - first:
+      213: -4000271933176412091
+    second: Fromage 1_102
+  - first:
+      213: 6597875511712379282
+    second: Fromage 1_103
+  - first:
+      213: -1819835472127148695
+    second: Fromage 1_104
+  - first:
+      213: 1229221859471027105
+    second: Fromage 1_105
+  - first:
+      213: 1324619786079721382
+    second: Fromage 1_106
+  - first:
+      213: -4095742125047585285
+    second: Fromage 1_107
+  - first:
+      213: -2769407881718853449
+    second: Fromage 1_108
+  - first:
+      213: -1481826279462308271
+    second: Fromage 1_109
+  - first:
+      213: 9045140510039653416
+    second: Fromage 1_110
+  - first:
+      213: 7334701530432171651
+    second: Fromage 1_111
+  - first:
+      213: 7965914338128377354
+    second: Fromage 1_112
+  - first:
+      213: 8906446466361412060
+    second: Fromage 1_113
+  - first:
+      213: 1740706283587594344
+    second: Fromage 1_114
+  - first:
+      213: 6153531467480273778
+    second: Fromage 1_115
+  - first:
+      213: -333690151969830856
+    second: Fromage 1_116
+  - first:
+      213: 4935625219345713180
+    second: Fromage 1_117
+  - first:
+      213: 2839582248283541283
+    second: Fromage 1_118
+  - first:
+      213: -2166951805567655049
+    second: Fromage 1_119
+  - first:
+      213: -2657995813476098581
+    second: Fromage 1_120
+  - first:
+      213: -2412680921879601345
+    second: Fromage 1_121
+  - first:
+      213: 8486835406450371392
+    second: Fromage 1_122
+  - first:
+      213: -5561463267453655249
+    second: Fromage 1_123
+  - first:
+      213: -5313704018734748015
+    second: Fromage 1_124
+  - first:
+      213: -3072695739035303641
+    second: Fromage 1_125
+  - first:
+      213: 5384120759099321316
+    second: Fromage 1_126
+  - first:
+      213: 8641056111068479407
+    second: Fromage 1_127
+  - first:
+      213: 4603655754081213773
+    second: Fromage 1_128
+  - first:
+      213: 5488090212867920633
+    second: Fromage 1_129
+  - first:
+      213: 7755178930601701117
+    second: Fromage 1_130
+  - first:
+      213: -4410924876512875323
+    second: Fromage 1_131
+  - first:
+      213: 6460410455296892460
+    second: Fromage 1_132
+  - first:
+      213: -1628749208153753908
+    second: Fromage 1_133
+  - first:
+      213: 3139206508762795333
+    second: Fromage 1_134
+  - first:
+      213: -650901524789632231
+    second: Fromage 1_135
+  - first:
+      213: 2209370157239468936
+    second: Fromage 1_136
+  - first:
+      213: 2314623079894268951
+    second: Fromage 1_137
+  - first:
+      213: 7580971319502160199
+    second: Fromage 1_138
+  - first:
+      213: -6166033944253115036
+    second: Fromage 1_139
+  - first:
+      213: -223118090192823001
+    second: Fromage 1_140
+  - first:
+      213: -5090103930679724623
+    second: Fromage 1_141
+  - first:
+      213: 7677512362136441473
+    second: Fromage 1_142
+  - first:
+      213: 9002251725779733698
+    second: Fromage 1_143
+  - first:
+      213: -3318711629077769853
+    second: Fromage 1_144
+  - first:
+      213: -5822543231183344512
+    second: Fromage 1_145
+  - first:
+      213: -6921052197808972165
+    second: Fromage 1_146
+  - first:
+      213: 3287379659285484986
+    second: Fromage 1_147
+  - first:
+      213: -649356075765829853
+    second: Fromage 1_148
+  - first:
+      213: 1878755905734349847
+    second: Fromage 1_149
+  - first:
+      213: -3443765661864873203
+    second: Fromage 1_150
+  - first:
+      213: 7423850450524476381
+    second: Fromage 1_151
+  - first:
+      213: 1795119914468627789
+    second: Fromage 1_152
+  - first:
+      213: -8015266901026920536
+    second: Fromage 1_153
+  - first:
+      213: 3034088856521013244
+    second: Fromage 1_154
+  - first:
+      213: -3876395893533290162
+    second: Fromage 1_155
+  - first:
+      213: 7249327533765015622
+    second: Fromage 1_156
+  - first:
+      213: 3700969449061197759
+    second: Fromage 1_157
+  - first:
+      213: 3418100488462935133
+    second: Fromage 1_158
+  - first:
+      213: -1790476613619117150
+    second: Fromage 1_159
+  - first:
+      213: -2694723325894110057
+    second: Fromage 1_160
+  - first:
+      213: 3473557369975986272
+    second: Fromage 1_161
+  - first:
+      213: 7423727010944669779
+    second: Fromage 1_162
+  - first:
+      213: -3529710977539539879
+    second: Fromage 1_163
+  - first:
+      213: -7095557565595348065
+    second: Fromage 1_164
+  - first:
+      213: -5938051374857511206
+    second: Fromage 1_165
+  - first:
+      213: -7149154407349255595
+    second: Fromage 1_166
+  - first:
+      213: 3426100938454831228
+    second: Fromage 1_167
+  - first:
+      213: 6263627891985906237
+    second: Fromage 1_168
+  - first:
+      213: -8533475730575598879
+    second: Fromage 1_169
+  - first:
+      213: 2435538260097650032
+    second: Fromage 1_170
+  - first:
+      213: 2057222103502528574
+    second: Fromage 1_171
+  - first:
+      213: 6503852352940619339
+    second: Fromage 1_172
+  - first:
+      213: -4535914677932672138
+    second: Fromage 1_173
+  - first:
+      213: -4388335449209544511
+    second: Fromage 1_174
+  - first:
+      213: -7061616690285172603
+    second: Fromage 1_175
+  - first:
+      213: -3266763915155357148
+    second: Fromage 1_176
+  - first:
+      213: 1855836637501873819
+    second: Fromage 1_177
+  - first:
+      213: 1911849935000814382
+    second: Fromage 1_178
+  - first:
+      213: -1768275260646119153
+    second: Fromage 1_179
+  - first:
+      213: -3459757972105103944
+    second: Fromage 1_180
+  - first:
+      213: 163914465044108954
+    second: Fromage 1_181
+  - first:
+      213: 5603033073164853652
+    second: Fromage 1_182
+  - first:
+      213: 4727472287212605458
+    second: Fromage 1_183
+  - first:
+      213: -7095211381174462907
+    second: Fromage 1_184
+  - first:
+      213: 7584959386315715111
+    second: Fromage 1_185
+  - first:
+      213: -3629850569238812827
+    second: Fromage 1_186
+  - first:
+      213: 7237250161342341455
+    second: Fromage 1_187
+  - first:
+      213: 1140702571455894932
+    second: Fromage 1_188
+  - first:
+      213: -7942258134783839991
+    second: Fromage 1_189
+  - first:
+      213: 4358334955655070255
+    second: Fromage 1_190
+  - first:
+      213: -3745074758648504025
+    second: Fromage 1_191
+  - first:
+      213: -8123029829659851661
+    second: Fromage 1_192
+  - first:
+      213: -3604807894514857595
+    second: Fromage 1_193
+  - first:
+      213: 4883906493376859686
+    second: Fromage 1_194
+  - first:
+      213: 631503549416807651
+    second: Fromage 1_195
+  - first:
+      213: -1404851222591744630
+    second: Fromage 1_196
+  - first:
+      213: -8323026638510711492
+    second: Fromage 1_197
+  - first:
+      213: -7730104840535533139
+    second: Fromage 1_198
+  - first:
+      213: 4672961430663663148
+    second: Fromage 1_199
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fromage 1_0
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1462
+        width: 95
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64420a689ffc9f3f0800000000000000
+      internalID: -866432782679661498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_1
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 1477
+        width: 15
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5749c5b7c9d4fd0800000000000000
+      internalID: -2356054976396757514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_2
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1464
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0b89199b9661a10800000000000000
+      internalID: 1879806140206330105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1464
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6e399aa7b27febb0800000000000000
+      internalID: -4904575336016429457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_4
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1332
+        width: 45
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0fc8ac9ba357ba70800000000000000
+      internalID: 8842628389898080014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_5
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 1298
+        width: 92
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36758caa86a7d2d00800000000000000
+      internalID: 949549686405486435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_6
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 1365
+        width: 51
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66cac4a62e08c2f30800000000000000
+      internalID: 4552155033299102822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_7
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 1231
+        width: 53
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ef5978c8d0864ec0800000000000000
+      internalID: -3583034784961962014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_8
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 1190
+        width: 143
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb609cf7c178d7d0800000000000000
+      internalID: -2893437656835789897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_9
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1169
+        width: 49
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7900c922803701970800000000000000
+      internalID: 8723598956994232471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_10
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1195
+        width: 68
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba3a919c11da742f0800000000000000
+      internalID: -988631301284584533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_11
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1250
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88269fb034b6ed330800000000000000
+      internalID: 3737542676471964296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_12
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1287
+        width: 77
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 440016bd0a97593e0800000000000000
+      internalID: -2047596723787726780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_13
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1205
+        width: 109
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c760e5baa9dce320800000000000000
+      internalID: 2588683213050243012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_14
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1156
+        width: 67
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497e943ca58250680800000000000000
+      internalID: -8789574727455086700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_15
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1178
+        width: 66
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42251690134a98980800000000000000
+      internalID: -8536111088186338780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_16
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1206
+        width: 58
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad3b73a58af1a9b00800000000000000
+      internalID: 836015488759215066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_17
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1246
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f987d53a80e39bf0800000000000000
+      internalID: -318664264399746569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_18
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 1248
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cf44e474635058d0800000000000000
+      internalID: -2859694072457310269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_19
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1221
+        width: 20
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f5628e3ce2f8c20800000000000000
+      internalID: 3210836478286782323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_20
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 1151
+        width: 86
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 941abcb0ed4139d10800000000000000
+      internalID: 2131069992589566281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_21
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1174
+        width: 14
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6ab602d4622901a0800000000000000
+      internalID: -6842900342397027734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_22
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1183
+        width: 82
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcfe9e091fe565300800000000000000
+      internalID: 240484021722279887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_23
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 1145
+        width: 51
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e912a22f707e8b230800000000000000
+      internalID: 3654925118924792222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_24
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1142
+        width: 57
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd8e507518bb2c30800000000000000
+      internalID: 4335761468493303263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_25
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 1214
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4b258d4b52e8c50800000000000000
+      internalID: 6669309556835923193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_26
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1200
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f045f5b7462623400800000000000000
+      internalID: 302412308693341199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_27
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 1185
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9274aef39bcdccd0800000000000000
+      internalID: -2536147178646900066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_28
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 1198
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d64624dde56e6a50800000000000000
+      internalID: 6516257782992619221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_29
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1187
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda22e3d7a9ca0d70800000000000000
+      internalID: 9010235727159634653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_30
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 1153
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da67c2e0428e0ffa0800000000000000
+      internalID: -5768855881107343699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_31
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1136
+        width: 93
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d7b62fa410e2f60800000000000000
+      internalID: 8011342208545029445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_32
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1131
+        width: 17
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 429b0cebfd9e082d0800000000000000
+      internalID: -3278363381538440924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_33
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1126
+        width: 30
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0961c5395dfc89be0800000000000000
+      internalID: -1470196762129197424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_34
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 1179
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e15e229ddeff88830800000000000000
+      internalID: 4073787259971888414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_35
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 1176
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 891d08bfd63014450800000000000000
+      internalID: 6071137543577981336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_36
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1152
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcfa392073f7b3cd0800000000000000
+      internalID: -2577326487496314931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_37
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1168
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb8d8698f3224040800000000000000
+      internalID: 4630302917475011519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_38
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1163
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eaca16d957450b90800000000000000
+      internalID: -7276331171777426718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_39
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 1168
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e73ef6504b4e0f30800000000000000
+      internalID: 4543651813772900325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_40
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 1151
+        width: 66
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409d276d6fff2ea10800000000000000
+      internalID: 1937392225347623172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_41
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1121
+        width: 65
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 488a6e12a56fa2db0800000000000000
+      internalID: -4815765984543070076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_42
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1160
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30587b2ffe2d44480800000000000000
+      internalID: -8915769434275609341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_43
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1085
+        width: 102
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4134a8b9fc56c0c30800000000000000
+      internalID: 4326945284338369300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_44
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1150
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c271d1f4329f5e680800000000000000
+      internalID: -8726294772913989844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_45
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 1127
+        width: 46
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26721d46ed4861f10800000000000000
+      internalID: 2240123955372435298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_46
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1043
+        width: 44
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e62d452eaae1a6ab0800000000000000
+      internalID: -5014161515833142674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 801
+        width: 50
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70086eb51f07e7840800000000000000
+      internalID: 5223736799727616007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_48
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1017
+        width: 129
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c0c7d91e40e8c920800000000000000
+      internalID: 3010902976942817472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_49
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 879
+        width: 53
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52ba652ac3269650800000000000000
+      internalID: 6239213684886516314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_50
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1033
+        width: 152
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb64adc4325b6fad0800000000000000
+      internalID: -2668746565952584002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_51
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 971
+        width: 57
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55863c5549f8c3030800000000000000
+      internalID: 3475810879679981653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_52
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1079
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5458551f4bd33e60800000000000000
+      internalID: 7940931700691326044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_53
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 1022
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3edfdbec129816d0800000000000000
+      internalID: -3019502897237860806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_54
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1123
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb21495fb538a6d0800000000000000
+      internalID: -2979072057553114163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_55
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1057
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65fe921a2c4c0a7e0800000000000000
+      internalID: -1756187514467913898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_56
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1025
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a0c53ee866b2ee0800000000000000
+      internalID: -1284820504798295498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_57
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1118
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094a289b15e088530800000000000000
+      internalID: 3857348825010316432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_58
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 977
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 986da7bd2a41fd6a0800000000000000
+      internalID: -6422391853907519863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_59
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1050
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ef883858b7bf71b0800000000000000
+      internalID: -5656600604572086303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_60
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1042
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ff8f48ba11c8e360800000000000000
+      internalID: 7199216324857270257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_61
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 963
+        width: 77
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e7a8d53bb124d80800000000000000
+      internalID: -8268015508716356018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_62
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 939
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b928782fc4476080800000000000000
+      internalID: -9194304457725695566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_63
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 1025
+        width: 115
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 889f357074380ba80800000000000000
+      internalID: -8453112159485560440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_64
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 958
+        width: 122
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baca26979761b1c40800000000000000
+      internalID: 5484001682237074603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_65
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 1003
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97787d8d18f8b8b20800000000000000
+      internalID: 3137759353245239161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_66
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1087
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39f7d243aa03e2b60800000000000000
+      internalID: 7723163918564949907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_67
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1020
+        width: 71
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a981f4b5f4d3a5850800000000000000
+      internalID: 6366468434285238426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_68
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 1044
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8af035bb6750a8a40800000000000000
+      internalID: 5371111513099800488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_69
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 928
+        width: 71
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1e41b2c7771ec880800000000000000
+      internalID: -8588901636214010337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_70
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1018
+        width: 58
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c74af7b59f22c430800000000000000
+      internalID: 3801653355537385417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_71
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 1114
+        width: 29
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0960a011ba237750800000000000000
+      internalID: 6301427243597981963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_72
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 999
+        width: 65
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e47028259ad764e0800000000000000
+      internalID: -1988380376302586656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_73
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1010
+        width: 62
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5a162de2ea16010800000000000000
+      internalID: 1180416093469124006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_74
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1038
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d223685cd4ad80e0800000000000000
+      internalID: -2265973771214839085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_75
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 964
+        width: 154
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13687d475b71b6a0800000000000000
+      internalID: -6435226777643621604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_76
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 1078
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77648a666d8d49f0800000000000000
+      internalID: -482574114045532291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_77
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 988
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f90188934d8fb9cb0800000000000000
+      internalID: -4856014182806974305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_78
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 903
+        width: 109
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e657c3499bcdefcd0800000000000000
+      internalID: -2522336051666848402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_79
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 1100
+        width: 60
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf7f02ce8ab92400800000000000000
+      internalID: 299975972500766687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_80
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 1018
+        width: 77
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54454a60dd9b2ef0800000000000000
+      internalID: -131838245615614886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_81
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1036
+        width: 113
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0520b068c97d95b00800000000000000
+      internalID: 817921874608194128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_82
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 1016
+        width: 45
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3cf01cd8f6ad2c0800000000000000
+      internalID: -4406086630808501343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_83
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 944
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44aa481f388411690800000000000000
+      internalID: -7633240161886361020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_84
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 912
+        width: 61
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2e9e1866ef323b20800000000000000
+      internalID: 3112620551288299052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_85
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 883
+        width: 18
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0634630640821910800000000000000
+      internalID: 1806647438721955343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_86
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 850
+        width: 115
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 889e467f6f2680b10800000000000000
+      internalID: 1947915651689802120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_87
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 900
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b759f5ab74d4b4680800000000000000
+      internalID: -8769830878909065861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_88
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 908
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef7ba44e8c75912c0800000000000000
+      internalID: -4460437435598587906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_89
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 879
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e0efc7a5bb47990800000000000000
+      internalID: -7389075091289665967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_90
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 817
+        width: 54
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482118c3db1b48b20800000000000000
+      internalID: 3135826666878734980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_91
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 870
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 130a53db742493b70800000000000000
+      internalID: 8879201016222162993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_92
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 894
+        width: 54
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b28b0647ff1e4d0800000000000000
+      internalID: -3106921392604959937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_93
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 781
+        width: 163
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8921c593cbe15d3c0800000000000000
+      internalID: -4335525272509214056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_94
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 843
+        width: 102
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa874e3b82fff5120800000000000000
+      internalID: 2404921276321003690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_95
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 849
+        width: 80
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c0870b05028a8a0800000000000000
+      internalID: -6293744948320138223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_96
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 837
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05deccf4c5fb38e30800000000000000
+      internalID: 4504654455497354576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_97
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 757
+        width: 150
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb82ddd2a8e980670800000000000000
+      internalID: 8505222212601325758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_98
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 831
+        width: 53
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3a186ef4d3da550800000000000000
+      internalID: 6173658077573784485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_99
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 824
+        width: 43
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea6433abf35ac9ca0800000000000000
+      internalID: -6008746109693638994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_100
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 798
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f73b0b28592ade9a0800000000000000
+      internalID: -6202122348792859777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_101
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 773
+        width: 12
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f917ff3b11add340800000000000000
+      internalID: 4890241908803574260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_102
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 759
+        width: 66
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5480e020fdd2c78c0800000000000000
+      internalID: -4000271933176412091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_103
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 735
+        width: 20
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2917dd322dc509b50800000000000000
+      internalID: 6597875511712379282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_104
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 770
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96db43ea745aeb6e0800000000000000
+      internalID: -1819835472127148695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_105
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 807
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ab6aebb4c21f0110800000000000000
+      internalID: 1229221859471027105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_106
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 786
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a75cb36daef16210800000000000000
+      internalID: 1324619786079721382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_107
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 784
+        width: 73
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf56fe8cc300927c0800000000000000
+      internalID: -4095742125047585285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_108
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 772
+        width: 79
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b01bfb54361199d0800000000000000
+      internalID: -2769407881718853449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_109
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 674
+        width: 180
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1567fc199de7f6be0800000000000000
+      internalID: -1481826279462308271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_110
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 786
+        width: 79
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82cb864ee5bc68d70800000000000000
+      internalID: 9045140510039653416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_111
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 660
+        width: 46
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38e6ce65e281ac560800000000000000
+      internalID: 7334701530432171651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_112
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 669
+        width: 67
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a063553a2ec9c8e60800000000000000
+      internalID: 7965914338128377354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_113
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 693
+        width: 47
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd9418e6fdd0a9b70800000000000000
+      internalID: 8906446466361412060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_114
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 671
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868678b642b382810800000000000000
+      internalID: 1740706283587594344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_115
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 690
+        width: 42
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2739951544cb56550800000000000000
+      internalID: 6153531467480273778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_116
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 681
+        width: 63
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 838cac2239e7e5bf0800000000000000
+      internalID: -333690151969830856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_117
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 712
+        width: 91
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c188f87acfcde7440800000000000000
+      internalID: 4935625219345713180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_118
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 685
+        width: 74
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f02739209386720800000000000000
+      internalID: 2839582248283541283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_119
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 680
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773afb750d07de1e0800000000000000
+      internalID: -2166951805567655049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_120
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 654
+        width: 56
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bed184be3e6ec1bd0800000000000000
+      internalID: -2657995813476098581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_121
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 519
+        width: 72
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f11070c7f648ed0800000000000000
+      internalID: -2412680921879601345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_122
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 612
+        width: 16
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04baea446db47c570800000000000000
+      internalID: 8486835406450371392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_123
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 650
+        width: 75
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f27aa08cf96b1d2b0800000000000000
+      internalID: -5561463267453655249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_124
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 645
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19eefb1295ee146b0800000000000000
+      internalID: -5313704018734748015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_125
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 613
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721c1f351879b55d0800000000000000
+      internalID: -3072695739035303641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_126
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 566
+        width: 20
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ebebe9dd4d38ba40800000000000000
+      internalID: 5384120759099321316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_127
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 568
+        width: 92
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faf747030c23be770800000000000000
+      internalID: 8641056111068479407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_128
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 596
+        width: 54
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d9132648873ef30800000000000000
+      internalID: 4603655754081213773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_129
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 544
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f25a41b8fc992c40800000000000000
+      internalID: 5488090212867920633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_130
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 529
+        width: 109
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfeab10162eef9b60800000000000000
+      internalID: 7755178930601701117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_131
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 542
+        width: 59
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc2484e13f39c2c0800000000000000
+      internalID: -4410924876512875323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_132
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 536
+        width: 55
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ed033941df7a950800000000000000
+      internalID: 6460410455296892460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_133
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 537
+        width: 44
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc6fbc389358569e0800000000000000
+      internalID: -1628749208153753908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_134
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 506
+        width: 44
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d866fffa3b09b20800000000000000
+      internalID: 3139206508762795333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_135
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 593
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9136727038887f6f0800000000000000
+      internalID: -650901524789632231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_136
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 575
+        width: 102
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8838b97c37249ae10800000000000000
+      internalID: 2209370157239468936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_137
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 515
+        width: 24
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71cb4028d613f1020800000000000000
+      internalID: 2314623079894268951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_138
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 491
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 741c957df35053960800000000000000
+      internalID: 7580971319502160199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_139
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 431
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465dac7fbc8dd6aa0800000000000000
+      internalID: -6166033944253115036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_140
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 380
+        width: 101
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72dd713774357ecf0800000000000000
+      internalID: -223118090192823001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_141
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 528
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5f30e81715c59b0800000000000000
+      internalID: -5090103930679724623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_142
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 524
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18210dfe0d00c8a60800000000000000
+      internalID: 7677512362136441473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_143
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 527
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cc8fb5af3c6eec70800000000000000
+      internalID: 9002251725779733698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_144
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 516
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3819cdc4b5191f1d0800000000000000
+      internalID: -3318711629077769853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_145
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 436
+        width: 56
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c26f7c7cb223fa0800000000000000
+      internalID: -5822543231183344512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_146
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 502
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7ed8a502bb73ff90800000000000000
+      internalID: -6921052197808972165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_147
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 500
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab55e81026e1f9d20800000000000000
+      internalID: 3287379659285484986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_148
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 453
+        width: 63
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f6c3be6160df6f0800000000000000
+      internalID: -649356075765829853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_149
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 502
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71496fcca8ea21a10800000000000000
+      internalID: 1878755905734349847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_150
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 503
+        width: 43
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d033bda50694530d0800000000000000
+      internalID: -3443765661864873203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_151
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 446
+        width: 45
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd39229c6a0d60760800000000000000
+      internalID: 7423850450524476381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_152
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 451
+        width: 107
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d45d12f1d0c89e810800000000000000
+      internalID: 1795119914468627789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_153
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 430
+        width: 51
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a72850683d04c090800000000000000
+      internalID: -8015266901026920536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_154
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 493
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf7f7ed5dbf3b1a20800000000000000
+      internalID: 3034088856521013244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_155
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 490
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e415a2d0976443ac0800000000000000
+      internalID: -3876395893533290162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_156
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 468
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648b58ebbf8ca9460800000000000000
+      internalID: 7249327533765015622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_157
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 480
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7add7fa1c7c5330800000000000000
+      internalID: 3700969449061197759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_158
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 424
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d542c6dc8488f6f20800000000000000
+      internalID: 3418100488462935133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_159
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 388
+        width: 37
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a3969a9103f627e0800000000000000
+      internalID: -1790476613619117150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_160
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 401
+        width: 18
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7945f10996b6a9ad0800000000000000
+      internalID: -2694723325894110057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_161
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 391
+        width: 101
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068db58360e843030800000000000000
+      internalID: 3473557369975986272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_162
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 455
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35854d44260660760800000000000000
+      internalID: 7423727010944669779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_163
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 417
+        width: 25
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c75ff2192f30fc0800000000000000
+      internalID: -3529710977539539879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_164
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 401
+        width: 35
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f939a5becf3878d90800000000000000
+      internalID: -7095557565595348065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_165
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 400
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade19975cbdc79da0800000000000000
+      internalID: -5938051374857511206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_166
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 260
+        width: 89
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5528781c1f919cc90800000000000000
+      internalID: -7149154407349255595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_167
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 297
+        width: 73
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c709b39b6a4fb8f20800000000000000
+      internalID: 3426100938454831228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_168
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 417
+        width: 81
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a7c03b160ece650800000000000000
+      internalID: 6263627891985906237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_169
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 410
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eadf9b0901039980800000000000000
+      internalID: -8533475730575598879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_170
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 311
+        width: 115
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d4efdb425ccc120800000000000000
+      internalID: 2435538260097650032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_171
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 418
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e30a95f7a98bc8c10800000000000000
+      internalID: 2057222103502528574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_172
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 375
+        width: 77
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b463d909143524a50800000000000000
+      internalID: 6503852352940619339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_173
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 351
+        width: 88
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67bb75af1a13d01c0800000000000000
+      internalID: -4535914677932672138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_174
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 384
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c06c9ac8208913c0800000000000000
+      internalID: -4388335449209544511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_175
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 344
+        width: 19
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5882593c809100e90800000000000000
+      internalID: -7061616690285172603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_176
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 385
+        width: 67
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 422c918f68f1aa2d0800000000000000
+      internalID: -3266763915155357148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_177
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 373
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e5473d69141c910800000000000000
+      internalID: 1855836637501873819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_178
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 367
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23c39fe261488a10800000000000000
+      internalID: 1911849935000814382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_179
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 330
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f09a318e403d577e0800000000000000
+      internalID: -1768275260646119153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_180
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 341
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b579d774787cffc0800000000000000
+      internalID: -3459757972105103944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_181
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 278
+        width: 22
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9690866657564200800000000000000
+      internalID: 163914465044108954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_182
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 333
+        width: 10
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491a1c6d4e8f1cd40800000000000000
+      internalID: 5603033073164853652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_183
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 305
+        width: 27
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2109fcc7ffa5b9140800000000000000
+      internalID: 4727472287212605458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_184
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 294
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54699c247deb88d90800000000000000
+      internalID: -7095211381174462907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_185
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 305
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 722fc110060334960800000000000000
+      internalID: 7584959386315715111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_186
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 330
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56765c8932e20adc0800000000000000
+      internalID: -3629850569238812827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_187
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 318
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41e2795da0ef6460800000000000000
+      internalID: 7237250161342341455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_188
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 254
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 495d00ee1f694df00800000000000000
+      internalID: 1140702571455894932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_189
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 274
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901b0c96e4e67c190800000000000000
+      internalID: -7942258134783839991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_190
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 276
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f220dfbfc8aeb7c30800000000000000
+      internalID: 4358334955655070255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_191
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 268
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72169796952d60cc0800000000000000
+      internalID: -3745074758648504025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_192
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 270
+        width: 68
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37409375863354f80800000000000000
+      internalID: -8123029829659851661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_193
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 237
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5890beba15629fdc0800000000000000
+      internalID: -3604807894514857595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_194
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 217
+        width: 92
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e83f5641f17c340800000000000000
+      internalID: 4883906493376859686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_195
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 245
+        width: 57
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec1361e12d83c800800000000000000
+      internalID: 631503549416807651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_196
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 227
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85552b9147f08ce0800000000000000
+      internalID: -1404851222591744630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_197
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 164
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d947b9e5bae7c80800000000000000
+      internalID: -8323026638510711492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_198
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 158
+        width: 93
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da91a577a9629b490800000000000000
+      internalID: -7730104840535533139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fromage 1_199
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 81
+        width: 83
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2e0fcba9a1b9d040800000000000000
+      internalID: 4672961430663663148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Fromage 1_0: -866432782679661498
+      Fromage 1_1: -2356054976396757514
+      Fromage 1_10: -988631301284584533
+      Fromage 1_100: -6202122348792859777
+      Fromage 1_101: 4890241908803574260
+      Fromage 1_102: -4000271933176412091
+      Fromage 1_103: 6597875511712379282
+      Fromage 1_104: -1819835472127148695
+      Fromage 1_105: 1229221859471027105
+      Fromage 1_106: 1324619786079721382
+      Fromage 1_107: -4095742125047585285
+      Fromage 1_108: -2769407881718853449
+      Fromage 1_109: -1481826279462308271
+      Fromage 1_11: 3737542676471964296
+      Fromage 1_110: 9045140510039653416
+      Fromage 1_111: 7334701530432171651
+      Fromage 1_112: 7965914338128377354
+      Fromage 1_113: 8906446466361412060
+      Fromage 1_114: 1740706283587594344
+      Fromage 1_115: 6153531467480273778
+      Fromage 1_116: -333690151969830856
+      Fromage 1_117: 4935625219345713180
+      Fromage 1_118: 2839582248283541283
+      Fromage 1_119: -2166951805567655049
+      Fromage 1_12: -2047596723787726780
+      Fromage 1_120: -2657995813476098581
+      Fromage 1_121: -2412680921879601345
+      Fromage 1_122: 8486835406450371392
+      Fromage 1_123: -5561463267453655249
+      Fromage 1_124: -5313704018734748015
+      Fromage 1_125: -3072695739035303641
+      Fromage 1_126: 5384120759099321316
+      Fromage 1_127: 8641056111068479407
+      Fromage 1_128: 4603655754081213773
+      Fromage 1_129: 5488090212867920633
+      Fromage 1_13: 2588683213050243012
+      Fromage 1_130: 7755178930601701117
+      Fromage 1_131: -4410924876512875323
+      Fromage 1_132: 6460410455296892460
+      Fromage 1_133: -1628749208153753908
+      Fromage 1_134: 3139206508762795333
+      Fromage 1_135: -650901524789632231
+      Fromage 1_136: 2209370157239468936
+      Fromage 1_137: 2314623079894268951
+      Fromage 1_138: 7580971319502160199
+      Fromage 1_139: -6166033944253115036
+      Fromage 1_14: -8789574727455086700
+      Fromage 1_140: -223118090192823001
+      Fromage 1_141: -5090103930679724623
+      Fromage 1_142: 7677512362136441473
+      Fromage 1_143: 9002251725779733698
+      Fromage 1_144: -3318711629077769853
+      Fromage 1_145: -5822543231183344512
+      Fromage 1_146: -6921052197808972165
+      Fromage 1_147: 3287379659285484986
+      Fromage 1_148: -649356075765829853
+      Fromage 1_149: 1878755905734349847
+      Fromage 1_15: -8536111088186338780
+      Fromage 1_150: -3443765661864873203
+      Fromage 1_151: 7423850450524476381
+      Fromage 1_152: 1795119914468627789
+      Fromage 1_153: -8015266901026920536
+      Fromage 1_154: 3034088856521013244
+      Fromage 1_155: -3876395893533290162
+      Fromage 1_156: 7249327533765015622
+      Fromage 1_157: 3700969449061197759
+      Fromage 1_158: 3418100488462935133
+      Fromage 1_159: -1790476613619117150
+      Fromage 1_16: 836015488759215066
+      Fromage 1_160: -2694723325894110057
+      Fromage 1_161: 3473557369975986272
+      Fromage 1_162: 7423727010944669779
+      Fromage 1_163: -3529710977539539879
+      Fromage 1_164: -7095557565595348065
+      Fromage 1_165: -5938051374857511206
+      Fromage 1_166: -7149154407349255595
+      Fromage 1_167: 3426100938454831228
+      Fromage 1_168: 6263627891985906237
+      Fromage 1_169: -8533475730575598879
+      Fromage 1_17: -318664264399746569
+      Fromage 1_170: 2435538260097650032
+      Fromage 1_171: 2057222103502528574
+      Fromage 1_172: 6503852352940619339
+      Fromage 1_173: -4535914677932672138
+      Fromage 1_174: -4388335449209544511
+      Fromage 1_175: -7061616690285172603
+      Fromage 1_176: -3266763915155357148
+      Fromage 1_177: 1855836637501873819
+      Fromage 1_178: 1911849935000814382
+      Fromage 1_179: -1768275260646119153
+      Fromage 1_18: -2859694072457310269
+      Fromage 1_180: -3459757972105103944
+      Fromage 1_181: 163914465044108954
+      Fromage 1_182: 5603033073164853652
+      Fromage 1_183: 4727472287212605458
+      Fromage 1_184: -7095211381174462907
+      Fromage 1_185: 7584959386315715111
+      Fromage 1_186: -3629850569238812827
+      Fromage 1_187: 7237250161342341455
+      Fromage 1_188: 1140702571455894932
+      Fromage 1_189: -7942258134783839991
+      Fromage 1_19: 3210836478286782323
+      Fromage 1_190: 4358334955655070255
+      Fromage 1_191: -3745074758648504025
+      Fromage 1_192: -8123029829659851661
+      Fromage 1_193: -3604807894514857595
+      Fromage 1_194: 4883906493376859686
+      Fromage 1_195: 631503549416807651
+      Fromage 1_196: -1404851222591744630
+      Fromage 1_197: -8323026638510711492
+      Fromage 1_198: -7730104840535533139
+      Fromage 1_199: 4672961430663663148
+      Fromage 1_2: 1879806140206330105
+      Fromage 1_20: 2131069992589566281
+      Fromage 1_21: -6842900342397027734
+      Fromage 1_22: 240484021722279887
+      Fromage 1_23: 3654925118924792222
+      Fromage 1_24: 4335761468493303263
+      Fromage 1_25: 6669309556835923193
+      Fromage 1_26: 302412308693341199
+      Fromage 1_27: -2536147178646900066
+      Fromage 1_28: 6516257782992619221
+      Fromage 1_29: 9010235727159634653
+      Fromage 1_3: -4904575336016429457
+      Fromage 1_30: -5768855881107343699
+      Fromage 1_31: 8011342208545029445
+      Fromage 1_32: -3278363381538440924
+      Fromage 1_33: -1470196762129197424
+      Fromage 1_34: 4073787259971888414
+      Fromage 1_35: 6071137543577981336
+      Fromage 1_36: -2577326487496314931
+      Fromage 1_37: 4630302917475011519
+      Fromage 1_38: -7276331171777426718
+      Fromage 1_39: 4543651813772900325
+      Fromage 1_4: 8842628389898080014
+      Fromage 1_40: 1937392225347623172
+      Fromage 1_41: -4815765984543070076
+      Fromage 1_42: -8915769434275609341
+      Fromage 1_43: 4326945284338369300
+      Fromage 1_44: -8726294772913989844
+      Fromage 1_45: 2240123955372435298
+      Fromage 1_46: -5014161515833142674
+      Fromage 1_47: 5223736799727616007
+      Fromage 1_48: 3010902976942817472
+      Fromage 1_49: 6239213684886516314
+      Fromage 1_5: 949549686405486435
+      Fromage 1_50: -2668746565952584002
+      Fromage 1_51: 3475810879679981653
+      Fromage 1_52: 7940931700691326044
+      Fromage 1_53: -3019502897237860806
+      Fromage 1_54: -2979072057553114163
+      Fromage 1_55: -1756187514467913898
+      Fromage 1_56: -1284820504798295498
+      Fromage 1_57: 3857348825010316432
+      Fromage 1_58: -6422391853907519863
+      Fromage 1_59: -5656600604572086303
+      Fromage 1_6: 4552155033299102822
+      Fromage 1_60: 7199216324857270257
+      Fromage 1_61: -8268015508716356018
+      Fromage 1_62: -9194304457725695566
+      Fromage 1_63: -8453112159485560440
+      Fromage 1_64: 5484001682237074603
+      Fromage 1_65: 3137759353245239161
+      Fromage 1_66: 7723163918564949907
+      Fromage 1_67: 6366468434285238426
+      Fromage 1_68: 5371111513099800488
+      Fromage 1_69: -8588901636214010337
+      Fromage 1_7: -3583034784961962014
+      Fromage 1_70: 3801653355537385417
+      Fromage 1_71: 6301427243597981963
+      Fromage 1_72: -1988380376302586656
+      Fromage 1_73: 1180416093469124006
+      Fromage 1_74: -2265973771214839085
+      Fromage 1_75: -6435226777643621604
+      Fromage 1_76: -482574114045532291
+      Fromage 1_77: -4856014182806974305
+      Fromage 1_78: -2522336051666848402
+      Fromage 1_79: 299975972500766687
+      Fromage 1_8: -2893437656835789897
+      Fromage 1_80: -131838245615614886
+      Fromage 1_81: 817921874608194128
+      Fromage 1_82: -4406086630808501343
+      Fromage 1_83: -7633240161886361020
+      Fromage 1_84: 3112620551288299052
+      Fromage 1_85: 1806647438721955343
+      Fromage 1_86: 1947915651689802120
+      Fromage 1_87: -8769830878909065861
+      Fromage 1_88: -4460437435598587906
+      Fromage 1_89: -7389075091289665967
+      Fromage 1_9: 8723598956994232471
+      Fromage 1_90: 3135826666878734980
+      Fromage 1_91: 8879201016222162993
+      Fromage 1_92: -3106921392604959937
+      Fromage 1_93: -4335525272509214056
+      Fromage 1_94: 2404921276321003690
+      Fromage 1_95: -6293744948320138223
+      Fromage 1_96: 4504654455497354576
+      Fromage 1_97: 8505222212601325758
+      Fromage 1_98: 6173658077573784485
+      Fromage 1_99: -6008746109693638994
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
