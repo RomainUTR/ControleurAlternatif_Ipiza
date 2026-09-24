@@ -13,6 +13,7 @@ public class GameModeSwitcher : MonoBehaviour
     [SerializeField] private GameObject RTRythm;
     [SerializeField] private GameObject CommandsPanel;
     [SerializeField] private Slider AutoSwitchSlider;
+    [SerializeField] private RSE_OnTutorialFinished OnTutorialFinished;
 
     [Header("Auto-Switcher")]
     [SerializeField, SuffixLabel("sec")] private float MinSwitchInterval;
@@ -22,8 +23,16 @@ public class GameModeSwitcher : MonoBehaviour
     private float _currentSwitchTarget = 15f;
     private float _timer = 0f;
 
-    private void OnEnable() => SwitchInput.action.Enable();
-    private void OnDisable() => SwitchInput.action.Disable();
+    private void OnEnable()
+    {
+        SwitchInput.action.Enable();
+        OnTutorialFinished.OnEventRaised += HandleForcedSwitch;
+    }
+    private void OnDisable()
+    {
+        SwitchInput.action.Disable();
+        OnTutorialFinished.OnEventRaised -= HandleForcedSwitch;
+    }
 
     private void Start()
     {
@@ -88,5 +97,12 @@ public class GameModeSwitcher : MonoBehaviour
     {
         _currentSwitchTarget = Random.Range(MinSwitchInterval, MaxSwitchInterval);
         _timer = 0f;
+    }
+
+    private void HandleForcedSwitch()
+    {
+        Debug.Log("Tuto terminé, on passe de force à la pizza");
+        SwitchGameMode();
+        SetNewRandomInterval();
     }
 }

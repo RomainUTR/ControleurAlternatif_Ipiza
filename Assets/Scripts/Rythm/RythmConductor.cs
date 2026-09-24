@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using RomainUTR.SLToolbox;
 using UnityEngine.InputSystem;
+using System.Collections;
+using System;
 
 [RequireComponent(typeof(AudioSource))]
 public class RythmConductor : MonoBehaviour
@@ -25,6 +27,7 @@ public class RythmConductor : MonoBehaviour
     [SerializeField] private SSO_ScoreData ScoreData;
     [SerializeField] private InputActionReference SpamInput;
     [SerializeField] private RSO_GameMode CurrentGameMode;
+    [SerializeField] private RSE_OnTutorialFinished OnTutorialFinished;
 
     [Header("Grace Period")]
     [SerializeField] private float GracePeriodDuration = 1.5f;
@@ -130,7 +133,7 @@ public class RythmConductor : MonoBehaviour
             int trackIndex = 0;
             if (PlayRandomly)
             {
-                trackIndex = Random.Range(0, _availableTracks.Count);
+                trackIndex = UnityEngine.Random.Range(0, _availableTracks.Count);
             }
 
             _currentTrackData = _availableTracks[trackIndex];
@@ -207,7 +210,7 @@ public class RythmConductor : MonoBehaviour
 
         if ((float)_currentTrackTime >= _nextBonusTargetTime - lookAheadTime)
         {
-            if (Random.value < BonusSpawnRate)
+            if (UnityEngine.Random.value < BonusSpawnRate)
             {
                 SpawnNote(BonusPrefab, _nextBonusTargetTime, 0f);
             }
@@ -223,17 +226,7 @@ public class RythmConductor : MonoBehaviour
 
         if ((allNotesPlayed || audioFinished) && _isPlaying)
         {
-            _isPlaying = false;
-
-            if (_audioSource.isPlaying) _audioSource.Stop();
-
-            foreach (NoteBehavior remainNote in _activeNotes)
-            {
-                if (remainNote != null) Destroy(remainNote.gameObject);
-            }
-            _activeNotes.Clear();
-
-            LoadNextTrack();
+            StopCurrentTrackAndLoadNext();
         }
     }
 
@@ -317,5 +310,42 @@ public class RythmConductor : MonoBehaviour
                 i--;
             }
         }
+    }
+
+    private IEnumerator FadeOutAndLoadNext(float fadeDuration)
+    {
+        float startingVolume = _audioSource.volume;
+
+        while (_audioSource.volume > 0)
+        {
+            _audioSource.volume -= startingVolume * Time.deltaTime / fadeDuration;
+            yield return null;
+        }
+
+        _audioSource.Stop();
+        _audioSource.volume = startingVolume;
+
+        if (_currentTrackData == TutorialTrack && OnTutorialFinished != null)
+        {
+            OnTutorialFinished.Raise();
+        }
+
+        LoadNextTrack();
+    }
+
+    private void StopCurrentTrackAndLoadNext()
+    {
+        if (!_isPlaying) return;
+
+        _isPlaying = false;
+
+        foreach (NoteBehavior remainNote in _activeNotes)
+        {
+            if (remainNote != null) Destroy(remainNote.gameObject);
+        }
+
+        _activeNotes.Clear();
+
+        StartCoroutine(FadeOutAndLoadNext(1.5f));
     }
 }
