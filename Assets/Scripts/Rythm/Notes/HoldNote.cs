@@ -112,8 +112,6 @@ public class HoldNote : NoteBehavior
                     {
                         Debug.LogWarning($"[HOLD RATÉ] Vitesse actuelle: {platter.CurrentSpeed:F2} | Trop lent: {!isFastEnough} | Mauvaise Direction: {!isRightDirection}");
 
-                        Debug.Break();
-
                         DebugHoldStatus = "LÂCHÉ";
                         SR.color = Color.red;
                         CurrentState = NoteState.Miss;

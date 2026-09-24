@@ -281,6 +281,26 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""initialStateCheck"": false,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""Switcher"",
+                    ""type"": ""Button"",
+                    ""id"": ""d7102b80-119b-45fa-8b30-3f8421cb634f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Start"",
+                    ""type"": ""Button"",
+                    ""id"": ""44df2f5e-ed8b-4356-a3d6-ca85d8569d87"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -864,6 +884,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""SpamNote"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""458a2e53-24ff-4a33-8f78-f03838ba2ca5"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Switcher"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3deb550d-42c2-4467-b1af-940af7e92253"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Start"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1480,6 +1522,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Four = m_Player.FindAction("Four", throwIfNotFound: true);
         m_Player_ServePizza = m_Player.FindAction("ServePizza", throwIfNotFound: true);
         m_Player_SpamNote = m_Player.FindAction("SpamNote", throwIfNotFound: true);
+        m_Player_Switcher = m_Player.FindAction("Switcher", throwIfNotFound: true);
+        m_Player_Start = m_Player.FindAction("Start", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1592,6 +1636,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Four;
     private readonly InputAction m_Player_ServePizza;
     private readonly InputAction m_Player_SpamNote;
+    private readonly InputAction m_Player_Switcher;
+    private readonly InputAction m_Player_Start;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1680,6 +1726,14 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @SpamNote => m_Wrapper.m_Player_SpamNote;
         /// <summary>
+        /// Provides access to the underlying input action "Player/Switcher".
+        /// </summary>
+        public InputAction @Switcher => m_Wrapper.m_Player_Switcher;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Start".
+        /// </summary>
+        public InputAction @Start => m_Wrapper.m_Player_Start;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -1762,6 +1816,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @SpamNote.started += instance.OnSpamNote;
             @SpamNote.performed += instance.OnSpamNote;
             @SpamNote.canceled += instance.OnSpamNote;
+            @Switcher.started += instance.OnSwitcher;
+            @Switcher.performed += instance.OnSwitcher;
+            @Switcher.canceled += instance.OnSwitcher;
+            @Start.started += instance.OnStart;
+            @Start.performed += instance.OnStart;
+            @Start.canceled += instance.OnStart;
         }
 
         /// <summary>
@@ -1830,6 +1890,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @SpamNote.started -= instance.OnSpamNote;
             @SpamNote.performed -= instance.OnSpamNote;
             @SpamNote.canceled -= instance.OnSpamNote;
+            @Switcher.started -= instance.OnSwitcher;
+            @Switcher.performed -= instance.OnSwitcher;
+            @Switcher.canceled -= instance.OnSwitcher;
+            @Start.started -= instance.OnStart;
+            @Start.performed -= instance.OnStart;
+            @Start.canceled -= instance.OnStart;
         }
 
         /// <summary>
@@ -2263,6 +2329,20 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSpamNote(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Switcher" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitcher(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Start" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnStart(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
