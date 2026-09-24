@@ -268,7 +268,7 @@ public class RythmConductor : MonoBehaviour
 
             if (note.CurrentState == NoteState.Hit)
             {
-                //Debug.LogWarning("HIT !");
+                GameEvents.OnNoteHit?.Invoke();
                 PlayerPlatter.ConsumeInput();
                 note.TryToScoring();
 
@@ -304,6 +304,8 @@ public class RythmConductor : MonoBehaviour
                 {
                     Destroy(note.gameObject);
                 }
+
+                GameEvents.OnNoteMiss?.Invoke();
 
                 RefreshUI.Raise();
                 _activeNotes.RemoveAt(i);

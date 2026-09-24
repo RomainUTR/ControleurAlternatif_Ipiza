@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class PizzaManager : MonoBehaviour
@@ -24,6 +22,9 @@ public class PizzaManager : MonoBehaviour
 
     [Header("State Machine")]
     public PizzaState CurrentState = PizzaState.DoughFlattening;
+
+    [Header("Settings")]
+    [SerializeField] private float TimePerOrder = 30f;
 
     [Header("Dough Settings")]
     [SerializeField] private int RequiredDoughTurns = 3;
@@ -67,6 +68,7 @@ public class PizzaManager : MonoBehaviour
     private int _currentCookingTurns = 0;
     private bool _isOvenOn = false;
     private List<SSO_Ingredient> CurrentRecipe;
+    public float _orderTimer;
 
     private void OnEnable()
     {
@@ -88,7 +90,26 @@ public class PizzaManager : MonoBehaviour
 
     private void Start()
     {
+        _orderTimer = TimePerOrder;
         if (RecipeGen != null) RecipeGen.GenerateRecipe();
+    }
+
+    private void Update()
+    {
+        if (CurrentGameMode.CurrentMode != RSO_GameMode.GameMode.Pizza) return;
+
+        if (CurrentState != PizzaState.Ready)
+        {
+            _orderTimer -= Time.deltaTime;
+
+            if (_orderTimer <= 0f)
+            {
+                Debug.Log("Temps écoulé pour la pizza!");
+
+                GameEvents.OnPizzaFailed?.Invoke();
+                ResetForNextOrder();
+            }
+        }
     }
 
     private void HandleTurnCompletion(int amount)
@@ -273,6 +294,8 @@ public class PizzaManager : MonoBehaviour
         _selectedIngredient = null;
         _isOvenOn = false;
 
+        _orderTimer = TimePerOrder;
+
         CurrentState = PizzaState.DoughFlattening;
         TurnText.text = $"0/{RequiredDoughTurns}";
 
@@ -327,6 +350,8 @@ public class PizzaManager : MonoBehaviour
         Score.RuntimeCombo++;
 
         RefreshUI.Raise();
+
+        GameEvents.OnPizzaDelivered?.Invoke();
 
         ResetForNextOrder();
     }
