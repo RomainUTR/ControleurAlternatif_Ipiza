@@ -6,6 +6,9 @@ public class GameModeSwitcher : MonoBehaviour
     [SerializeField] private RSO_GameMode GameModeData;
     [SerializeField] private InputActionReference SwitchInput;
 
+    [Header("References")]
+    [SerializeField] private GameObject RTPizza;
+
     private void OnEnable() => SwitchInput.action.Enable();
     private void OnDisable() => SwitchInput.action.Disable();
 
@@ -20,4 +23,6 @@ public class GameModeSwitcher : MonoBehaviour
             Debug.Log($"Mode switché sur : {GameModeData.CurrentMode}");
         } 
     }
+
+    
 }

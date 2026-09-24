@@ -392,6 +392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameModeSwitcher
   GameModeData: {fileID: 11400000, guid: 8337bb908822b2449b62eee0d90379cf, type: 2}
   SwitchInput: {fileID: 4137916787638889854, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  RTPizza: {fileID: 0}
 --- !u!1 &251791839
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,7 +956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &570163646
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1494,7 +1495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1107378352
 Transform:
   m_ObjectHideFlags: 0
@@ -1533,7 +1534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1151537539
 Transform:
   m_ObjectHideFlags: 0
@@ -2361,7 +2362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1779338281
 RectTransform:
   m_ObjectHideFlags: 0
