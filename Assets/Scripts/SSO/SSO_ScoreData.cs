@@ -9,6 +9,7 @@ public class SSO_ScoreData : ScriptableObject
     public int HoldNote;
     public int SpamNote;
     public int BonusNote;
+    public int PointsPerPizza;
 
     [InfoBox("Pour chaque unité du combo, ça ajoute la valeur suivante au multiplicateur")]
     public float MultiplierByComboUnit;

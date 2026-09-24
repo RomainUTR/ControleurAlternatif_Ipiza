@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 
@@ -44,6 +45,10 @@ public class PizzaManager : MonoBehaviour
     [Header("Events")]
     [SerializeField] private RecipeGenerator RecipeGen;
     [SerializeField] private RSE_OnTurnCompleted OnTurnCompleted;
+    [SerializeField] private RSE_RequestScoring RequestScoring;
+    [SerializeField] private SSO_ScoreData ScoreData;
+    [SerializeField] private RSE_RefreshUI RefreshUI;
+    [SerializeField] private RSO_Score Score;
 
     private List<Image> _spawnedOrderIcons = new List<Image>();
 
@@ -292,6 +297,17 @@ public class PizzaManager : MonoBehaviour
         if (CurrentState != PizzaState.Ready) return;
 
         Debug.Log("Pizza servie ! En attente de la prochaine commande...");
+        
+        int n = CurrentRecipe.Count;
+        int earnedPoint = ScoreData.PointsPerPizza * (n * n);
+
+        RequestScoring.Raise(earnedPoint);
+
+        Score.RuntimeMultiplier += ScoreData.MultiplierByComboUnit;
+        Score.RuntimeCombo++;
+
+        RefreshUI.Raise();
+
         ResetForNextOrder();
     }
 }

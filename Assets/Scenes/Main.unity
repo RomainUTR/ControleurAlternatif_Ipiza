@@ -1903,9 +1903,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 1107378352}
     m_Modifications:
     - target: {fileID: 3582733237022914785, guid: a37bbeff527dfbc47b401a760291c90d, type: 3}
+      propertyPath: Score
+      value: 
+      objectReference: {fileID: 11400000, guid: 0447474c414389e4cb6042f4bbbd1110, type: 2}
+    - target: {fileID: 3582733237022914785, guid: a37bbeff527dfbc47b401a760291c90d, type: 3}
       propertyPath: TurnText
       value: 
       objectReference: {fileID: 2109670819}
+    - target: {fileID: 3582733237022914785, guid: a37bbeff527dfbc47b401a760291c90d, type: 3}
+      propertyPath: RefreshUI
+      value: 
+      objectReference: {fileID: 11400000, guid: 201c0e01d76e8214b9fc6c2dda46096f, type: 2}
+    - target: {fileID: 3582733237022914785, guid: a37bbeff527dfbc47b401a760291c90d, type: 3}
+      propertyPath: ScoreData
+      value: 
+      objectReference: {fileID: 11400000, guid: 55aaa038bf52d714984610c9e5a7f412, type: 2}
     - target: {fileID: 3582733237022914785, guid: a37bbeff527dfbc47b401a760291c90d, type: 3}
       propertyPath: InputReader
       value: 
@@ -1918,6 +1930,10 @@ PrefabInstance:
       propertyPath: PizzaTransform
       value: 
       objectReference: {fileID: 1137668705}
+    - target: {fileID: 3582733237022914785, guid: a37bbeff527dfbc47b401a760291c90d, type: 3}
+      propertyPath: RequestScoring
+      value: 
+      objectReference: {fileID: 11400000, guid: 09a6bce03286b584b835c5ce59d7a0e7, type: 2}
     - target: {fileID: 3582733237022914785, guid: a37bbeff527dfbc47b401a760291c90d, type: 3}
       propertyPath: CurrentGameMode
       value: 
