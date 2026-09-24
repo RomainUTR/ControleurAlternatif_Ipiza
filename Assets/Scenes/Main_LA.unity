@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 12142543}
   - component: {fileID: 12142544}
+  - component: {fileID: 12142545}
   m_Layer: 0
   m_Name: Spot Light 2D (2)
   m_TagString: Untagged
@@ -194,8 +195,8 @@ MonoBehaviour:
     serializedVersion: 0
     m_Bits: 1
   m_LocalBounds:
-    m_Center: {x: -4.87245, y: -1.8174, z: 0}
-    m_Extent: {x: 4.49975, y: 6.009, z: 0}
+    m_Center: {x: -4.4049497, y: -1.8167, z: 0}
+    m_Extent: {x: 4.03225, y: 6.0083, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -206,7 +207,7 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -8.872856, y: -7.2947474, z: 0}
+  - {x: -7.937468, y: -7.0997024, z: 0}
   - {x: -4.910586, y: -7.3272758, z: 0}
   - {x: -0.8713028, y: 3.691291, z: 0}
   references:
@@ -237,6 +238,28 @@ MonoBehaviour:
           m_Image: {fileID: 2800000, guid: 68e5bb6e60bebc046b26d3c3100a523b, type: 3}
           m_Tooltip: 
           m_TextWithWhitespace: "Freeform\u200B"
+--- !u!95 &12142545
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12142542}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 04c9539d5b5215f4a85e2947efaef5e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &43496209
 GameObject:
   m_ObjectHideFlags: 0
@@ -9876,7 +9899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2076398652
 Transform:
   m_ObjectHideFlags: 0

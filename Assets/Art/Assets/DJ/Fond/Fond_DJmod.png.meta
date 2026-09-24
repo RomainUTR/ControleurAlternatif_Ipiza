@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 30105f8d396932c4db02546c618af5cf
+guid: 9cb20c104e1426b45bd3eeee50317ed2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4796082085525896554
-    second: cheese_PNG25295_0
+      213: 6431216873957931663
+    second: Fond_DJmod_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -77,7 +77,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cheese_PNG25295_0
+      name: Fond_DJmod_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 339
-        height: 304
+        width: 1920
+        height: 513
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,8 +117,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6924d9201c4e07db0800000000000000
-      internalID: -4796082085525896554
+      spriteID: f8ab2cd3ca5404950800000000000000
+      internalID: 6431216873957931663
       vertices: []
       indices: 
       edges: []
@@ -137,7 +137,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cheese_PNG25295_0: -4796082085525896554
+      Fond_DJmod_0: 6431216873957931663
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
