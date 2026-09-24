@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using RomainUTR.SLToolbox;
 using UnityEngine.InputSystem;
+using System.Collections;
+using System;
 
 [RequireComponent(typeof(AudioSource))]
 public class RythmConductor : MonoBehaviour
@@ -12,7 +14,6 @@ public class RythmConductor : MonoBehaviour
     [SerializeField, Range(0f, 1f)] private float BonusSpawnRate;
 
     [Header("References")]
-    [SerializeField, InlineEditor] private SSO_TrackData trackData;
     [Tooltip("Glisse ici le KeyboardPlatter ou l'EncoderPlatter")]
     [SerializeField] private MonoBehaviour PlatterComponent;
     [SerializeField] private Transform ValidationZone;
@@ -26,15 +27,20 @@ public class RythmConductor : MonoBehaviour
     [SerializeField] private SSO_ScoreData ScoreData;
     [SerializeField] private InputActionReference SpamInput;
     [SerializeField] private RSO_GameMode CurrentGameMode;
+    [SerializeField] private RSE_OnTutorialFinished OnTutorialFinished;
 
     [Header("Grace Period")]
     [SerializeField] private float GracePeriodDuration = 1.5f;
+
+    [Header("Playlist")]
+    [SerializeField] private SSO_TrackData TutorialTrack;
+    [SerializeField] private List<SSO_TrackData> TrackPool;
+    [SerializeField] private bool PlayRandomly = true;
 
     public float CurrentTrackTime => (float)_currentTrackTime;
 
     private AudioSource _audioSource;
 
-    // On prï¿½fï¿½re double pour la prï¿½cision des dï¿½cimales
     private double _trackStartDspTime;
     private double _currentTrackTime;
 
@@ -51,6 +57,10 @@ public class RythmConductor : MonoBehaviour
     private IPlatterInput PlayerPlatter;
     private double _gracePeriodEndTime = 0;
     private RSO_GameMode.GameMode _previousFrameMode;
+
+    private SSO_TrackData _currentTrackData;
+    private List<SSO_TrackData> _availableTracks = new List<SSO_TrackData>();
+    private bool _hasPlayedTutorial = false;
 
     private void OnEnable()
     {
@@ -75,23 +85,16 @@ public class RythmConductor : MonoBehaviour
 
         if (PlayerPlatter == null)
         {
-            Debug.LogError("Le composant assigné à PlatterComponent n'implémente pas IPlatterInput !");
+            Debug.LogError("Le composant assigné n'implémente pas IPlatterInput !");
             return;
         }
 
-        if (trackData == null || trackData.TrackAudio == null) return;
+        if (TrackPool == null || TrackPool.Count == 0) return;
 
         _audioSource = GetComponent<AudioSource>();
-        _audioSource.clip = trackData.TrackAudio;
-        _bpm = trackData.DivideBPM ? trackData.BPM / 2f : trackData.BPM;
-        _secondsPerBeat = 60f / _bpm;
+        _availableTracks = new List<SSO_TrackData>(TrackPool);
 
-        _nextBonusTargetTime = trackData.FirstBeatOffset + (_secondsPerBeat / 2f);
-
-        _trackStartDspTime = AudioSettings.dspTime + lookAheadTime;
-        _audioSource.PlayScheduled(_trackStartDspTime);
-
-        _isPlaying = true;
+        LoadNextTrack();
     }
 
     private void Update()
@@ -113,12 +116,49 @@ public class RythmConductor : MonoBehaviour
         CheckTrackEnd();
     }
 
+    private void LoadNextTrack()
+    {
+        if (!_hasPlayedTutorial && TutorialTrack != null)
+        {
+            _currentTrackData = TutorialTrack;
+            _hasPlayedTutorial = true;
+        }
+        else
+        {
+            if (_availableTracks.Count == 0)
+            {
+                _availableTracks = new List<SSO_TrackData>(TrackPool);
+            }
+
+            int trackIndex = 0;
+            if (PlayRandomly)
+            {
+                trackIndex = UnityEngine.Random.Range(0, _availableTracks.Count);
+            }
+
+            _currentTrackData = _availableTracks[trackIndex];
+            _availableTracks.RemoveAt(trackIndex);
+        }
+
+        _currentDataNoteIndex = 0;
+        _pauseProceduralUntil = 0f;
+
+        _audioSource.clip = _currentTrackData.TrackAudio;
+        _bpm = _currentTrackData.DivideBPM ? _currentTrackData.BPM / 2f : _currentTrackData.BPM;
+        _secondsPerBeat = 60f / _bpm;
+        _nextBonusTargetTime = _currentTrackData.FirstBeatOffset + (_secondsPerBeat / 2f);
+
+        _trackStartDspTime = AudioSettings.dspTime + lookAheadTime;
+        _audioSource.PlayScheduled(_trackStartDspTime);
+        _isPlaying = true;
+    }
+
     private void ProcessDataNotes()
     {
-        while (_currentDataNoteIndex < trackData.TrackNotes.Count)
+        while (_currentDataNoteIndex < _currentTrackData.TrackNotes.Count)
         {
-            NoteEvent nextNote = trackData.TrackNotes[_currentDataNoteIndex];
-            float targetTimeInSeconds = trackData.FirstBeatOffset + (nextNote.TargetBeat * _secondsPerBeat);
+            NoteEvent nextNote = _currentTrackData.TrackNotes[_currentDataNoteIndex];
+            float targetTimeInSeconds = _currentTrackData.FirstBeatOffset + (nextNote.TargetBeat * _secondsPerBeat);
             float spawnTime = targetTimeInSeconds - lookAheadTime;
 
             if ((float)_currentTrackTime < spawnTime) break;
@@ -148,7 +188,7 @@ public class RythmConductor : MonoBehaviour
 
     private void ProcessProceduralBonuses()
     {
-        if (_currentDataNoteIndex >= trackData.TrackNotes.Count) return;
+        if (_currentDataNoteIndex >= _currentTrackData.TrackNotes.Count) return;
 
         if (_nextBonusTargetTime <= _pauseProceduralUntil + 0.01f)
         {
@@ -156,10 +196,10 @@ public class RythmConductor : MonoBehaviour
             return;
         }
 
-        if (_currentDataNoteIndex < trackData.TrackNotes.Count)
+        if (_currentDataNoteIndex < _currentTrackData.TrackNotes.Count)
         {
-            NoteEvent nextNote = trackData.TrackNotes[_currentDataNoteIndex];
-            float nextNoteTime = trackData.FirstBeatOffset + (nextNote.TargetBeat * _secondsPerBeat);
+            NoteEvent nextNote = _currentTrackData.TrackNotes[_currentDataNoteIndex];
+            float nextNoteTime = _currentTrackData.FirstBeatOffset + (nextNote.TargetBeat * _secondsPerBeat);
 
             if (Mathf.Abs(nextNoteTime - _nextBonusTargetTime) <= 0.1f)
             {
@@ -170,7 +210,7 @@ public class RythmConductor : MonoBehaviour
 
         if ((float)_currentTrackTime >= _nextBonusTargetTime - lookAheadTime)
         {
-            if (Random.value < BonusSpawnRate)
+            if (UnityEngine.Random.value < BonusSpawnRate)
             {
                 SpawnNote(BonusPrefab, _nextBonusTargetTime, 0f);
             }
@@ -181,21 +221,12 @@ public class RythmConductor : MonoBehaviour
 
     private void CheckTrackEnd()
     {
-        bool allNotesPlayed = _currentDataNoteIndex >= trackData.TrackNotes.Count;
+        bool allNotesPlayed = _currentDataNoteIndex >= _currentTrackData.TrackNotes.Count;
         bool audioFinished = _currentTrackTime >= _audioSource.clip.length;
 
         if ((allNotesPlayed || audioFinished) && _isPlaying)
         {
-            _isPlaying = false;
-
-            if (_audioSource.isPlaying) _audioSource.Stop();
-
-            foreach (NoteBehavior remainNote in _activeNotes)
-            {
-                if (remainNote != null) Destroy(remainNote.gameObject);
-            }
-            _activeNotes.Clear();
-            Debug.Log("Fin de piste");
+            StopCurrentTrackAndLoadNext();
         }
     }
 
@@ -223,7 +254,7 @@ public class RythmConductor : MonoBehaviour
             {
                 float timeDifference = (float)_currentTrackTime - note.TargetTime;
 
-                if (timeDifference > trackData.DifficultyTolerance)
+                if (timeDifference > _currentTrackData.DifficultyTolerance)
                 {
                     Destroy(note.gameObject);
                     _activeNotes.RemoveAt(i);
@@ -233,7 +264,7 @@ public class RythmConductor : MonoBehaviour
                 continue;
             }
 
-            note.EvaluateInput(PlayerPlatter, trackData.DifficultyTolerance, (float)_currentTrackTime);
+            note.EvaluateInput(PlayerPlatter, _currentTrackData.DifficultyTolerance, (float)_currentTrackTime);
 
             if (note.CurrentState == NoteState.Hit)
             {
@@ -279,5 +310,42 @@ public class RythmConductor : MonoBehaviour
                 i--;
             }
         }
+    }
+
+    private IEnumerator FadeOutAndLoadNext(float fadeDuration)
+    {
+        float startingVolume = _audioSource.volume;
+
+        while (_audioSource.volume > 0)
+        {
+            _audioSource.volume -= startingVolume * Time.deltaTime / fadeDuration;
+            yield return null;
+        }
+
+        _audioSource.Stop();
+        _audioSource.volume = startingVolume;
+
+        if (_currentTrackData == TutorialTrack && OnTutorialFinished != null)
+        {
+            OnTutorialFinished.Raise();
+        }
+
+        LoadNextTrack();
+    }
+
+    private void StopCurrentTrackAndLoadNext()
+    {
+        if (!_isPlaying) return;
+
+        _isPlaying = false;
+
+        foreach (NoteBehavior remainNote in _activeNotes)
+        {
+            if (remainNote != null) Destroy(remainNote.gameObject);
+        }
+
+        _activeNotes.Clear();
+
+        StartCoroutine(FadeOutAndLoadNext(1.5f));
     }
 }
