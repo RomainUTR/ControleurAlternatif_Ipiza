@@ -889,6 +889,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2219071090774977460, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
     - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
+      propertyPath: TutorialTrack
+      value: 
+      objectReference: {fileID: 11400000, guid: a0563aa7c610655488cab0e0067fa8f7, type: 2}
+    - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: ValidationZone
       value: 
       objectReference: {fileID: 287773698}
@@ -900,6 +904,22 @@ PrefabInstance:
       propertyPath: PlatterComponent
       value: 
       objectReference: {fileID: 1265101912}
+    - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
+      propertyPath: TrackPool.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
+      propertyPath: 'TrackPool.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 52f348b3d7958be4d9f7e1a55011fbda, type: 2}
+    - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
+      propertyPath: 'TrackPool.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 45a3dc57f55a984499e519e12efef132, type: 2}
+    - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
+      propertyPath: 'TrackPool.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 10e8f7590881ec941bbab568601be6a8, type: 2}
     - target: {fileID: 6047120970472744290, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 85.78
