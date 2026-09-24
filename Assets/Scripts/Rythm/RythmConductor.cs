@@ -221,7 +221,7 @@ public class RythmConductor : MonoBehaviour
 
     private void CheckTrackEnd()
     {
-        bool allNotesPlayed = _currentDataNoteIndex >= _currentTrackData.TrackNotes.Count;
+        bool allNotesPlayed = (_currentDataNoteIndex >= _currentTrackData.TrackNotes.Count) && (_activeNotes.Count == 0);
         bool audioFinished = _currentTrackTime >= _audioSource.clip.length;
 
         if ((allNotesPlayed || audioFinished) && _isPlaying)
