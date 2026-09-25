@@ -304,532 +304,477 @@ MonoBehaviour:
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 36.3
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 36.5
+    TargetBeat: 36.35
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 2
-    TargetBeat: 36.7
+    TargetBeat: 36.55
     Duration: 0.25
     Direction: -1
     RequiredHits: 2
   - Type: 0
-    TargetBeat: 37.2
+    TargetBeat: 37.05
     Duration: 0
     Direction: 1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 37.3
+    Duration: 0
+    Direction: -1
     RequiredHits: 0
   - Type: 0
     TargetBeat: 37.45
     Duration: 0
-    Direction: -1
+    Direction: 1
     RequiredHits: 0
   - Type: 0
     TargetBeat: 37.6
     Duration: 0
-    Direction: 1
+    Direction: -1
     RequiredHits: 0
   - Type: 0
     TargetBeat: 37.75
     Duration: 0
-    Direction: -1
+    Direction: 1
     RequiredHits: 0
   - Type: 0
     TargetBeat: 37.95
     Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 38.15
-    Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 2
-    TargetBeat: 38.35
+    TargetBeat: 38.15
     Duration: 0.25
     Direction: 1
     RequiredHits: 2
   - Type: 0
-    TargetBeat: 38.8
+    TargetBeat: 38.65
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 88
+    TargetBeat: 38.9
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 89
+    TargetBeat: 39.15
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 39.4
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 39.65
+    Duration: 0.25
+    Direction: -1
+    RequiredHits: 2
+  - Type: 0
+    TargetBeat: 40.15
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 40.4
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 90
+    TargetBeat: 40.55
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 91
+    TargetBeat: 40.7
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 92
+    TargetBeat: 40.85
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 93
+    TargetBeat: 41.05
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 41.25
+    Duration: 0.25
+    Direction: -1
+    RequiredHits: 2
+  - Type: 0
+    TargetBeat: 41.75
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 94
+    TargetBeat: 42
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 95
+    TargetBeat: 42.15
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 96
+    TargetBeat: 42.3
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 97
+    TargetBeat: 42.45
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 98
+    TargetBeat: 42.65
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 42.85
+    Duration: 0.25
+    Direction: -1
+    RequiredHits: 2
+  - Type: 0
+    TargetBeat: 43.35
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 99
+    TargetBeat: 43.6
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 100
+    TargetBeat: 43.75
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 101
+    TargetBeat: 43.9
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 102
+    TargetBeat: 44.05
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 103
+    TargetBeat: 44.25
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 44.45
+    Duration: 0.25
+    Direction: 1
+    RequiredHits: 2
+  - Type: 0
+    TargetBeat: 44.95
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 104
+    TargetBeat: 45.2
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 105
+    TargetBeat: 45.35
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 106
+    TargetBeat: 45.5
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 107
+    TargetBeat: 45.65
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 3
+    TargetBeat: 46.25
+    Duration: 1.25
+    Direction: 1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 47.75
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 108
+    TargetBeat: 48
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 48.25
+    Duration: 0.3
+    Direction: -1
+    RequiredHits: 2
+  - Type: 0
+    TargetBeat: 48.7
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 109
+    TargetBeat: 48.85
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 110
+    TargetBeat: 49
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 111
+    TargetBeat: 49.15
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 112
+    TargetBeat: 49.4
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 49.65
+    Duration: 0.3
+    Direction: -1
+    RequiredHits: 2
+  - Type: 0
+    TargetBeat: 50.1
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 113
+    TargetBeat: 50.25
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 114
+    TargetBeat: 50.4
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 115
+    TargetBeat: 50.55
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 116
+    TargetBeat: 50.9
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 51.15
+    Duration: 0.3
+    Direction: -1
+    RequiredHits: 2
+  - Type: 0
+    TargetBeat: 51.6
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 117
+    TargetBeat: 51.75
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 118
+    TargetBeat: 51.9
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 119
+    TargetBeat: 52.05
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 120
+    TargetBeat: 52.3
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 121
+    TargetBeat: 52.6
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 52.85
+    Duration: 0.3
+    Direction: 1
+    RequiredHits: 2
+  - Type: 0
+    TargetBeat: 53.4
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 122
+    TargetBeat: 53.55
     Duration: 0
     Direction: 1
     RequiredHits: 0
+  - Type: 3
+    TargetBeat: 53.7
+    Duration: 0.3
+    Direction: -1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 54.15
+    Duration: 0.6
+    Direction: 1
+    RequiredHits: 4
+  - Type: 2
+    TargetBeat: 55
+    Duration: 0.6
+    Direction: -1
+    RequiredHits: 4
+  - Type: 2
+    TargetBeat: 57.3
+    Duration: 0.3
+    Direction: 1
+    RequiredHits: 2
   - Type: 0
-    TargetBeat: 123
+    TargetBeat: 57.75
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 124
+    TargetBeat: 57.9
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 125
+    TargetBeat: 58.05
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 126
+    TargetBeat: 58.2
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 127
+    TargetBeat: 58.5
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 58.75
+    Duration: 0.3
+    Direction: 1
+    RequiredHits: 2
+  - Type: 0
+    TargetBeat: 59.2
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 128
+    TargetBeat: 59.35
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 129
+    TargetBeat: 59.55
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 130
+    TargetBeat: 59.7
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 131
+    TargetBeat: 59.95
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 60.2
+    Duration: 0.3
+    Direction: 1
+    RequiredHits: 2
+  - Type: 0
+    TargetBeat: 60.65
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 132
+    TargetBeat: 60.8
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 133
+    TargetBeat: 60.95
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 134
+    TargetBeat: 61.1
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 135
+    TargetBeat: 61.35
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 61.6
+    Duration: 0.3
+    Direction: 1
+    RequiredHits: 2
+  - Type: 0
+    TargetBeat: 62.05
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 136
+    TargetBeat: 62.2
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 137
+    TargetBeat: 62.35
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 138
+    TargetBeat: 62.5
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 139
+    TargetBeat: 62.75
     Duration: 0
     Direction: -1
     RequiredHits: 0
-  - Type: 0
-    TargetBeat: 140
-    Duration: 0
+  - Type: 2
+    TargetBeat: 63
+    Duration: 0.3
     Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 141
-    Duration: 0
+    RequiredHits: 2
+  - Type: 3
+    TargetBeat: 63.45
+    Duration: 0.5
     Direction: -1
     RequiredHits: 0
-  - Type: 0
-    TargetBeat: 142
-    Duration: 0
+  - Type: 2
+    TargetBeat: 64.1
+    Duration: 1
     Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 143
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 144
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 145
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 146
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 147
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 148
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 149
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 150
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 151
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 152
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 153
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 154
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 155
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 156
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 157
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 158
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 159
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 160
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 161
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 162
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 163
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 164
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 165
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 166
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 167
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 168
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 169
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 170
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 171
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 172
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 173
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 174
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 175
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 176
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 177
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 178
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 179
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 180
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 181
-    Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 182
-    Duration: 0
-    Direction: 1
-    RequiredHits: 0
+    RequiredHits: 10
