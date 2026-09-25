@@ -89,6 +89,7 @@ public class PizzaManager : MonoBehaviour
 
     private void Start()
     {
+        if (TurnText != null) TurnText.text = $"0 / {RequiredDoughTurns}";
         if (RecipeGen != null) RecipeGen.GenerateRecipe();
     }
 
@@ -115,7 +116,7 @@ public class PizzaManager : MonoBehaviour
         if (Mathf.Sign(turnAmount) == Mathf.Sign(RequiredTurnDirection))
         {
             _turnCount += Mathf.Abs(turnAmount);
-            //TurnText.text = $"{_turnCount} / {RequiredDoughTurns}";
+            TurnText.text = $"{_turnCount} / {RequiredDoughTurns}";
 
             if (_turnCount >= RequiredDoughTurns)
             {
@@ -151,7 +152,7 @@ public class PizzaManager : MonoBehaviour
             FillTray(pressedIngredient);
 
             Debug.Log($"Sélection correcte : {pressedIngredient.IngredientName}. Tourne le joystick !");
-            //TurnText.text = $"Étale {pressedIngredient.IngredientName} (0/{TurnsToPlaceIngredient})";
+            TurnText.text = $"0 / {TurnsToPlaceIngredient}";
         } else
         {
             Debug.Log($"Erreur de commande ! Attendu : {expectedIngredient.IngredientName} | Reçu : {pressedIngredient.IngredientName}");
@@ -163,8 +164,7 @@ public class PizzaManager : MonoBehaviour
         if (_selectedIngredient == null) return;
 
         _currentIngredientTurns += Mathf.Abs(turnAmount);
-
-        //TurnText.text = $"Étale {_selectedIngredient.IngredientName} ({_currentIngredientTurns}/{TurnsToPlaceIngredient})";
+        TurnText.text = $"{_currentIngredientTurns} / {TurnsToPlaceIngredient}";
 
         if (_currentIngredientTurns >= TurnsToPlaceIngredient)
         {
@@ -205,21 +205,6 @@ public class PizzaManager : MonoBehaviour
         }
         _spawnedOrderIcons.Clear();
 
-        //foreach (SSO_Ingredient ingredient in CurrentRecipe)
-        //{
-        //    GameObject iconObj = Instantiate(OrderIconPrefab, OrderContainer);
-
-        //    iconObj.transform.SetAsFirstSibling();
-
-        //    Image iconImage = iconObj.GetComponent<Image>();
-
-        //    if (iconImage != null && ingredient.Icon != null)
-        //    {
-        //        iconImage.sprite = ingredient.Icon;
-        //        _spawnedOrderIcons.Add(iconImage);
-        //    }
-        //}
-
         string text = string.Empty;
 
         foreach (SSO_Ingredient ingredient in CurrentRecipe)
@@ -243,7 +228,7 @@ public class PizzaManager : MonoBehaviour
         if (!_isOvenOn || _currentCookingTurns >= TurnsToOven) return;
 
         _currentCookingTurns += Mathf.Abs(amount);
-        //TurnText.text = $"Cuisson : {_currentCookingTurns}/{TurnsToOven}";
+        TurnText.text = $"{_currentCookingTurns}/{TurnsToOven}";
 
         if (_currentCookingTurns >= TurnsToOven)
         {
@@ -284,7 +269,7 @@ public class PizzaManager : MonoBehaviour
         _isOvenOn = false;
 
         CurrentState = PizzaState.DoughFlattening;
-        //TurnText.text = $"0/{RequiredDoughTurns}";
+        TurnText.text = $"0 / {RequiredDoughTurns}";
 
         if (RecipeGen != null) RecipeGen.GenerateRecipe();
     }
@@ -312,7 +297,7 @@ public class PizzaManager : MonoBehaviour
         if (!_isOvenOn)
         {
             _isOvenOn = true;
-            TurnText.text = $"Cuisson : {_currentCookingTurns}/{TurnsToOven}";
+            TurnText.text = $"{_currentCookingTurns} / {TurnsToOven}";
         }
         else if (_currentCookingTurns >= TurnsToOven)
         {
