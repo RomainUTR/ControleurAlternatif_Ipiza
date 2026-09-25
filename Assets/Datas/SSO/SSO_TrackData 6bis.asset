@@ -1054,52 +1054,97 @@ MonoBehaviour:
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 92.5
+    TargetBeat: 92.6
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 92.75
+    TargetBeat: 92.85
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 92.95
+    TargetBeat: 93.05
     Duration: 0
     Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 93.15
-    Duration: 0
-    Direction: 1
     RequiredHits: 0
   - Type: 0
     TargetBeat: 93.3
     Duration: 0
-    Direction: -1
-    RequiredHits: 0
-  - Type: 0
-    TargetBeat: 93.55
-    Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 94.25
+    TargetBeat: 93.9
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 94.5
+    TargetBeat: 94.15
     Duration: 0
     Direction: 1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 94.75
+    TargetBeat: 94.4
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 94.65
+    Duration: 1
+    Direction: 1
+    RequiredHits: 6
+  - Type: 0
+    TargetBeat: 96.05
     Duration: 0
     Direction: -1
     RequiredHits: 0
   - Type: 0
-    TargetBeat: 95
+    TargetBeat: 96.25
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 96.4
     Duration: 0
     Direction: 1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 96.55
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 2
+    TargetBeat: 96.95
+    Duration: 0.6
+    Direction: 1
+    RequiredHits: 4
+  - Type: 0
+    TargetBeat: 97.8
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 97.95
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 98.1
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 98.35
+    Duration: 0
+    Direction: -1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 98.6
+    Duration: 0
+    Direction: 1
+    RequiredHits: 0
+  - Type: 0
+    TargetBeat: 98.85
+    Duration: 0
+    Direction: -1
     RequiredHits: 0
