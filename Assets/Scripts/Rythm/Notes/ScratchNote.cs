@@ -1,17 +1,21 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class ScratchNote : NoteBehavior
 {
     [Header("References")]
     [SerializeField] private SpriteRenderer SR;
-    [SerializeField] private Sprite SpriteUp;
-    [SerializeField] private Sprite SpriteDown;
+    [SerializeField] private GameObject VisualUp;
+    [SerializeField] private GameObject VisualDown;
 
     public override void Initialize(Vector3 startPos, Vector3 targetPos, float spawnTime, float targetTime, float direction, RythmConductor conductor, float duration, int requiredHits = 0)
     {
         base.Initialize(startPos, targetPos, spawnTime, targetTime, direction, conductor);
 
-        SR.sprite = (Direction > 0f) ? SpriteDown : SpriteUp;
+        bool isDown = Direction > 0f;
+
+        if (VisualDown != null) VisualDown.SetActive(isDown);
+        if (VisualUp != null) VisualUp.SetActive(!isDown);
     }
 
     public override void EvaluateInput(IPlatterInput platter, float tolerance, float currentTime)

@@ -46,6 +46,7 @@ public class PizzaManager : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private Transform OrderContainer;
     [SerializeField] private GameObject OrderIconPrefab;
+    [SerializeField] private TMP_Text CommandText;
 
     [Header("Events")]
     [SerializeField] private RecipeGenerator RecipeGen;
@@ -88,6 +89,7 @@ public class PizzaManager : MonoBehaviour
 
     private void Start()
     {
+        if (TurnText != null) TurnText.text = $"0 / {RequiredDoughTurns}";
         if (RecipeGen != null) RecipeGen.GenerateRecipe();
     }
 
@@ -120,7 +122,7 @@ public class PizzaManager : MonoBehaviour
             {
                 Debug.Log("Pâte étalée !");
                 StartIngredientAssembly();
-                TurnText.text = "Pâte prête";
+                //TurnText.text = "Pâte prête";
             }
         }
         else
@@ -150,7 +152,7 @@ public class PizzaManager : MonoBehaviour
             FillTray(pressedIngredient);
 
             Debug.Log($"Sélection correcte : {pressedIngredient.IngredientName}. Tourne le joystick !");
-            TurnText.text = $"Étale {pressedIngredient.IngredientName} (0/{TurnsToPlaceIngredient})";
+            TurnText.text = $"0 / {TurnsToPlaceIngredient}";
         } else
         {
             Debug.Log($"Erreur de commande ! Attendu : {expectedIngredient.IngredientName} | Reçu : {pressedIngredient.IngredientName}");
@@ -162,8 +164,7 @@ public class PizzaManager : MonoBehaviour
         if (_selectedIngredient == null) return;
 
         _currentIngredientTurns += Mathf.Abs(turnAmount);
-
-        TurnText.text = $"Étale {_selectedIngredient.IngredientName} ({_currentIngredientTurns}/{TurnsToPlaceIngredient})";
+        TurnText.text = $"{_currentIngredientTurns} / {TurnsToPlaceIngredient}";
 
         if (_currentIngredientTurns >= TurnsToPlaceIngredient)
         {
@@ -186,12 +187,12 @@ public class PizzaManager : MonoBehaviour
             {
                 Debug.Log("Recette complète ! On passe à la cuisson.");
                 StartCooking();
-                TurnText.text = "Au four !";
+                //TurnText.text = "Au four !";
             }
             else
             {
                 Debug.Log($"En attente du prochain ingrédient...");
-                TurnText.text = "Garniture suivante ?";
+                //TurnText.text = "Garniture suivante ?";
             }
         }
     }
@@ -204,20 +205,14 @@ public class PizzaManager : MonoBehaviour
         }
         _spawnedOrderIcons.Clear();
 
+        string text = string.Empty;
+
         foreach (SSO_Ingredient ingredient in CurrentRecipe)
         {
-            GameObject iconObj = Instantiate(OrderIconPrefab, OrderContainer);
-
-            iconObj.transform.SetAsFirstSibling();
-
-            Image iconImage = iconObj.GetComponent<Image>();
-
-            if (iconImage != null && ingredient.Icon != null)
-            {
-                iconImage.sprite = ingredient.Icon;
-                _spawnedOrderIcons.Add(iconImage);
-            }
+            text += $"{ingredient.IngredientName.ToUpper()}\n";
         }
+
+        CommandText.text = text;
     }
 
     private void StartCooking()
@@ -225,7 +220,7 @@ public class PizzaManager : MonoBehaviour
         CurrentState = PizzaState.Cooking;
         _currentCookingTurns = 0;
         _isOvenOn = false;
-        TurnText.text = "Appuyez sur le bouton du four !";
+        //TurnText.text = "Appuyez sur le bouton du four !";
     }
 
     private void ProcessCookingTurning(int amount)
@@ -233,19 +228,19 @@ public class PizzaManager : MonoBehaviour
         if (!_isOvenOn || _currentCookingTurns >= TurnsToOven) return;
 
         _currentCookingTurns += Mathf.Abs(amount);
-        TurnText.text = $"Cuisson : {_currentCookingTurns}/{TurnsToOven}";
+        TurnText.text = $"{_currentCookingTurns}/{TurnsToOven}";
 
         if (_currentCookingTurns >= TurnsToOven)
         {
             Debug.Log("Cuisson parfaite ! Eteignez le four !");
-            TurnText.text = "Eteignez le four ! (Appuyez sur le bouton)";
+            //TurnText.text = "Eteignez le four ! (Appuyez sur le bouton)";
         }
     }
 
     private void StartServing()
     {
         CurrentState = PizzaState.Ready;
-        TurnText.text = "Pizza prête ! Appuyez pour servir.";
+        //TurnText.text = "Pizza prête ! Appuyez pour servir.";
     }
 
     private void ResetForNextOrder()
@@ -274,7 +269,7 @@ public class PizzaManager : MonoBehaviour
         _isOvenOn = false;
 
         CurrentState = PizzaState.DoughFlattening;
-        TurnText.text = $"0/{RequiredDoughTurns}";
+        TurnText.text = $"0 / {RequiredDoughTurns}";
 
         if (RecipeGen != null) RecipeGen.GenerateRecipe();
     }
@@ -302,7 +297,7 @@ public class PizzaManager : MonoBehaviour
         if (!_isOvenOn)
         {
             _isOvenOn = true;
-            TurnText.text = $"Cuisson : {_currentCookingTurns}/{TurnsToOven}";
+            TurnText.text = $"{_currentCookingTurns} / {TurnsToOven}";
         }
         else if (_currentCookingTurns >= TurnsToOven)
         {
@@ -316,7 +311,7 @@ public class PizzaManager : MonoBehaviour
         if (CurrentGameMode.CurrentMode != RSO_GameMode.GameMode.Pizza) return;
         if (CurrentState != PizzaState.Ready) return;
 
-        Debug.Log("Pizza servie ! En attente de la prochaine commande...");
+        //Debug.Log("Pizza servie ! En attente de la prochaine commande...");
         
         int n = CurrentRecipe.Count;
         int earnedPoint = ScoreData.PointsPerPizza * (n * n);
