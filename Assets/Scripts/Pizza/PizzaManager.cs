@@ -284,7 +284,7 @@ public class PizzaManager : MonoBehaviour
         _isOvenOn = false;
 
         CurrentState = PizzaState.DoughFlattening;
-        TurnText.text = $"0/{RequiredDoughTurns}";
+        //TurnText.text = $"0/{RequiredDoughTurns}";
 
         if (RecipeGen != null) RecipeGen.GenerateRecipe();
     }

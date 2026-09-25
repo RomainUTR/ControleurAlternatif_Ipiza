@@ -10,7 +10,7 @@ public class HoldNote : NoteBehavior
     [Header("References")]
     [SerializeField] private SpriteRenderer SR;
     [SerializeField] private Transform TrailTransform;
-    [SerializeField] private Sprite SpriteUp, SpriteDown;
+    [SerializeField] private GameObject VisualUp, VisualDown;
 
     [Header("Debug En Temps Réel")]
     [ShowInInspector, ReadOnly] private float DebugCurrentSpeed = 0f;
@@ -31,7 +31,10 @@ public class HoldNote : NoteBehavior
         base.Initialize(startPos, targetPos, spawnTime, targetTime, direction, conductor, duration);
         Duration = duration;
 
-        SR.sprite = (Direction > 0f) ? SpriteDown : SpriteUp;
+        bool isDown = Direction > 0f;
+
+        if (VisualDown != null) VisualDown.SetActive(isDown);
+        if (VisualUp != null) VisualUp.SetActive(!isDown);
 
         if (TrailTransform != null)
         {
@@ -75,8 +78,6 @@ public class HoldNote : NoteBehavior
                 break;
 
             case NoteState.Ongoing:
-                SR.color = Color.yellow;
-
                 DebugCurrentSpeed = platter.CurrentSpeed;
 
                 if (TrailTransform != null)
@@ -113,7 +114,6 @@ public class HoldNote : NoteBehavior
                         Debug.LogWarning($"[HOLD RATÉ] Vitesse actuelle: {platter.CurrentSpeed:F2} | Trop lent: {!isFastEnough} | Mauvaise Direction: {!isRightDirection}");
 
                         DebugHoldStatus = "LÂCHÉ";
-                        SR.color = Color.red;
                         CurrentState = NoteState.Miss;
                     }
                 }
@@ -123,7 +123,6 @@ public class HoldNote : NoteBehavior
 
     public override void TriggerMissFeedback(float currentTime)
     {
-        SR.color = new Color(1f, 0f, 0f, 0.5f);
         _trailSR.color = new Color(1f, 0f, 0f, 0.5f);
 
         float remainingTime = (TargetTime + Duration) - currentTime;
