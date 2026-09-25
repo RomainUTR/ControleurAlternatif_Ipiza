@@ -47,6 +47,7 @@ public class PizzaManager : MonoBehaviour
     [SerializeField] private Transform OrderContainer;
     [SerializeField] private GameObject OrderIconPrefab;
     [SerializeField] private TMP_Text CommandText;
+    [SerializeField] private GameObject RedOvenIndicator;
 
     [Header("Events")]
     [SerializeField] private RecipeGenerator RecipeGen;
@@ -222,7 +223,8 @@ public class PizzaManager : MonoBehaviour
         CurrentState = PizzaState.Cooking;
         _currentCookingTurns = 0;
         _isOvenOn = false;
-        //TurnText.text = "Appuyez sur le bouton du four !";
+        if (RedOvenIndicator != null) RedOvenIndicator.SetActive(true);
+        if (TurnText != null) TurnText.text = $"0 / {TurnsToOven}";
     }
 
     private void ProcessCookingTurning(int amount)
@@ -272,6 +274,7 @@ public class PizzaManager : MonoBehaviour
 
         CurrentState = PizzaState.DoughFlattening;
         TurnText.text = $"0 / {RequiredDoughTurns}";
+        if (RedOvenIndicator != null) RedOvenIndicator.SetActive(false);
 
         if (RecipeGen != null) RecipeGen.GenerateRecipe();
     }
