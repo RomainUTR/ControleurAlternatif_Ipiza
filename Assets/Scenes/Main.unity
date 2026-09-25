@@ -1070,6 +1070,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2219071090774977460, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
     - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
+      propertyPath: PlayRandomly
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: TutorialTrack
       value: 
       objectReference: {fileID: 11400000, guid: a0563aa7c610655488cab0e0067fa8f7, type: 2}
@@ -1091,16 +1095,16 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: ce90d07cde756a2429f1d37d3e8ab033, type: 2}
     - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: TrackPool.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: 'TrackPool.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 52f348b3d7958be4d9f7e1a55011fbda, type: 2}
+      objectReference: {fileID: 11400000, guid: 0562d26a04207144cae398c0ea4e7650, type: 2}
     - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: 'TrackPool.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 45a3dc57f55a984499e519e12efef132, type: 2}
+      objectReference: {fileID: 11400000, guid: eb792360411b0d046b3ea342aa7bedcc, type: 2}
     - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: 'TrackPool.Array.data[2]'
       value: 
