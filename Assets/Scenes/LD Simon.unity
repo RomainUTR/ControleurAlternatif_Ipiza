@@ -1011,7 +1011,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: ce90d07cde756a2429f1d37d3e8ab033, type: 2}
     - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: TrackPool.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4959967233967255251, guid: a5e8a3e0cff886549b7e00b65d003de5, type: 3}
       propertyPath: 'TrackPool.Array.data[0]'
