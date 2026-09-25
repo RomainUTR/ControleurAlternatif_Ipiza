@@ -72,6 +72,7 @@ public class PizzaManager : MonoBehaviour
     private void OnEnable()
     {
         OnTurnCompleted.OnEventRaised += HandleTurnCompletion;
+        InputReader.OnOvenReleasedEvent += HandleOvenReleased;
         InputReader.OnIngredientPressedEvent += HandleIngredient;
         InputReader.OnOvenPressedEvent += HandleOven;
         InputReader.OnServePressedEvent += HandleServe;
@@ -83,6 +84,7 @@ public class PizzaManager : MonoBehaviour
         OnTurnCompleted.OnEventRaised -= HandleTurnCompletion;
         InputReader.OnIngredientPressedEvent -= HandleIngredient;
         InputReader.OnOvenPressedEvent -= HandleOven;
+        InputReader.OnOvenReleasedEvent -= HandleOvenReleased;
         InputReader.OnServePressedEvent -= HandleServe;
         if (RecipeGen != null) RecipeGen.OnRecipeGenerated -= HandleNewRecipe;
     }
@@ -294,14 +296,19 @@ public class PizzaManager : MonoBehaviour
         if (CurrentGameMode.CurrentMode != RSO_GameMode.GameMode.Pizza) return;
         if (CurrentState != PizzaState.Cooking) return;
 
-        if (!_isOvenOn)
+        _isOvenOn = true;
+        if (TurnText != null) TurnText.text = $"{_currentCookingTurns} / {TurnsToOven}";
+    }
+
+    private void HandleOvenReleased()
+    {
+        _isOvenOn = false;
+
+        if (CurrentGameMode.CurrentMode != RSO_GameMode.GameMode.Pizza) return;
+        if (CurrentState != PizzaState.Cooking) return;
+
+        if (_currentCookingTurns >= TurnsToOven)
         {
-            _isOvenOn = true;
-            TurnText.text = $"{_currentCookingTurns} / {TurnsToOven}";
-        }
-        else if (_currentCookingTurns >= TurnsToOven)
-        {
-            _isOvenOn = false;
             StartServing();
         }
     }

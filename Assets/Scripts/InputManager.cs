@@ -25,7 +25,12 @@ public class InputManager : MonoBehaviour
 
     private void OnEnable()
     {
-        if (OvenInput != null) { OvenInput.action.Enable(); OvenInput.action.performed += OnOvenPerformed; }
+        if (OvenInput != null)
+        {
+            OvenInput.action.Enable();
+            OvenInput.action.performed += OnOvenPerformed;
+            OvenInput.action.canceled += OnOvenPerformed;
+        }
         if (ServeInput != null) { ServeInput.action.Enable(); ServeInput.action.performed += OnServePerformed; }
         if (SwitchInput != null) { SwitchInput.action.Enable(); SwitchInput.action.performed += OnSwitchPerformed; }
         if (SpamInput != null) { SpamInput.action.Enable(); SpamInput.action.performed += OnSpamPerformed; }
@@ -42,7 +47,12 @@ public class InputManager : MonoBehaviour
 
     private void OnDisable()
     {
-        if (OvenInput != null) { OvenInput.action.Disable(); OvenInput.action.performed -= OnOvenPerformed; }
+        if (OvenInput != null)
+        {
+            OvenInput.action.Disable();
+            OvenInput.action.performed -= OnOvenPerformed;
+            OvenInput.action.canceled -= OnOvenPerformed;
+        }
         if (ServeInput != null) { ServeInput.action.Disable(); ServeInput.action.performed -= OnServePerformed; }
         if (SwitchInput != null) { SwitchInput.action.Disable(); SwitchInput.action.performed -= OnSwitchPerformed; }
         if (SpamInput != null) { SpamInput.action.Disable(); SpamInput.action.performed -= OnSpamPerformed; }
@@ -57,7 +67,18 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    private void OnOvenPerformed(InputAction.CallbackContext ctx) => InputReader.RaiseOvenPressed();
+    public void OnOvenPerformed(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            InputReader.RaiseOvenPressed();
+        }
+
+        if (ctx.canceled)
+        {
+            InputReader.RaiseOvenReleased();
+        }
+    }
     private void OnServePerformed(InputAction.CallbackContext ctx) => InputReader.RaiseServePressed();
     private void OnSwitchPerformed(InputAction.CallbackContext ctx) => InputReader.RaiseSwitchPressed();
     private void OnSpamPerformed(InputAction.CallbackContext ctx) => InputReader.RaiseSpamPressed();

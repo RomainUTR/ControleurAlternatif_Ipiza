@@ -24,7 +24,6 @@ public class RecipeGenerator : MonoBehaviour
         }
 
         List<SSO_Ingredient> remainingPool = new List<SSO_Ingredient>();
-        remainingPool.AddRange(CheesePool);
         remainingPool.AddRange(OtherPool);
 
         while(newRecipe.Count < recipeSize)

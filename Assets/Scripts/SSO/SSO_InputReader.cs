@@ -7,6 +7,7 @@ public class SSO_InputReader : ScriptableObject
     public event Action<SSO_Ingredient> OnIngredientPressedEvent;
 
     public event Action OnOvenPressedEvent;
+    public event Action OnOvenReleasedEvent;
     public event Action OnServePressedEvent;
     public event Action OnSwitchPressedEvent;
     public event Action OnSpamPressedEvent;
@@ -17,6 +18,7 @@ public class SSO_InputReader : ScriptableObject
     }
 
     public void RaiseOvenPressed() => OnOvenPressedEvent?.Invoke();
+    public void RaiseOvenReleased() => OnOvenReleasedEvent?.Invoke();
     public void RaiseServePressed() => OnServePressedEvent?.Invoke();
     public void RaiseSwitchPressed() => OnSwitchPressedEvent?.Invoke();
     public void RaiseSpamPressed() => OnSpamPressedEvent?.Invoke();
