@@ -403,8 +403,8 @@ MonoBehaviour:
   CommandsPanel: {fileID: 378448453}
   AutoSwitchSlider: {fileID: 1202236800}
   OnTutorialFinished: {fileID: 11400000, guid: ce90d07cde756a2429f1d37d3e8ab033, type: 2}
-  MinSwitchInterval: 10
-  MaxSwitchInterval: 18
+  MinSwitchInterval: 15
+  MaxSwitchInterval: 25
 --- !u!1001 &225564059
 PrefabInstance:
   m_ObjectHideFlags: 0
